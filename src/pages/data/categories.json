@@ -1,0 +1,101 @@
+{
+  "categories": [
+    {
+    "category": "Advanced Practice",
+    "tests": [
+      "CRNA",
+      "Nurse Practitioner (NP)"
+    ]
+    },
+    {
+      "category": "Allied Health",
+      "tests": [
+        "Cath Lab Tech",
+        "CT Technologist",
+        "Cytotechnologist",
+        "Dosimetry",
+        "Echo Tech",
+        "Tech",
+        "Histotechnologist",
+        "Interventional Radiology",
+        "Mammographer",
+        "Maternal Fetal Medicine / High Risk",
+        "Medical Laboratory Technician",
+        "Medical Technologist",
+        "MRI Technologist",
+        "Nuclear Medicine Technologist",
+        "OR Tech / Surgical Technician",
+        "Pathology Assistant",
+        "Pharmacist",
+        "Pharmacy Technician",
+        "Phlebotomy",
+        "Radiation Therapy",
+        "Radiology Technologist",
+        "Social Worker",
+        "Sterile Processing Technician",
+        "Ultrasound Technologist (Sonographer)",
+        "Vascular Ultrasound Technologist"
+      ]
+    },
+    {
+      "category": "Cardiopulmonary",
+      "tests": [
+        "Certified Anesthesia Technician",
+        "EEG Tech",
+        "Polysomnographer / RPSGT",
+        "Registered Dietician",
+        "Respiratory Therapy"
+      ]
+    },
+    {
+      "category": "Nursing",
+      "tests": [
+        "Acute Rehab",
+        "Cardiac Cath Lab",
+        "Case Manager",
+        "Cath Lab",
+        "CNA",
+        "CVICU",
+        "CVOR",
+        "Dialysis",
+        "Emergency Room",
+        "Endoscopy",
+        "Geriatric/LTC",
+        "Home Health",
+        "Hospice / Palliative",
+        "ICU/CCU",
+        "Infection Control",
+        "Interventional Radiology - RN",
+        "Labor & Delivery",
+        "LPN / LVN",
+        "Med/Surg",
+        "Medical Surgical - Telemetry",
+        "Mother/Baby/Postpartum/Nursery/OB",
+        "NICU",
+        "Nurse Manager",
+        "Oncology",
+        "Operating Room - Circulating",
+        "Operating Room - First Assist",
+        "PACU / Recovery Room",
+        "Paramedic",
+        "PEDS",
+        "PICC Line Nurse",
+        "PICU",
+        "Progressive Care",
+        "Psychiatric",
+        "Telemetry",
+        "Wound Care / Ostomy"
+      ]
+    },
+        {
+          "category": "Rehab Therapy",
+          "tests": [
+            "Occupational Therapist (OT)",
+            "Occupational Therapist Assistant (COTA)",
+            "Physical Therapist (PT)",
+            "Physical Therapist Assistant (PTA)",
+            "Speech Language Pathologist (SLP)"
+          ]
+        }
+      ]
+}
