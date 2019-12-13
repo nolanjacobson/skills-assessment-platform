@@ -18,6 +18,7 @@ const HomePage = () => {
       )}
     else if (!listen) {
       setShowNext(false)
+      setButtonDrop(false)
     }
   }, [listen])
 
@@ -26,7 +27,7 @@ const HomePage = () => {
     if (secondListen) {
       setButtonDrop(true)
       }
-    else if (!secondListen) {
+    else if (!secondListen || !listen) {
       setButtonDrop(false)
     }
   }, [secondListen])
