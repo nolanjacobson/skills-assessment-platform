@@ -28,6 +28,12 @@ body {
 
 .ratingsUl {
   list-style: none;
+  display:flex;
+  justify-content: space-evenly;
+}
+
+.testDataText {
+  font-size: .9rem;
 }
 .credits {
   font-size:.5rem;
@@ -62,4 +68,107 @@ body {
 .skillsAssessmentTest {
   text-align:center;
   font-family: 'Open Sans';
+  font-size:1.5rem;
+  font-weight:bold;
+}
+
+.apiCallBox {
+  display:flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-color:#C0C0C0;
+  padding-bottom:2rem;
+  border-radius:12px;
+
+}
+
+.apiCallBox2 {
+  display:flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-color:#C0C0C0;
+  padding-bottom:2rem;
+  border-radius:12px;
+  margin-top:1rem;
+
+  
+}
+.newTestData {
+  list-style-type: none;
+  width:80%;
+}
+
+.fa-plus-square {
+  color:rgb(139, 3, 3);
+  font-size:1rem;
+}
+
+.newCategory {
+  text-align:center;
+  width:95%;
+}
+
+.frequencyProficiency {
+  display:flex;
+  justify-content: flex-end;
+  flex-direction: row;
+}
+
+.frequencyRatingsLi {
+  justify-self: center;
+}
+
+input {
+  width:100%;
+  margin-top:1rem;
+  margin-bottom: 1rem;
+}
+
+input:focus {
+  border: 3px solid #555;
+}
+
+legend {
+  background-color:#4F63AA;
+  border-radius:12px;
+  text-align:center;
+  padding:1rem;
+  margin:1rem;
+  color:white;
+}
+
+.signature {
+  background-color:#4F63AA;
+  border-radius:12px;
+  text-align:center;
+  padding:1rem;
+  margin:1rem;
+  color:white;
+}
+
+.checkbox {
+  height:2rem;
+}
+
+.certification {
+  text-align:center;
+}
+
+.submit {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  font-size:1.75rem;
+}
+
+.newCategory {
+  background-color:silver;
+  padding:1rem;
+}
+
+.wrapper {
+  display:flex;
+  flex-direction:column;
+  justify-content: center;
+  margin:2rem;
 }
