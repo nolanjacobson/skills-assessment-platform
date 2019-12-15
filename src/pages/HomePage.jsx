@@ -33,11 +33,11 @@ const HomePage = () => {
   }, [secondListen])
 
   return (
-    <>
+    <div className="outerBox">
       <section className="box">
         <img className="nurse2nurseHome" src={nurse2nursestaffingimage} />
         <p className="chooseTest">Please choose a Skills Assessment Test</p>
-        <select onChange={e => setListen(e.target.value)}>
+        <select className="categorySelect" onChange={e => setListen(e.target.value)}>
           <option value={null}></option>
           {data.categories.map((categoryName, index) => {
             return (
@@ -50,7 +50,7 @@ const HomePage = () => {
     
         {showNext && (
             <>
-          <select onChange={e => setSecondListen(e.target.value)}>
+          <select className="testSelect" onChange={e => setSecondListen(e.target.value)}>
              <option value={null}></option>
             {testDropDown.map((category, index) => {
               return <option key={index}>{category}</option>
@@ -58,9 +58,10 @@ const HomePage = () => {
           </select>
           </>
         )}
-        {buttonDrop ? <Link to={`/${listen}/${secondListen}`}><button>Submit</button></Link> : (<></>)}
+        {buttonDrop ? <Link to={`/${listen}/${secondListen}`}><button className="tempSubmit">Submit</button></Link> : (<></>)}
+            {console.log (buttonDrop)}
       </section>
-    </>
+    </div>
   )
 }
 

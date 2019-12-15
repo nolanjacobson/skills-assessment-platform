@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import Ratings from 'react-rating'
-import { exportNamespaceSpecifier } from '@babel/types'
 
 const AddRatings = props => {
   const [frequencyRating, setFrequencyRating] = useState(1)

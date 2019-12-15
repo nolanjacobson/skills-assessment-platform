@@ -4,6 +4,7 @@
 
 html {
   height: 100%;
+  color:black;
 }
 
 body {
@@ -24,6 +25,25 @@ body {
 .chooseTest {
   font-weight:bold;
   font-family: 'Open Sans', sans-serif;
+}
+
+.tempSubmit {
+  margin-top:2rem;
+  font-size:1.5rem;
+}
+
+select {
+  position: relative;
+  display: block;
+  width: 75%;
+  margin: 0 auto;
+  font-family: 'Open Sans', 'Helvetica Neue', 'Segoe UI', 'Calibri', 'Arial', sans-serif;
+  font-size: 18px;
+  color: #60666d;
+}
+
+.testSelect {
+  margin-top:1.5rem;
 }
 
 .ratingsUl {
@@ -49,8 +69,9 @@ body {
   flex-direction:column;
   background-color:silver;
   margin:1rem;
-  border-radius:12px;
+  border-radius:5px;
   padding-bottom:1rem;
+  border: 1px solid gray;
 }
 
 .ratingScale {
@@ -80,6 +101,7 @@ body {
   background-color:#C0C0C0;
   padding-bottom:2rem;
   border-radius:12px;
+  border: 1px solid gray;
 
 }
 
@@ -92,12 +114,15 @@ body {
   padding-bottom:2rem;
   border-radius:12px;
   margin-top:1rem;
+  border: 1px solid gray;
+
 
   
 }
 .newTestData {
   list-style-type: none;
   width:80%;
+  margin: 0 auto;
 }
 
 .fa-plus-square {
@@ -107,7 +132,10 @@ body {
 
 .newCategory {
   text-align:center;
-  width:95%;
+  word-wrap: break-word;
+  font-size:1rem;
+  border: 1px solid gray;
+
 }
 
 .frequencyProficiency {
@@ -171,4 +199,85 @@ legend {
   flex-direction:column;
   justify-content: center;
   margin:2rem;
+}
+
+@media (min-width: 768px ) and (max-width: 1024px) {
+  
+  .box {
+    width:25%;
+    margin-top:10rem;
+    margin-left:auto;
+    margin-right:auto;
+  }
+
+  .ratingScale {
+    width:10%;
+    margin:0 auto;
+  }
+
+  .newTestData {
+    margin: 0 auto;
+    width:75%;
+  }
+
+  .testDataText {
+    font-size:1rem;
+  }
+
+  .fa-plus-square {
+    color:rgb(139, 3, 3);
+    font-size:1.5rem;
+  }
+
+  .apiCallBox {
+    width:40%;
+    margin: 0 auto;
+
+
+  }
+
+  .apiCallBox2 {
+    width:40%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+}
+@media (min-width: 1025px) {
+  .box {
+    width:25%;
+    margin-top:10rem;
+    margin-left:auto;
+    margin-right:auto;
+  }
+
+  .ratingScale {
+    width:10%;
+    margin:0 auto;
+  }
+
+  .newTestData {
+    margin: 0 auto;
+    width:75%;
+  }
+
+  .testDataText {
+    font-size:1.5rem;
+  }
+
+  .fa-plus-square {
+    color:rgb(139, 3, 3);
+    font-size:2rem;
+  }
+
+  .apiCallBox {
+    width:25%;
+    margin: 0 auto;
+  }
+
+  .apiCallBox2 {
+    width:25%;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }

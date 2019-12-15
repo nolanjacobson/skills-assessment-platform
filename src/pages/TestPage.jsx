@@ -6,7 +6,7 @@ import SignatureCanvas from 'react-signature-canvas'
 import AddRatings from '../components/AddRatings'
 
 const TestPage = props => {
-  const [show, setShow] = useState(false)
+  const [show, setShow] = useState(true)
   const proficiencyRatingsList = [
     'Proficiency Rating Labels',
     'Inexperienced - no experience',
