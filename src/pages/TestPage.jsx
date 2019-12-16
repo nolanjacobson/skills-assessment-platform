@@ -4,7 +4,7 @@ import Ratings from 'react-rating'
 import TestData from './data/tests.json'
 import SignatureCanvas from 'react-signature-canvas'
 import AddRatings from '../components/AddRatings'
-
+import {Redirect} from 'react-router-dom'
 const TestPage = props => {
   const [show, setShow] = useState(true)
   const proficiencyRatingsList = [
@@ -24,7 +24,7 @@ const TestPage = props => {
   const plusButton = '+ Rating Scale'
   const minusButton = '- Rating Scale'
   const setCategory = props.match.params.category
-  const setTest = props.match.params.test
+  const setTest = decodeURIComponent(props.match.params.test)
   const [checkBox, setCheckBox] = useState(false)
   const newTestData = TestData.tests
     .filter(category => category.category === setCategory)
@@ -53,9 +53,10 @@ const TestPage = props => {
         src={nurse2nursestaffingimage}
         alt="Nurse 2 Nurse Staffing Image"
       />
+      {/* <Redirect to="/"/><p>Back</p> */}
       <section className="standardBox">
         <p className="skillsAssessmentTest">
-          Skills Assessment Test: {props.match.params.test}
+          Skills Assessment Test: {setTest}
         </p>
         <button
           className="ratingScale"
@@ -114,7 +115,11 @@ const TestPage = props => {
           <></>
         )}
       </section>
-      <AddRatings newTestData={newTestData}/>
+      <ul className="newTestData">
+      {newTestData.map((name, index) => {
+        return (
+      <AddRatings name={name} index={index}/>)})}
+       </ul>
       <section className="wrapper">
       <section className="apiCallBox">
         <form>

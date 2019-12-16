@@ -8,6 +8,7 @@ const HomePage = () => {
   const [secondListen, setSecondListen] = useState()
   const [testDropDown, setTestDropDown] = useState([])
   const [buttonDrop, setButtonDrop] = useState(false)
+  const uri = encodeURIComponent(secondListen)
   useEffect(() => {
     console.log({ listen })
     if (listen) {
@@ -37,6 +38,7 @@ const HomePage = () => {
       <section className="box">
         <img className="nurse2nurseHome" src={nurse2nursestaffingimage} />
         <p className="chooseTest">Please choose a Skills Assessment Test</p>
+        <p>Category *</p>
         <select className="categorySelect" onChange={e => setListen(e.target.value)}>
           <option value={null}></option>
           {data.categories.map((categoryName, index) => {
@@ -50,6 +52,7 @@ const HomePage = () => {
     
         {showNext && (
             <>
+            <p>Test *</p>
           <select className="testSelect" onChange={e => setSecondListen(e.target.value)}>
              <option value={null}></option>
             {testDropDown.map((category, index) => {
@@ -58,8 +61,7 @@ const HomePage = () => {
           </select>
           </>
         )}
-        {buttonDrop ? <Link to={`/${listen}/${secondListen}`}><button className="tempSubmit">Submit</button></Link> : (<></>)}
-            {console.log (buttonDrop)}
+        {buttonDrop ? <Link to={`/${listen}/${uri}`}><button className="tempSubmit">Start</button></Link> : (<></>)}
       </section>
     </div>
   )

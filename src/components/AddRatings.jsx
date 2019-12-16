@@ -4,20 +4,16 @@ import Ratings from 'react-rating'
 const AddRatings = props => {
   const [frequencyRating, setFrequencyRating] = useState(1)
   const [proficiencyRating, setProficiencyRating] = useState(1)
-  const newTestData = props.newTestData
   return (
-    <ul className="newTestData">
-      {newTestData.map((name, index) => {
-        return (
           <li className="newTestData">
-            {name.includes('*') ? (
-              <h1 className="newCategory">{name}</h1>
+            {props.name.includes('*') ? (
+              <h1 className="newCategory">{props.name}</h1>
             ) : (
-              <span className="testDataText">{name}</span>
+              <span className="testDataText">{props.name}</span>
             )}
             {'  '}
             <section className="frequencyProficiency">
-              {index > 0 ? (
+              {props.index > 0 ? (
                 <Ratings
                   start={0}
                   stop={4}
@@ -25,11 +21,11 @@ const AddRatings = props => {
                   emptySymbol="far fa-plus-square"
                   fullSymbol="fas fa-plus-square"
                   // placeholderSymbol="fas fa-heartbeat"
-                  onClick={newRating => setProficiencyRating(newRating)}
+                  onClick={(rating) => setProficiencyRating(rating)}
                 />) : (
                 <></>
               )}
-              {index > 0 ? (<>
+              {props.index > 0 ? (<>
               &emsp;
                 <Ratings
                   start={0}
@@ -47,9 +43,6 @@ const AddRatings = props => {
             <hr></hr>
           </li>
         )
-      })}
-    </ul>
-  )
 }
 
 export default AddRatings
