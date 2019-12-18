@@ -305,8 +305,8 @@ input:focus {
   }
 
   .apiCallBox {
-    display:inline;
-    width:55%;
+    display:flex;
+    width:35%;
     margin: 0 auto;
     padding-bottom:1rem;
   }
@@ -326,10 +326,10 @@ input:focus {
   }
 
   .signature {
-    width:53.5%;
+    width:29%;
     margin-left: auto;
     margin-right: auto;
-    
+
   }
   .testDataText {
     font-size:1rem;
@@ -341,7 +341,7 @@ input:focus {
   }
 
   .apiCallBox2 {
-    width:55%;
+    width:30%;
     margin-left: auto;
     margin-right: auto;
   }
