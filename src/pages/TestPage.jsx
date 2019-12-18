@@ -17,6 +17,7 @@ const TestPage = props => {
         
   return (
     <>
+    <section className="wrapEverything">
       <Header
       show = {show}
       setTest = {setTest}
@@ -28,6 +29,7 @@ const TestPage = props => {
       <AddRatings name={name} index={index}/>)})}
         </ul>
         <FormSubmission/>
+    </section>
     </>
   )
 }

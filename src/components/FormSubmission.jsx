@@ -33,7 +33,7 @@ console.log(image)
   <section className="wrapper">
         <section className="optionalRecruiterInformation">
           <legend className="recruiterAddressLegend">Recruiter Email (Optional)</legend> 
-          <input className="recruiterAddress" name="recruiterAddress" value={recruiterAddress.recruiterAddress} onChange={(e) => setRecruiterAddress(e.target.value)} placeholder="Recruiter Email Address"></input>
+          <div className="recruiterAddressContainer"><input className="recruiterAddress" name="recruiterAddress" value={recruiterAddress.recruiterAddress} onChange={(e) => setRecruiterAddress(e.target.value)} placeholder="Recruiter Email Address"></input></div>
         </section>
       <section className="apiCallBox">
         <form>

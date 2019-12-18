@@ -96,7 +96,6 @@ select {
   flex-direction: column;
   align-items: center;
   border-radius:12px;
-
 }
 
 .apiCallBox2 {
@@ -107,7 +106,8 @@ select {
   padding-bottom:2rem;
   border: 1px solid gray;
   background-color:silver;
-
+  width:95%;
+  margin: 0 auto;
   
 }
 .newTestData {
@@ -170,12 +170,15 @@ input:focus {
   padding:1rem;
   color:white;
   font-weight:lighter;
-  margin-bottom:1rem;
+  margin: 0 auto;
+  margin-bottom:1rem;  
+  font-size: 1.5rem;
 }
 
 .optionalRecruiterInformation {
-  width:75%;
+  width:95%;
   margin: 0 auto;
+  font-size: 1.5rem;
 }
 
 .recruiterAddressLegend {
@@ -190,6 +193,11 @@ input:focus {
   padding:1rem;
   color:white;
   font-weight:lighter;
+  font-size:1.5rem;
+  width: 87%;
+  margin: 0 auto;
+  margin-top:1rem;
+  margin-bottom: 1rem;
 }
 
 .sigCanvas {
@@ -222,6 +230,10 @@ input:focus {
   margin:.5rem;
 }
 
+form {
+  width: 100%;
+}
+
 @media (min-width: 768px ) and (max-width: 1024px) {
   
   .box {
@@ -234,13 +246,14 @@ input:focus {
   .row1 {
     display:flex;
     flex-direction:row;
-    justify-content: space-between;
+    justify-content: space-evenly;
+
   }
 
   .row2 {
     display:flex;
     flex-direction:row;
-    justify-content: space-between;
+    justify-content: space-evenly;
   }
 
   .apiCallBox {
@@ -260,7 +273,7 @@ input:focus {
     width:50%;
   }
   .optionalRecruiterInformation {
-    width:25%;
+    width:55%;
     margin: 0 auto;
   }
 
@@ -273,7 +286,7 @@ input:focus {
   }
 
   .fa-plus-square {
-    color:rgb(139, 3, 3);
+    color:#4f63aa;
     font-size:1.25rem;
   }
 
@@ -283,8 +296,33 @@ input:focus {
     margin-right: auto;
     margin-top:1rem;
   }
+  .standardBox {
+  max-width:55%;
+  margin: 0 auto;
+  margin-bottom:2rem;
+  }
+  .ratingScale {
+    width:50%;
+  }
+  .recruiterAddress {
+    display: flex;
+    justify-content: center;
+    width:50%;
+    
+  }
+  .recruiterAddressContainer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+   
+  }
 }
 @media (min-width: 1025px) {
+
+  .wrapEverything {
+    max-width:100%;
+    margin: 0 auto;
+  }
   .box {
     width:25%;
     margin-top:10rem;
@@ -295,18 +333,18 @@ input:focus {
   .row1 {
     display:flex;
     flex-direction:row;
-    justify-content: space-between;
+    justify-content: space-evenly;
   }
 
   .row2 {
     display:flex;
     flex-direction:row;
-    justify-content: space-between;
+    justify-content: space-evenly;
   }
 
   .apiCallBox {
     display:flex;
-    width:35%;
+    width:52.5%;
     margin: 0 auto;
     padding-bottom:1rem;
   }
@@ -321,12 +359,12 @@ input:focus {
     width:50%;
   }
   .optionalRecruiterInformation {
-    width:25%;
+    width:100%;
     margin: 0 auto;
   }
 
   .signature {
-    width:29%;
+    width:50.9%;
     margin-left: auto;
     margin-right: auto;
 
@@ -336,7 +374,7 @@ input:focus {
   }
 
   .fa-plus-square {
-    color:rgb(139, 3, 3);
+    color:#4f63aa;
     font-size:1.25rem;
   }
 
@@ -345,4 +383,24 @@ input:focus {
     margin-left: auto;
     margin-right: auto;
   }
+
+  .standardBox {
+    max-width:55%;
+    margin: 0 auto;
+    margin-bottom:2rem;
+  }
+
+.recruiterAddress {
+  display: flex;
+  justify-content: center;
+  width:50%;
+  
+}
+.recruiterAddressContainer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+ 
+}
+
 }
