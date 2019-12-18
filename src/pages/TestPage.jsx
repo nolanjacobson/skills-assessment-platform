@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef} from 'react'
 import nurse2nursestaffingimage from './images/nurse2nurse.png'
 import Ratings from 'react-rating'
 import TestData from './data/tests.json'
 import SignatureCanvas from 'react-signature-canvas'
 import AddRatings from '../components/AddRatings'
 import {Redirect} from 'react-router-dom'
+
 const TestPage = props => {
   const [show, setShow] = useState(true)
   const proficiencyRatingsList = [
@@ -38,6 +39,7 @@ const TestPage = props => {
   console.log(newTestData)
   const [frequencyRatingValue, setFrequencyRatingValue] = useState(0)
   const [proficiencyRatingValue, setProficiencyRatingValue] = useState(0)
+  const [recruiterAddress, setRecruiterAddress] = useState({recruiterAddress: ''})
   const handleChange = e => {
     e.persist()
     setContactInformation(prev => ({
@@ -45,7 +47,17 @@ const TestPage = props => {
       [e.target.name]: e.target.value,
     }))
   }
-
+  const sigCanvas = useRef(null)
+  const clear = () => {
+    sigCanvas.current.clear()
+  }
+  const [image, setImage] = useState(null)
+  const trim = () => {
+    if (!sigCanvas.current.isEmpty()) {
+    setImage(sigCanvas.current.getTrimmedCanvas().toDataURL('image/png'))
+    console.log(image)
+    }
+  }
   return (
     <>
       <img
@@ -110,7 +122,8 @@ const TestPage = props => {
                 }
               })}
             </li>
-          </ul>
+        </ul>
+         
         ) : (
           <></>
         )}
@@ -119,62 +132,69 @@ const TestPage = props => {
       {newTestData.map((name, index) => {
         return (
       <AddRatings name={name} index={index}/>)})}
-       </ul>
+        </ul>
       <section className="wrapper">
+        <section className="optionalRecruiterInformation">
+          <legend className="recruiterAddressLegend">Recruiter Email (Optional)</legend> 
+          <input className="recruiterAddress" name="recruiterAddress" value={recruiterAddress.recruiterAddress} onChange={(e) => setRecruiterAddress(e.target.value)} placeholder="Recruiter Email Address"></input>
+        </section>
       <section className="apiCallBox">
         <form>
-          <legend>Contact Information</legend>
+          <legend className="contactInformation">Contact Information *</legend>
           <fieldset>
             <section className="row1">
-              First Name:
+              <span>First Name:
               <input
-                placeholder="First Name"
+                placeholder="First Name *"
                 name="firstName"
                 value={contactInformation.firstName}
                 onChange={e => handleChange(e)}
                 required
-              />
+              />  </span>
+
               <br></br>
-              Last Name:
+              <span>Last Name:
               <input
-                placeholder="Last Name"
+                placeholder="Last Name *"
                 name="lastName"
                 value={contactInformation.lastName}
                 onChange={e => handleChange(e)}
                 required
-              />
+              /></span>
             </section>
             <section className="row2">
-              Email:{' '}
+              <span>Email:{' '}
               <input
-                placeholder="Email"
+                placeholder="Email *"
                 name="email"
                 value={contactInformation.email}
                 onChange={e => handleChange(e)}
                 required
-              />
+              /></span>
               <br></br>
-              Phone Number:{' '}
+              <span>Phone Number:{' '}
               <input
                 type="number"
-                placeholder="Phone Number"
+                placeholder="Phone Number *"
                 name="phoneNumber"
                 value={contactInformation.phoneNumber}
                 onChange={e => handleChange(e)}
-                placeholder="Phone Number"
+                placeholder="Phone Number *"
                 required
-              />
+              /></span>
             </section>
           </fieldset>
         </form>
       </section>
+        <p className="signature">Signature *</p>
       <section className="apiCallBox2">
-        <p className="signature">Signature</p>
         <section className="sigCanvas"><SignatureCanvas
           backgroundColor="white"
           penColor="black"
-          canvasProps={{ width: 250, height: 200, className: 'sigCanvas' }}
+          canvasProps={{ width: 300, height: 200, className: 'sigCanvas' }}
+          ref={sigCanvas}
         /></section>
+      <button className="clearButton" onClick={clear}>Clear</button>
         <span>
           <input
             className="checkbox"
@@ -187,9 +207,8 @@ const TestPage = props => {
           </p>
         </span>
         <button className="submit" disabled={true}>
-          Submit
+          Finish
         </button>
-        {console.log(checkBox)}
       </section>
       </section>
     </>

@@ -68,6 +68,7 @@ select {
   border-radius:5px;
   padding-bottom:1rem;
   border: 1px solid gray;
+  box-shadow: 10px 10px 5px #888888;
 }
 
 .ratingScale {
@@ -94,10 +95,7 @@ select {
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  background-color:#C0C0C0;
-  padding-bottom:2rem;
   border-radius:12px;
-  border: 1px solid gray;
 
 }
 
@@ -106,19 +104,19 @@ select {
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  background-color:#C0C0C0;
   padding-bottom:2rem;
-  border-radius:12px;
-  margin-top:1rem;
   border: 1px solid gray;
-
+  background-color:silver;
 
   
 }
 .newTestData {
   list-style-type: none;
-  width:80%;
-  margin: 0 auto;
+  max-width:100%;
+  padding-inline-start:0rem;
+  padding:1rem;
+  border: 1px solid silver;
+  margin:1rem;
 }
 
 .fa-plus-square {
@@ -127,17 +125,30 @@ select {
 }
 
 .newCategory {
-  text-align:center;
-  word-wrap: break-word;
-  font-size:1rem;
+  font-size:1.5rem;
   border: 1px solid gray;
 
 }
 
+.newTestDataLi {
+  width: 100%;
+}
+
+.flexThem {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+
+}
+
+.headerProficiency {
+  font-size:.75rem;
+}
 .frequencyProficiency {
   display:flex;
   justify-content: flex-end;
   flex-direction: row;
+  padding-right:2rem;
 }
 
 .frequencyRatingsLi {
@@ -154,24 +165,36 @@ input:focus {
   border: 3px solid #555;
 }
 
-legend {
-  background-color:#4F63AA;
-  border-radius:12px;
-  text-align:center;
+.contactInformation {
+  background-color: #4f63aa;
   padding:1rem;
-  margin:1rem;
   color:white;
+  font-weight:lighter;
+  margin-bottom:1rem;
 }
 
+.optionalRecruiterInformation {
+  width:75%;
+  margin: 0 auto;
+}
+
+.recruiterAddressLegend {
+  background-color: #4f63aa;
+  color:white;
+  padding:1rem;
+  font-weight:lighter;
+  
+}
 .signature {
-  background-color:#4F63AA;
-  border-radius:12px;
-  text-align:center;
+  background-color: #4f63aa;
   padding:1rem;
-  margin:1rem;
   color:white;
+  font-weight:lighter;
 }
 
+.sigCanvas {
+  padding-top:1rem;
+}
 .checkbox {
   height:2rem;
 }
@@ -186,24 +209,45 @@ legend {
 }
 
 .newCategory {
-  background-color:silver;
+  background-color: #4f63aa;
   padding:1rem;
+  color:white;
+  font-weight:lighter;
 }
 
 .wrapper {
   display:flex;
   flex-direction:column;
   justify-content: center;
-  margin:2rem;
+  margin:.5rem;
 }
 
 @media (min-width: 768px ) and (max-width: 1024px) {
   
   .box {
-    width:50%;
+    width:25%;
     margin-top:10rem;
     margin-left:auto;
     margin-right:auto;
+  }
+
+  .row1 {
+    display:flex;
+    flex-direction:row;
+    justify-content: space-between;
+  }
+
+  .row2 {
+    display:flex;
+    flex-direction:row;
+    justify-content: space-between;
+  }
+
+  .apiCallBox {
+    display:inline;
+    width:55%;
+    margin: 0 auto;
+    padding-bottom:1rem;
   }
 
   .ratingScale {
@@ -213,31 +257,32 @@ legend {
 
   .newTestData {
     margin: 0 auto;
-    width:75%;
+    width:50%;
+  }
+  .optionalRecruiterInformation {
+    width:25%;
+    margin: 0 auto;
   }
 
+  .signature {
+    width:52%;
+    margin: 0 auto;
+  }
   .testDataText {
     font-size:1rem;
   }
 
   .fa-plus-square {
     color:rgb(139, 3, 3);
-    font-size:1.5rem;
-  }
-
-  .apiCallBox {
-    width:40%;
-    margin: 0 auto;
-
-
+    font-size:1.25rem;
   }
 
   .apiCallBox2 {
-    width:40%;
+    width:55%;
     margin-left: auto;
     margin-right: auto;
+    margin-top:1rem;
   }
-
 }
 @media (min-width: 1025px) {
   .box {
@@ -247,6 +292,25 @@ legend {
     margin-right:auto;
   }
 
+  .row1 {
+    display:flex;
+    flex-direction:row;
+    justify-content: space-between;
+  }
+
+  .row2 {
+    display:flex;
+    flex-direction:row;
+    justify-content: space-between;
+  }
+
+  .apiCallBox {
+    display:inline;
+    width:55%;
+    margin: 0 auto;
+    padding-bottom:1rem;
+  }
+
   .ratingScale {
     width:10%;
     margin:0 auto;
@@ -254,25 +318,30 @@ legend {
 
   .newTestData {
     margin: 0 auto;
-    width:75%;
+    width:50%;
   }
-
-  .testDataText {
-    font-size:1.5rem;
-  }
-
-  .fa-plus-square {
-    color:rgb(139, 3, 3);
-    font-size:2rem;
-  }
-
-  .apiCallBox {
+  .optionalRecruiterInformation {
     width:25%;
     margin: 0 auto;
   }
 
+  .signature {
+    width:53.5%;
+    margin-left: auto;
+    margin-right: auto;
+    
+  }
+  .testDataText {
+    font-size:1rem;
+  }
+
+  .fa-plus-square {
+    color:rgb(139, 3, 3);
+    font-size:1.25rem;
+  }
+
   .apiCallBox2 {
-    width:25%;
+    width:55%;
     margin-left: auto;
     margin-right: auto;
   }

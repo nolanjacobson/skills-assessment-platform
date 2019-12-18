@@ -29,7 +29,9 @@
     "stylelint-config-standard": "^19.0.0"
   },
   "dependencies": {
+    "html2canvas": "^1.0.0-rc.5",
     "json": "^9.0.6",
+    "jspdf": "^1.5.3",
     "react": "^16.12.0",
     "react-bootstrap": "^1.0.0-beta.16",
     "react-dom": "^16.12.0",
@@ -37,6 +39,7 @@
     "react-router-dom": "^5.1.2",
     "react-scripts": "^3.3.0",
     "react-signature-canvas": "^1.0.3",
-    "react-star-ratings": "^2.3.0"
+    "react-star-ratings": "^2.3.0",
+    "signature_pad": "^3.0.0-beta.3"
   }
 }
