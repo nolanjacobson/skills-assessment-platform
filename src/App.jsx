@@ -9,7 +9,6 @@ const App = () => {
     <Router>
       <Switch>
         <Route exact path="/" component={HomePage}></Route>
-        {/* <Route exact path="/:test" component={TestPage}></Route> */}
         <Route exact path="/:category/:test" component={TestPage}></Route>
         <Route path="*" component={NotFound}></Route>
       </Switch>
