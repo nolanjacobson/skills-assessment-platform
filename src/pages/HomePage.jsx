@@ -2,8 +2,10 @@ import React, { useState, useEffect } from 'react'
 import nurse2nursestaffingimage from './images/nurse2nurse.png'
 import data from './data/categories.json'
 import {Link} from 'react-router-dom'
+// import ReCAPTCHA from 'react-google-recaptcha'
+
 const HomePage = () => {
-  const [listen, setListen] = useState()
+  const [listen, setListen] = useState('Advanced Practice')
   const [showNext, setShowNext] = useState(false)
   const [secondListen, setSecondListen] = useState()
   const [testDropDown, setTestDropDown] = useState([])
@@ -38,9 +40,9 @@ const HomePage = () => {
       <section className="box">
         <img className="nurse2nurseHome" src={nurse2nursestaffingimage} />
         <p className="chooseTest">Please choose a Skills Assessment Test</p>
-        <p>Category *</p>
+        <p className="homePagePTag">Category *</p>
         <select className="categorySelect" onChange={e => setListen(e.target.value)}>
-          <option value={null}></option>
+          {/* <option value={null}></option> */}
           {data.categories.map((categoryName, index) => {
             return (
               <option key={index} value={categoryName.category}>
@@ -52,7 +54,7 @@ const HomePage = () => {
     
         {showNext && (
             <>
-            <p>Test *</p>
+            <p className="homePagePTag">Test *</p>
           <select className="testSelect" onChange={e => setSecondListen(e.target.value)}>
              <option value={null}></option>
             {testDropDown.map((category, index) => {
@@ -61,7 +63,10 @@ const HomePage = () => {
           </select>
           </>
         )}
-        {buttonDrop ? <Link to={`/${listen}/${uri}`}><button className="tempSubmit">Start</button></Link> : (<></>)}
+        {/* <ReCAPTCHA
+        sitekey="6LfoqMgUAAAAAOOjK4oTxlLYZdPUGVZQXnrFN5Jy"
+        onChange={buttonDrop}/> */}
+        {buttonDrop ? <Link to={`/${listen}/${uri}`}><button className="submit">Start</button></Link> : (<></>)}
       </section>
     </div>
   )

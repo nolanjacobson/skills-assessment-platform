@@ -1,21 +1,12 @@
 import React, { useState } from 'react'
 import Ratings from 'react-rating'
 import html2canvas from 'html2canvas'
-// import jsPDF from 'jspdf'
 
 const AddRatings = props => {
   const [frequencyRating, setFrequencyRating] = useState(1)
   const [proficiencyRating, setProficiencyRating] = useState(1)
   const [num, setNum] = useState()
-//   const input = document.getElementsByClassName('newTestDataLi');
-// html2canvas(input)
-//   .then((canvas) => {
-//     const imgData = canvas.toDataURL('image/png');
-//     const pdf = new jsPDF();
-//     pdf.addImage(imgData, 'PNG', 0, 0);
-//     pdf.save("download.pdf");  
-//   })
-// ;
+
   return (
           <li className="newTestDataLi">
             {props.name.includes('*') ? (

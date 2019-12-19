@@ -1,114 +1,150 @@
-import React, { useState, useEffect, useRef} from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import SignatureCanvas from 'react-signature-canvas'
+import axios from 'axios'
 
 const FormSubmission = () => {
   const [contactInformation, setContactInformation] = useState({
     firstName: '',
     lastName: '',
-    email: '',
+    nurseEmail: '',
     phoneNumber: '',
+    recruiterEmail: 'jeremy@nurse2nursestaffing.com',
   })
-const [recruiterAddress, setRecruiterAddress] = useState({recruiterAddress: ''})
-const [checkBox, setCheckBox] = useState(false)
-const handleChange = e => {
-e.persist()
-setContactInformation(prev => ({
-...prev,
-[e.target.name]: e.target.value,
-}))
-}
-const sigCanvas = useRef(null)
-const clear = () => {
-sigCanvas.current.clear()
-}
-const [image, setImage] = useState(null)
-const trim = () => {
-if (!sigCanvas.current.isEmpty()) {
-setImage(sigCanvas.current.getTrimmedCanvas().toDataURL('image/png'))
-console.log(image)
-}
-}
 
+  const [checkBox, setCheckBox] = useState(false)
+  const handleChange = e => {
+    e.persist()
+    setContactInformation(prev => ({
+      ...prev,
+      [e.target.name]: e.target.value,
+    }))
+  }
+  const sigCanvas = useRef(null)
+  const clear = () => {
+    sigCanvas.current.clear()
+  }
+  const [image, setImage] = useState(null)
+  const trim = () => {
+    if (!sigCanvas.current.isEmpty()) {
+      setImage(sigCanvas.current.getTrimmedCanvas().toDataURL('image/png'))
+      console.log(image)
+    }
+  }
+
+  const sendEmail = async () => {
+    trim()
+    const response = await axios.post(
+      'https://localhost:5001/api/NurseInformation',
+      contactInformation
+    )
+    console.log(response)
+  }
   return (
-  <section className="wrapper">
-        <section className="optionalRecruiterInformation">
-          <legend className="recruiterAddressLegend">Recruiter Email (Optional)</legend> 
-          <div className="recruiterAddressContainer"><input className="recruiterAddress" name="recruiterAddress" value={recruiterAddress.recruiterAddress} onChange={(e) => setRecruiterAddress(e.target.value)} placeholder="Recruiter Email Address"></input></div>
-        </section>
+    <section className="wrapper">
+      <section className="recruiterInformation">
+        <p className="recruiterEmail">Recruiter Email *</p>
+        <div className="recruiterEmailContainer">
+          <select
+            name="recruiterEmail"
+            value={contactInformation.recruiterEmail}
+            onChange={e => handleChange(e)}
+            className="recruiterAddress"
+            required
+          >
+            <option value={'jeremy@nurse2nursestaffing.com'}>Jeremy</option>
+            <option value={'mary@nurse2nursestaffing.com'}>Mary</option>
+            <option value={'mary@nurse2nursestaffing.com'}>Megan</option>
+            <option value={'nikaela@nurse2nursestaffing.com'}>Nikaela</option>
+            <option value={'tobin@nurse2nursestaffing.com'}>Tobin</option>
+          </select>
+        </div>
+      </section>
       <section className="apiCallBox">
-        <form>
-          <legend className="contactInformation">Contact Information *</legend>
+          <p className="contactInformation">Contact Information *</p>
+        <form className="contactInformationForm">
           <fieldset>
             <section className="row1">
-              <span>First Name:
-              <input
-                placeholder="First Name *"
-                name="firstName"
-                value={contactInformation.firstName}
-                onChange={e => handleChange(e)}
-                required
-              />  </span>
+              <div>
+                First Name:
+                <input
+                  placeholder="First Name *"
+                  name="firstName"
+                  value={contactInformation.firstName}
+                  onChange={e => handleChange(e)}
+                  required
+                />{' '}
+              </div>
 
               <br></br>
-              <span>Last Name:
-              <input
-                placeholder="Last Name *"
-                name="lastName"
-                value={contactInformation.lastName}
-                onChange={e => handleChange(e)}
-                required
-              /></span>
+              <div>
+                Last Name:
+                <input
+                  placeholder="Last Name *"
+                  name="lastName"
+                  value={contactInformation.lastName}
+                  onChange={e => handleChange(e)}
+                  required
+                />
+              </div>
             </section>
             <section className="row2">
-              <span>Email:{' '}
-              <input
-                placeholder="Email *"
-                name="email"
-                value={contactInformation.email}
-                onChange={e => handleChange(e)}
-                required
-              /></span>
+              <div>
+                Email:{' '}
+                <input
+                  placeholder="Email *"
+                  name="nurseEmail"
+                  value={contactInformation.nurseEmail}
+                  onChange={e => handleChange(e)}
+                  required
+                />
+              </div>
               <br></br>
-              <span>Phone Number:{' '}
-              <input
-                type="number"
-                placeholder="Phone Number *"
-                name="phoneNumber"
-                value={contactInformation.phoneNumber}
-                onChange={e => handleChange(e)}
-                placeholder="Phone Number *"
-                required
-              /></span>
+              <div>
+                Phone Number:{' '}
+                <input
+                  type="number"
+                  placeholder="Phone Number *"
+                  name="phoneNumber"
+                  value={contactInformation.phoneNumber}
+                  onChange={e => handleChange(e)}
+                  placeholder="Phone Number *"
+                  required
+                />
+              </div>
             </section>
           </fieldset>
         </form>
       </section>
-        <p className="signature">Signature *</p>
+      <p className="signature">Signature *</p>
       <section className="apiCallBox2">
-        <section className="sigCanvas"><SignatureCanvas
-          backgroundColor="white"
-          penColor="black"
-          canvasProps={{ width: 300, height: 200, className: 'sigCanvas' }}
-          ref={sigCanvas}
-        /></section>
-      <button className="clearButton" onClick={clear}>Clear</button>
-        <span>
-          <input
+        <section className="sigCanvas">
+          <SignatureCanvas
+            backgroundColor="white"
+            penColor="black"
+            canvasProps={{ width: 300, height: 100, className: 'sigCanvas' }}
+            ref={sigCanvas}
+          />
+        <button className="clearButton" onClick={clear}>
+          Clear
+        </button>
+        </section>
+        <div className="finishSection">
+          <p className="certification">
+            I certify this test was filled out to the best of my knowledge.
+          </p>
+          {/* <input
             className="checkbox"
             type="checkbox"
             onChange={() => setCheckBox(true)}
             required
-          />
-          <p className="certification">
-            I certify this test was filled out to the best of my knowledge
-          </p>
-        </span>
-        <button className="submit" disabled={true}>
+          /> */}
+        <button className="finish" disabled={false} onClick={sendEmail}>
           Finish
         </button>
+        </div>
       </section>
-      </section>
+    </section>
   )
 }
 
-export default FormSubmission;
+export default FormSubmission

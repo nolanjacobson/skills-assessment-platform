@@ -4,7 +4,7 @@
 
 html {
   height: 100%;
-  color:black;
+  color: black;
 }
 
 body {
@@ -12,432 +12,376 @@ body {
   min-height: 100%;
 }
 
+.outerBox {
+  width: 100%;
+}
+
 .box {
-  display:flex;
-  justify-content: center;
+  display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  background-color:#C0C0C0;
-  padding-bottom:2rem;
-  padding-top:1rem;
+  background-color: #c0c0c0;
+  padding-bottom: 2rem;
+  padding-top: 1rem;
 }
 
 .chooseTest {
-  font-weight:bold;
-  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+  background-color: #4f63aa;
+  width: 90%;
+  color: white;
+  font-size: 1rem;
+  padding: 0.5rem;
+  border-radius: 12px;
 }
 
-.tempSubmit {
-  margin-top:2rem;
-  font-size:1.5rem;
+.homePagePTag {
+  font-weight: bold;
 }
 
-select {
-  position: relative;
-  display: block;
-  width: 75%;
-  margin: 0 auto;
-  font-family: 'Open Sans', 'Helvetica Neue', 'Segoe UI', 'Calibri', 'Arial', sans-serif;
-  font-size: 18px;
-  color: #60666d;
+.submit {
+  margin-top: 1rem;
+  font-size: 1.5rem;
 }
 
-.ratingsUl {
-  list-style: none;
-  display:flex;
-  justify-content: space-evenly;
-}
-
-.testDataText {
-  font-size: .9rem;
-}
-.credits {
-  font-size:.5rem;
+.wrapEverything {
+  display: flex;
+  flex-direction: column;
 }
 
 .testPageLogo {
- height:3rem;
- margin:1rem;
-}
-
-.standardBox {
-  display:flex;
-  flex-direction:column;
-  background-color:silver;
-  margin:1rem;
-  border-radius:5px;
-  padding-bottom:1rem;
-  border: 1px solid gray;
-  box-shadow: 10px 10px 5px #888888;
-}
-
-.ratingScale {
-  border-radius:12px;
-  width:100%;
-  background-color:#4F63AA;
-  color:white;
-  font-size:1.25rem;
-}
-.ratingP {
-  font-size:.75rem;
-  white-space: normal;
-}
-
-.skillsAssessmentTest {
-  text-align:center;
-  font-family: 'Open Sans';
-  font-size:1.5rem;
-  font-weight:bold;
-}
-
-.apiCallBox {
-  display:flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  border-radius:12px;
-  width:100%;
-}
-
-.apiCallBox2 {
-  display:flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  padding-bottom:2rem;
-  border: 1px solid gray;
-  background-color:silver;
-  width:95%;
+  width: 75%;
   margin: 0 auto;
-  
 }
-
-.recruiterAddress {
+.standardBox {
   display: flex;
-  justify-content: center;
-  width:50%;
-  
-}
-.recruiterAddressContainer {
-  display: flex;
-  justify-content: center;
-  width: 100%;
- 
-}
-.newTestData {
-  list-style-type: none;
-  max-width:100%;
-  padding-inline-start:0rem;
-  padding:1rem;
-  border: 1px solid silver;
-  margin:1rem;
+  flex-direction: column;
+  background-color: silver;
+  margin: 0.75rem;
+  border-radius: 10px;
+  padding-bottom: 2rem;
 }
 
 .fa-plus-square {
   color: #4f63aa;
-  font-size:1rem;
+}
+.skillsAssessmentTest {
+  font-weight: bold;
+  text-align: center;
+  font-size: 1.25rem;
 }
 
-.signature {
-  width:100%;
+.ratingScale {
+  background-color: #4f63aa;
+  font-size: 1.5rem;
+  width: 50%;
   margin: 0 auto;
+  border-radius: 10px;
+  box-shadow: 10px 10px 5px #888888;
+  color: white;
 }
 
-.newCategory {
-  font-size:1.5rem;
-  border: 1px solid gray;
-
+.newTestData {
+  list-style: none;
+  padding-inline-start: 0;
 }
 
 .newTestDataLi {
-  width: 100%;
+  width: 90%;
+  margin: auto;
 }
-
+.newCategory {
+  background-color: #4f63aa;
+  padding: 1.5rem;
+  text-align: center;
+  color: white;
+}
 .flexThem {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-
 }
 
 .headerProficiency {
-  font-size:.75rem;
-}
-.frequencyProficiency {
-  display:flex;
-  justify-content: flex-end;
-  flex-direction: row;
-  padding-right:2rem;
+  font-size: 0.8rem;
 }
 
-.frequencyRatingsLi {
-  justify-self: center;
+.frequencyProficiency {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.ratingsUl {
+  list-style: none;
+}
+
+.recruiterEmail {
+  background-color: #4f63aa;
+  color: white;
+  font-size: 1.5rem;
+  padding: 1.5rem;
+  margin: 1rem;
+}
+
+.recruiterEmailContainer {
+  text-align: center;
+}
+
+.recruiterAddress {
+  font-size: 1.25rem;
+}
+.contactInformation {
+  background-color: #4f63aa;
+  color: white;
+  font-size: 1.5rem;
+  padding: 1.5rem;
+  margin: 1rem;
+}
+
+.contactInformationForm {
+  margin: 1rem;
 }
 
 input {
-  width:100%;
-  margin-top:1rem;
-  margin-bottom: 1rem;
-}
-
-input:focus {
-  border: 3px solid #555;
-}
-
-.contactInformation {
-  background-color: #4f63aa;
-  padding:1rem;
-  color:white;
-  font-weight:lighter;
-  margin: 0 auto;
-  margin-bottom:1rem;  
-  font-size: 1.5rem;
-  width: 90%;
-}
-
-.optionalRecruiterInformation {
-  width:100%;
-  margin: 0 auto;
-  font-size: 1.5rem;
-}
-
-.recruiterAddressLegend {
-  background-color: #4f63aa;
-  color:white;
-  padding:1rem;
-  font-weight:lighter;
-
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
 }
 .signature {
   background-color: #4f63aa;
-  padding:1rem;
-  color:white;
-  font-weight:lighter;
-  font-size:1.5rem;
-  width: 87%;
-  margin: 0 auto;
-  margin-top:1rem;
-  margin-bottom: 1rem;
+  color: white;
+  font-size: 1.5rem;
+  padding: 1.5rem;
+  margin: 1rem;
 }
-
 .sigCanvas {
-  padding-top:1rem;
+  display:flex;
+  flex-direction:column;
+  width:98%;
+  margin: auto;
 }
-.checkbox {
-  height:2rem;
+.clearButton {
+  width:20%;
+  margin: auto;
+}
+.apiCallBox2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem;
+  background-color: silver;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .certification {
+  text-align: center;
+}
+.checkbox {
+  height: 2rem;
+}
+
+.finishSection {
+  font-size:1.5rem;
   text-align:center;
 }
-
-.submit {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+.finish {
   font-size:1.75rem;
 }
-
-.newCategory {
-  background-color: #4f63aa;
-  padding:1rem;
-  color:white;
-  font-weight:lighter;
-}
-
-.wrapper {
-  display:flex;
-  flex-direction:column;
-  justify-content: center;
-  margin:.5rem;
-}
-
-form {
-  width: 98%;
-}
-
-@media (min-width: 768px ) and (max-width: 1024px) {
-  
-  .box {
-    width:25%;
-    margin-top:10rem;
-    margin-left:auto;
-    margin-right:auto;
+@media (min-width: 768px) and (max-width: 1024px) {
+  .testPageLogo {
+    padding: 1rem;
+    width: 30%;
   }
 
-  .recruiterAddressLegend {
-    width: 92%;
-  }
-
-  .row1 {
-    display:flex;
-    flex-direction:row;
-    justify-content: space-evenly;
-
-  }
-
-  .row2 {
-    display:flex;
-    flex-direction:row;
-    justify-content: space-evenly;
-  }
-
-  .apiCallBox {
-    width: 56%;
-    margin: 0 auto;
-    padding-bottom:1rem;
-  }
-
-  .ratingScale {
-    width:10%;
-    margin:0 auto;
-  }
-
-  .newTestData {
-    margin: 0 auto;
-    width:50%;
-  }
-  .optionalRecruiterInformation {
-    width:55%;
-    margin: 0 auto;
-  }
-
-  .signature {
-    width:52%;
-    margin: 0 auto;
-  }
-  .testDataText {
-    font-size:1rem;
-  }
-
-  .fa-plus-e {
-    color:#4f63aa;
-    font-size:1.25rem;
-  }
-
-  .apiCallBox2 {
-    width:55%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top:1rem;
-  }
   .standardBox {
-  max-width:55%;
-  margin: 0 auto;
-  margin-bottom:2rem;
+    margin:2rem;
   }
-  .ratingScale {
-    width:50%;
-  }
-  .recruiterAddress {
+  .ratingsUl {
     display: flex;
-    justify-content: center;
-    width:50%;
-    
+    justify-content: space-evenly;
   }
-  .recruiterAddressContainer {
-    display: flex;
-    justify-content: center;
+  .outerBox {
     width: 100%;
-   
   }
-}
-@media (min-width: 1025px) {
 
-  .contactInformation {
-   margin-left: 0 auto;
-   margin-right: 0 auto;
-
-  }
-  .wrapper {
-    width: 52%;
-    margin: 0 auto;
-  }
-  .wrapEverything {
-    max-width:100%;
-    margin: 0 auto;
-  }
   .box {
-    width:25%;
-    margin-top:10rem;
-    margin-left:auto;
-    margin-right:auto;
-    border-radius: 20px;
-  }
-
-  .row1 {
-    display:flex;
-    flex-direction:row;
-    justify-content: space-evenly;
-  }
-
-  .row2 {
-    display:flex;
-    flex-direction:row;
-    justify-content: space-evenly;
-  }
-
-  .apiCallBox {
-    display:flex;
-        margin: 0 auto;
-    padding-bottom:1rem;
-  }
-
-
-  .ratingScale {
-    width:10%;
-    margin:0 auto;
-  }
-
-  .newTestData {
-    margin: 0 auto;
-    width:50%;
-  }
-  .optionalRecruiterInformation {
-    width:98%;
-    margin: 0 auto;
-    margin-top:1rem;
-  }
-
-  .signature {
-    width: 94%;
-    margin-left: auto;
-    margin-right: auto;
-
-  }
-  .testDataText {
-    font-size:1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #c0c0c0;
+    padding-bottom: 2rem;
+    padding-top: 1rem;
+    width: 50%;
+    margin: auto;
+    border-radius: 12px;
+    margin-top: 5rem;
   }
 
   .fa-plus-square {
-    color:#4f63aa;
-    font-size:1.25rem;
+    color: #4f63aa;
+    font-size: 1.5rem;
   }
 
-  .apiCallBox2 {
-    width:50%;
-    margin-left: auto;
-    margin-right: auto;
+  .row1 {
+    display:flex;
+    flex-direction:row;
+    justify-content: space-evenly;
   }
-
-  .standardBox {
-    max-width:55%;
-    margin: 0 auto;
-    margin-bottom:2rem;
+  .row2 {
+    display:flex;
+    flex-direction:row;
+    justify-content: space-evenly;
   }
+}
 
+@media (min-width: 1024px) {
   .testPageLogo {
-  display: flex;
-  justify-content: center;
-}
-  .imageWrapper {
-  display: flex;
-  justify-content: center;
-  width: 100%;
- 
-}
+    padding: 1rem;
+    width: 15%;
+  }
+  .standardBox {
+    width: 75%;
+    margin: auto;
+  }
+  .ratingsUl {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .outerBox {
+    width: 100%;
+  }
 
-.recruiterAddressLegend {
-  width: 96.5%;
-}
+  .box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #c0c0c0;
+    padding-bottom: 2rem;
+    padding-top: 1rem;
+    width: 40%;
+    margin: auto;
+    border-radius: 10px;
+    margin-top: 5rem;
+  }
 
+  .chooseTest {
+    text-align: center;
+    background-color: #4f63aa;
+    width: 60%;
+    color: white;
+    font-size: 1rem;
+    padding: 0.5rem;
+    border-radius: 12px;
+  }
 
+  .newTestDataLi {
+    width: 75%;
+  }
+
+  .fa-plus-square {
+    color: #4f63aa;
+    font-size: 1.5rem;
+  }
+  .recruiterEmail {
+    background-color: #4f63aa;
+    color: white;
+    font-size: 1.5rem;
+    padding: 1.5rem;
+    width: 75%;
+    margin: auto;
+    margin-bottom:1rem;
+  }
+
+  .recruiterEmailContainer {
+    text-align: center;
+  }
+
+  .recruiterAddress {
+    font-size: 1.25rem;
+  }
+  .contactInformation {
+    background-color: #4f63aa;
+    color: white;
+    font-size: 1.5rem;
+    padding: 1.5rem;
+    width: 75%;
+    margin: auto;
+    margin-top:1rem;
+  }
+
+  .contactInformationForm {
+    width: 50%;
+    margin:auto;
+    margin-top:1rem;
+  }
+
+  input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+  }
+
+  .row1 {
+    display:flex;
+    flex-direction:row;
+    justify-content: space-evenly;
+  }
+  .row2 {
+    display:flex;
+    flex-direction:row;
+    justify-content: space-evenly;
+  }
+  .signature {
+    background-color: #4f63aa;
+    color: white;
+    font-size: 1.5rem;
+    padding: 1.5rem;
+    width: 75%;
+    margin: auto;
+    margin-top:1rem;
+    margin-bottom:1rem;
+  }
+  .sigCanvas {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .clearButton {
+    margin: auto;
+    margin-top: 1rem;
+  }
+
+  .finishSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .apiCallBox2 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto;
+    margin-bottom: 2rem;
+    background-color: silver;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    width: 50%;
+  }
+
+  .finish {
+    width: 25%;
+    font-size: 2rem;
+    margin: auto;
+    margin-top: 1rem;
+  }
 }
