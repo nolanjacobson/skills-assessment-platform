@@ -96,6 +96,7 @@ select {
   flex-direction: column;
   align-items: center;
   border-radius:12px;
+  width:100%;
 }
 
 .apiCallBox2 {
@@ -110,6 +111,19 @@ select {
   margin: 0 auto;
   
 }
+
+.recruiterAddress {
+  display: flex;
+  justify-content: center;
+  width:50%;
+  
+}
+.recruiterAddressContainer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+ 
+}
 .newTestData {
   list-style-type: none;
   max-width:100%;
@@ -122,6 +136,11 @@ select {
 .fa-plus-square {
   color: #4f63aa;
   font-size:1rem;
+}
+
+.signature {
+  width:100%;
+  margin: 0 auto;
 }
 
 .newCategory {
@@ -170,7 +189,6 @@ input:focus {
   padding:1rem;
   color:white;
   font-weight:lighter;
-  width:88%;
   margin: 0 auto;
   margin-bottom:1rem;  
   font-size: 1.5rem;
@@ -187,7 +205,7 @@ input:focus {
   color:white;
   padding:1rem;
   font-weight:lighter;
-  width:
+  width:100%;
 }
 .signature {
   background-color: #4f63aa;
@@ -244,6 +262,10 @@ form {
     margin-right:auto;
   }
 
+  .recruiterAddressLegend {
+    width: 92%;
+  }
+
   .row1 {
     display:flex;
     flex-direction:row;
@@ -258,8 +280,7 @@ form {
   }
 
   .apiCallBox {
-    display:inline;
-    width:55%;
+    width: 56%;
     margin: 0 auto;
     padding-bottom:1rem;
   }
@@ -320,6 +341,15 @@ form {
 }
 @media (min-width: 1025px) {
 
+  .contactInformation {
+   margin-left: 0 auto;
+   margin-right: 0 auto;
+
+  }
+  .wrapper {
+    width: 52%;
+    margin: 0 auto;
+  }
   .wrapEverything {
     max-width:100%;
     margin: 0 auto;
@@ -346,10 +376,10 @@ form {
 
   .apiCallBox {
     display:flex;
-    width:52.5%;
-    margin: 0 auto;
+        margin: 0 auto;
     padding-bottom:1rem;
   }
+
 
   .ratingScale {
     width:10%;
@@ -361,12 +391,13 @@ form {
     width:50%;
   }
   .optionalRecruiterInformation {
-    width:52.5%;
+    width:98%;
     margin: 0 auto;
+    margin-top:1rem;
   }
 
   .signature {
-    width:50.9%;
+    width: 94%;
     margin-left: auto;
     margin-right: auto;
 
@@ -381,7 +412,7 @@ form {
   }
 
   .apiCallBox2 {
-    width:30%;
+    width:50%;
     margin-left: auto;
     margin-right: auto;
   }
@@ -392,28 +423,19 @@ form {
     margin-bottom:2rem;
   }
 
-.recruiterAddress {
+  .testPageLogo {
   display: flex;
   justify-content: center;
-  width:50%;
-  
 }
-.recruiterAddressContainer {
+  .imageWrapper {
   display: flex;
   justify-content: center;
   width: 100%;
  
 }
 
-.testPageLogo {
-  display: flex;
-  justify-content: center;
-}
-.imageWrapper {
-  display: flex;
-  justify-content: center;
-  width: 100%;
- 
+.recruiterAddressLegend {
+  width: 96.5%;
 }
 
 
