@@ -192,6 +192,7 @@ input:focus {
   margin: 0 auto;
   margin-bottom:1rem;  
   font-size: 1.5rem;
+  width: 90%;
 }
 
 .optionalRecruiterInformation {
@@ -205,7 +206,7 @@ input:focus {
   color:white;
   padding:1rem;
   font-weight:lighter;
-  width:100%;
+
 }
 .signature {
   background-color: #4f63aa;
