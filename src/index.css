@@ -403,4 +403,16 @@ form {
  
 }
 
+.testPageLogo {
+  display: flex;
+  justify-content: center;
+}
+.imageWrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+ 
+}
+
+
 }

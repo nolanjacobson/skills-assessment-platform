@@ -20,11 +20,12 @@ const Header = props => {
   const minusButton = '- Rating Scale'
 return ( 
   <>
+  <div className="imageWrapper">
 <img
   className="testPageLogo"
   src={props.nurse2nursestaffingimage}
   alt="Nurse 2 Nurse Staffing Image"
-/>
+/></div>
 <section className="standardBox">
   <p className="skillsAssessmentTest">
     Skills Assessment Test: {props.setTest}
