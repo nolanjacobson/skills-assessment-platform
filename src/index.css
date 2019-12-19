@@ -120,7 +120,7 @@ select {
 }
 
 .fa-plus-square {
-  color:rgb(139, 3, 3);
+  color: #4f63aa;
   font-size:1rem;
 }
 
@@ -281,11 +281,11 @@ form {
     width:52%;
     margin: 0 auto;
   }
-  .testDataText {
+  .testDataText {squar
     font-size:1rem;
   }
 
-  .fa-plus-square {
+  .fa-plus-e {
     color:#4f63aa;
     font-size:1.25rem;
   }
