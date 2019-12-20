@@ -1,7 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react'
 import SignatureCanvas from 'react-signature-canvas'
 import axios from 'axios'
-
+import {Redirect} from 'react-router-dom'
+import ReactPDF from '@react-pdf/renderer';
+import MyDocument from '../components/MyDocument'
 const FormSubmission = () => {
   const [contactInformation, setContactInformation] = useState({
     firstName: '',
@@ -23,26 +25,31 @@ const FormSubmission = () => {
   const clear = () => {
     sigCanvas.current.clear()
   }
-  const [image, setImage] = useState(null)
+  const [image, setImage] = useState()
   const trim = () => {
-    if (!sigCanvas.current.isEmpty()) {
-      setImage(sigCanvas.current.getTrimmedCanvas().toDataURL('image/png'))
-      console.log(image)
-    }
+    setImage(sigCanvas.current.getTrimmedCanvas().toDataURL('image/png'))
+  
   }
 
+const tokenStr = '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'
   const sendEmail = async () => {
-    trim()
-    const response = await axios.post(
-      'https://localhost:5001/api/NurseInformation',
-      contactInformation
-    )
-    console.log(response)
+    // trim()
+    const response1 = await axios.post("https://api.sendgrid.com/v3/mail/send", { headers: {"Authorization" : `Bearer ${tokenStr}`, "content-type" : "application/json"}  , data: {"personalizations":[{"to":[{"email":"nolanjacobson0@gmail.com","name":"Nolan Jacobson"}],"subject":"test success"}],"content": [{"type": "text/plain", "value": "Heya!"}],"from":{"email":"nolanjacobson0@gmail.com","name":"Sam Smith"},"reply_to":{"email":"nolanjacobson0@gmail.com","name":"Sam Smith"}}})
+    console.log(response1)
+    // ReactPDF.render(<MyDocument />, `${__dirname}/example.pdf`)
+    // console.log(image)
+    // const response = await axios.post(
+    //   'https://localhost:5001/api/NurseInformation',
+    //   contactInformation
+    // )
+    
   }
   return (
+    
     <section className="wrapper">
+      {checkBox && <Redirect to ="/"/>}
       <section className="recruiterInformation">
-        <p className="recruiterEmail">Recruiter Email *</p>
+        <p className="recruiterEmail">Recruiter Name *</p>
         <div className="recruiterEmailContainer">
           <select
             name="recruiterEmail"
@@ -60,7 +67,7 @@ const FormSubmission = () => {
         </div>
       </section>
       <section className="apiCallBox">
-          <p className="contactInformation">Contact Information *</p>
+        <p className="contactInformation">Contact Information *</p>
         <form className="contactInformationForm">
           <fieldset>
             <section className="row1">
@@ -124,25 +131,29 @@ const FormSubmission = () => {
             canvasProps={{ width: 300, height: 100, className: 'sigCanvas' }}
             ref={sigCanvas}
           />
-        <button className="clearButton" onClick={clear}>
-          Clear
-        </button>
+          <button className="clearButton" onClick={clear}>
+            Clear
+          </button>
         </section>
         <div className="finishSection">
           <p className="certification">
             I certify this test was filled out to the best of my knowledge.
           </p>
-          {/* <input
-            className="checkbox"
-            type="checkbox"
-            onChange={() => setCheckBox(true)}
-            required
-          /> */}
-        <button className="finish" disabled={false} onClick={sendEmail}>
-          Finish
-        </button>
+          <button
+            className="finish"
+            disabled={
+              (contactInformation.firstName &&
+                contactInformation.lastName &&
+                contactInformation.phoneNumber &&
+                contactInformation.nurseEmail ) == ''
+            }
+            onClick={sendEmail}
+          >
+            Finish
+          </button>
         </div>
       </section>
+      <img src={image}/>
     </section>
   )
 }

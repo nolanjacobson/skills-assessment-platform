@@ -1,12 +1,11 @@
 import React, { useState } from 'react'
 import Ratings from 'react-rating'
-import html2canvas from 'html2canvas'
+
 
 const AddRatings = props => {
   const [frequencyRating, setFrequencyRating] = useState(1)
   const [proficiencyRating, setProficiencyRating] = useState(1)
   const [num, setNum] = useState()
-
   return (
           <li className="newTestDataLi">
             {props.name.includes('*') ? (
