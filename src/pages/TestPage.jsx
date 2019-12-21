@@ -26,7 +26,7 @@ const TestPage = props => {
       <ul className="newTestData">
       {newTestData.map((name, index) => {
         return (
-      <AddRatings name={name} index={index}/>)})}
+      <AddRatings name={name} index={index}  key={index} />)})}
         </ul>
         <FormSubmission/>
     </section>
