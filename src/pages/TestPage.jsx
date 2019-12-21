@@ -4,6 +4,7 @@ import TestData from './data/tests.json'
 import AddRatings from '../components/AddRatings'
 import FormSubmission from '../components/FormSubmission'
 import Header from '../components/Header'
+import jsPDF from 'jspdf'
 const TestPage = props => {
   const [show, setShow] = useState(true)
   const setCategory = props.match.params.category
@@ -12,9 +13,15 @@ const TestPage = props => {
     .filter(category => category.category === setCategory)
     .filter(test => test.testName === setTest)[0].testData
     console.log(newTestData)
-    const [frequencyRatingValue, setFrequencyRatingValue] = useState(0)
-    const [proficiencyRatingValue, setProficiencyRatingValue] = useState(0)
-        
+  
+  // let doc = new jsPDF({
+  //   orientation: 'landscape',
+  //   unit: 'in',
+  //   format: [4, 2]
+  // });
+
+  // doc.text(<TestPage/>)
+  // doc.save('test.pdf')
   return (
     <>
     <section className="wrapEverything">
