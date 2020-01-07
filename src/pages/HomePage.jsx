@@ -63,9 +63,6 @@ const HomePage = () => {
           </select>
           </>
         )}
-        {/* <ReCAPTCHA
-        sitekey="6LfoqMgUAAAAAOOjK4oTxlLYZdPUGVZQXnrFN5Jy"
-        onChange={buttonDrop}/> */}
         {buttonDrop ? <Link to={`/${listen}/${uri}`}><button className="submit">Start</button></Link> : (<></>)}
       </section>
     </div>

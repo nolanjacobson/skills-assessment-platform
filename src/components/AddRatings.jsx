@@ -1,20 +1,19 @@
 import React, { useState, useEffect } from 'react'
 import Ratings from 'react-rating'
+import jsPDF from 'jspdf'
+import axios from 'axios'
 
 const AddRatings = props => {
-  const [frequencyRating, setFrequencyRating] = useState(0)
-  const [proficiencyRating, setProficiencyRating] = useState(0)
-  const [frequencyRatingSum, setFrequencyRatingSum] = useState([])
-  const [proficiencyRatingSum, setProficiencyRatingSum] = useState([])
+  const [frequencyRating, setFrequencyRating] = useState(1)
+  const [proficiencyRating, setProficiencyRating] = useState(1)
 
-  // useEffect(() => {
-  //   setProficiencyRatingSum(prev => prev += proficiencyRating)
-  //   console.log(proficiencyRatingSum)
-  // }, [proficiencyRating])
-
+  useEffect(() => {
+    props.updatePageData(props.name, frequencyRating, proficiencyRating)
+  }, [frequencyRating, proficiencyRating])
+  
   return (
     <li className="newTestDataLi">
-      {props.name.includes('*') ? (
+      {/* {props.name.includes('*') ? (
         <>
           <h1 className="newCategory">{props.name}</h1>{' '}
           <section className="flexThem">
@@ -24,7 +23,7 @@ const AddRatings = props => {
           </section>
           <hr></hr>
         </>
-      ) : (
+      ) : ( */}
         <>
           <span className="testDataText">{props.name}</span>{' '}
           <section className="frequencyProficiency">
@@ -32,8 +31,8 @@ const AddRatings = props => {
               start={0}
               stop={4}
               initialRating={proficiencyRating}
-              emptySymbol="far fa-plus-square"
-              fullSymbol="fas fa-plus-square"
+              emptySymbol={'far fa-plus-square'}
+              fullSymbol={'fas fa-plus-square'}
               // placeholderSymbol="fas fa-heartbeat"
               onClick={rating => setProficiencyRating(rating)}
             />
@@ -42,15 +41,15 @@ const AddRatings = props => {
               start={0}
               stop={4}
               initialRating={frequencyRating}
-              emptySymbol="far fa-plus-square"
-              fullSymbol="fas fa-plus-square"
-              // placeholderSymbol="fas fa-heartbeat"
-              onClick={newRating => setFrequencyRating(newRating)}
+              emptySymbol={<i class="far fa-plus-square"></i>}
+              fullSymbol={<i class="fas fa-plus-square"></i>}
+              placeholderSymbol="fas fa-heartbeat"
+              onClick={rating => setFrequencyRating(rating)}
             />
           </section>
           <hr></hr>
         </>
-      )}
+      }
       {'  '}
     </li>
   )

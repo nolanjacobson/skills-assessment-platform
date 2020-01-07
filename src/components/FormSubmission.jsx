@@ -4,53 +4,22 @@ import axios from 'axios'
 import { Redirect } from 'react-router-dom'
 import ReactPDF from '@react-pdf/renderer'
 import MyDocument from '../components/MyDocument'
-const FormSubmission = () => {
-  const [contactInformation, setContactInformation] = useState({
-    firstName: '',
-    lastName: '',
-    nurseEmail: '',
-    phoneNumber: '',
-    recruiterEmail: 'jeremy@nurse2nursestaffing.com',
-  })
+import AddRatings from '../components/AddRatings'
+import * as jsPDF from 'jspdf'
+import ReactDOMServer from 'react-dom/server'
+import html2canvas from 'html2canvas'
 
-  const [checkBox, setCheckBox] = useState(false)
-  const handleChange = e => {
-    e.persist()
-    setContactInformation(prev => ({
-      ...prev,
-      [e.target.name]: e.target.value,
-    }))
-  }
-  const sigCanvas = useRef(null)
-  const clear = () => {
-    sigCanvas.current.clear()
-  }
-  const [image, setImage] = useState()
-  const trim = () => {
-    setImage(sigCanvas.current.getTrimmedCanvas().toDataURL('image/png'))
-  }
-
-
-  const sendEmail = async () => {
-    trim()
-    // ReactPDF.render(<MyDocument />, `${__dirname}/example.pdf`)
-    console.log(image)
-    const response = await axios.post(
-      'https://localhost:5001/api/NurseInformation',
-      contactInformation
-      )
-      setCheckBox(true)
-  }
+const FormSubmission = props => {
   return (
-    <section className="wrapper">
-      {checkBox && <Redirect to="/" />}
+    <section className="wrapper" data-html2canvas-ignore>
+      {props.checkBox && <Redirect to="/" />}
       <section className="recruiterInformation">
         <p className="recruiterEmail">Recruiter Name *</p>
         <div className="recruiterEmailContainer">
           <select
             name="recruiterEmail"
-            value={contactInformation.recruiterEmail}
-            onChange={e => handleChange(e)}
+            value={props.contactInformation.recruiterEmail}
+            onChange={e => props.handleChange(e)}
             className="recruiterAddress"
             required
           >
@@ -59,21 +28,22 @@ const FormSubmission = () => {
             <option value={'mary@nurse2nursestaffing.com'}>Megan</option>
             <option value={'nikaela@nurse2nursestaffing.com'}>Nikaela</option>
             <option value={'tobin@nurse2nursestaffing.com'}>Tobin</option>
+            <option value={'nolanjacobson0@Gmail.com'}>Nolan</option>
           </select>
         </div>
       </section>
       <section className="apiCallBox">
         <p className="contactInformation">Contact Information *</p>
-        <form className="contactInformationForm">
-          <fieldset>
+        <form className="contactInformationForm" onSubmit={props.sendEmail}>
+          <section className="shrinkThis">
             <section className="row1">
               <div>
                 First Name:
                 <input
                   placeholder="First Name *"
                   name="firstName"
-                  value={contactInformation.firstName}
-                  onChange={e => handleChange(e)}
+                  value={props.contactInformation.firstName}
+                  onChange={e => props.handleChange(e)}
                   required
                 />{' '}
               </div>
@@ -84,8 +54,8 @@ const FormSubmission = () => {
                 <input
                   placeholder="Last Name *"
                   name="lastName"
-                  value={contactInformation.lastName}
-                  onChange={e => handleChange(e)}
+                  value={props.contactInformation.lastName}
+                  onChange={e => props.handleChange(e)}
                   required
                 />
               </div>
@@ -96,8 +66,8 @@ const FormSubmission = () => {
                 <input
                   placeholder="Email *"
                   name="nurseEmail"
-                  value={contactInformation.nurseEmail}
-                  onChange={e => handleChange(e)}
+                  value={props.contactInformation.nurseEmail}
+                  onChange={e => props.handleChange(e)}
                   required
                 />
               </div>
@@ -108,48 +78,57 @@ const FormSubmission = () => {
                   type="number"
                   placeholder="Phone Number *"
                   name="phoneNumber"
-                  value={contactInformation.phoneNumber}
-                  onChange={e => handleChange(e)}
+                  value={props.contactInformation.phoneNumber}
+                  onChange={e => props.handleChange(e)}
                   placeholder="Phone Number *"
                   required
                 />
               </div>
             </section>
-          </fieldset>
+          </section>
+          <p className="signature">Signature *</p>
+          <section className="apiCallBox2">
+            <section className="sigCanvas">
+              <SignatureCanvas
+                backgroundColor="white"
+                penColor="black"
+                canvasProps={{ width: 300, height: 150 }}
+                ref={props.sigCanvas}
+              />
+              <section className="flexButtons">
+                <button
+                  type="button"
+                  className="saveButton"
+                  onClick={props.save}
+                >
+                  Save *
+                </button>
+                <button
+                  type="button"
+                  className="clearButton"
+                  onClick={props.clear}
+                >
+                  Clear
+                </button>
+              </section>
+            </section>
+            <div className="finishSection">
+              <p className="certification">
+                I certify this test was filled out to the best of my knowledge.
+              </p>
+              <button
+                className="finish"
+                disabled={props.contactInformation.signatureCanvas === 'val'}
+                type="submit"
+                onClick={props.sendEmail}
+              >
+                Finish
+              </button>
+            
+            </div>
+          </section>
         </form>
       </section>
-      <p className="signature">Signature *</p>
-      <section className="apiCallBox2">
-        <section className="sigCanvas">
-          <SignatureCanvas
-            backgroundColor="white"
-            penColor="black"
-            canvasProps={{ width: 300, height: 150 }}
-            ref={sigCanvas}
-          />
-          <button className="clearButton" onClick={clear}>
-            Clear
-          </button>
-        </section>
-        <div className="finishSection">
-          <p className="certification">
-            I certify this test was filled out to the best of my knowledge.
-          </p>
-          <button
-            className="finish"
-            disabled={
-              (contactInformation.firstName &&
-                contactInformation.lastName &&
-                contactInformation.phoneNumber &&
-                contactInformation.nurseEmail) == ''
-            }
-            onClick={() => sendEmail()}
-          >
-            Finish
-          </button>
-        </div>
-      </section>
-      <img src={image} />
     </section>
   )
 }

@@ -1,11 +1,8 @@
 {
   "categories": [
     {
-    "category": "Advanced Practice",
-    "tests": [
-      "CRNA",
-      "Nurse Practitioner (NP)"
-    ]
+      "category": "Advanced Practice",
+      "tests": ["CRNA", "Nurse Practitioner (NP)"]
     },
     {
       "category": "Allied Health",
@@ -87,15 +84,15 @@
         "Wound Care / Ostomy"
       ]
     },
-        {
-          "category": "Rehab Therapy",
-          "tests": [
-            "Occupational Therapist (OT)",
-            "Occupational Therapist Assistant (COTA)",
-            "Physical Therapist (PT)",
-            "Physical Therapist Assistant (PTA)",
-            "Speech Language Pathologist (SLP)"
-          ]
-        }
+    {
+      "category": "Rehab Therapy",
+      "tests": [
+        "Occupational Therapist (OT)",
+        "Occupational Therapist Assistant (COTA)",
+        "Physical Therapist (PT)",
+        "Physical Therapist Assistant (PTA)",
+        "Speech Language Pathologist (SLP)"
       ]
+    }
+  ]
 }

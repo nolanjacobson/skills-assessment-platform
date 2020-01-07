@@ -19,7 +19,7 @@ const Header = props => {
   const plusButton = '+ Rating Scale'
   const minusButton = '- Rating Scale'
   return (
-    <>
+    <section data-html2canvas-ignore>
       <img
         className="testPageLogo"
         src={props.nurse2nursestaffingimage}
@@ -46,6 +46,7 @@ const Header = props => {
                     return (
                       <p className="ratingP">
                         <Ratings
+                          className="ratingP"
                           start={0}
                           stop={index}
                           initialRating={index}
@@ -90,7 +91,7 @@ const Header = props => {
           <></>
         )}
       </nav>
-    </>
+    </section>
   )
 }
 
