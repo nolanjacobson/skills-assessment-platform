@@ -2,16 +2,10 @@ import React, { useState, useEffect, useRef } from 'react'
 import SignatureCanvas from 'react-signature-canvas'
 import axios from 'axios'
 import { Redirect } from 'react-router-dom'
-import ReactPDF from '@react-pdf/renderer'
-import MyDocument from '../components/MyDocument'
-import AddRatings from '../components/AddRatings'
-import * as jsPDF from 'jspdf'
-import ReactDOMServer from 'react-dom/server'
-import html2canvas from 'html2canvas'
 
 const FormSubmission = props => {
   return (
-    <section className="wrapper" data-html2canvas-ignore>
+    <section className="wrapper">
       {props.checkBox && <Redirect to="/" />}
       <section className="recruiterInformation">
         <p className="recruiterEmail">Recruiter Name *</p>
@@ -92,7 +86,7 @@ const FormSubmission = props => {
               <SignatureCanvas
                 backgroundColor="white"
                 penColor="black"
-                canvasProps={{ width: 300, height: 150 }}
+                canvasProps={{className:'siggCanvas'}}
                 ref={props.sigCanvas}
               />
               <section className="flexButtons">
@@ -124,7 +118,6 @@ const FormSubmission = props => {
               >
                 Finish
               </button>
-            
             </div>
           </section>
         </form>

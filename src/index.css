@@ -1,5 +1,5 @@
 :root {
-  font: 16px / 1 sans-serif ;
+  font: 16px / 1 sans-serif;
 }
 
 html {
@@ -53,6 +53,8 @@ body {
 .testPageLogo {
   width: 75%;
   margin: 0 auto;
+  display:flex;
+  justify-content: center;
 }
 .standardBox {
   display: flex;
@@ -105,6 +107,10 @@ body {
 
 .headerProficiency {
   font-size: 0.8rem;
+}
+
+.flexRight {
+  color: black;
 }
 
 .frequencyProficiency {
@@ -163,6 +169,7 @@ input {
   width: 98%;
   margin: auto;
 }
+
 .clearButton {
   margin-top: 1rem;
   font-weight: bold;
@@ -198,6 +205,7 @@ input {
 
 .certification {
   text-align: center;
+  font-size: 0.9rem;
 }
 .checkbox {
   height: 2rem;
@@ -210,16 +218,32 @@ input {
 .finish {
   border: none;
   color: white;
-  padding: 15px 32px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
+  font-size: 2rem;
   background-color: #4f63aa;
   -webkit-transition-duration: 0.4s;
   transition-duration: 0.4s;
 }
 
+.sigCanvas {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.siggCanvas {
+  width: 245px;
+  height: 200px;
+  border: 1px solid black;
+
+}
+
+.flexButtons {
+  text-align: center;
+  margin: 0.5rem;
+}
 .finish:hover {
   background-color: white;
   color: black;
@@ -228,6 +252,7 @@ input {
   .testPageLogo {
     padding: 1rem;
     width: 30%;
+   
   }
 
   .standardBox {
@@ -269,6 +294,12 @@ input {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+  }
+
+  .siggCanvas {
+    width: 685px;
+    height: 200px;
+    border: 1px solid black;
   }
 }
 
@@ -326,7 +357,7 @@ input {
     color: white;
     font-size: 1.5rem;
     padding: 1.5rem;
-    width: 75%;
+    width: 72.5%;
     margin: auto;
     margin-bottom: 1rem;
   }
@@ -343,7 +374,7 @@ input {
     color: white;
     font-size: 1.5rem;
     padding: 1.5rem;
-    width: 75%;
+    width: 72.5%;
     margin: auto;
     margin-top: 1rem;
   }
@@ -356,7 +387,7 @@ input {
 
   .shrinkThis {
     border: 1px solid gray;
-    width: 50%;
+    width: 55%;
     margin: auto;
     padding: 1rem;
   }
@@ -385,7 +416,7 @@ input {
     font-size: 1.5rem;
     padding: 1.5rem;
     margin: auto;
-    width: 75%;
+    width: 72.5%;
     margin-top: 1rem;
     margin-bottom: 1rem;
   }
@@ -413,16 +444,22 @@ input {
     align-items: center;
     margin: auto;
     margin-bottom: 2rem;
-    background-color: silver;
+    background-color: rgb(219, 219, 219);
     padding-top: 1rem;
     padding-bottom: 1rem;
-    width: 30%;
+    width: 50%;
+    border: 1px solid black;
   }
 
   .finish {
-    width: 25%;
+    width: 50%;
     font-size: 2rem;
     margin: auto;
     margin-top: 1rem;
+  }
+  .siggCanvas {
+    width: 700px;
+    height: 200px;
+    border: 1px solid black;
   }
 }

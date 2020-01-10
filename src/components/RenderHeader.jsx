@@ -1,7 +1,7 @@
 import React from 'react'
 import Ratings from 'react-rating'
 
-const Header = props => {
+const RenderHeader = props => {
   const proficiencyRatingsList = [
     'Proficiency Rating Labels',
     'Inexperienced - no experience',
@@ -19,7 +19,7 @@ const Header = props => {
   const plusButton = '+ Rating Scale'
   const minusButton = '- Rating Scale'
   return (
-    <section data-html2canvas-ignore>
+    <section>
       <img
         className="testPageLogo"
         src={props.nurse2nursestaffingimage}
@@ -95,4 +95,4 @@ const Header = props => {
   )
 }
 
-export default Header
+export default RenderHeader

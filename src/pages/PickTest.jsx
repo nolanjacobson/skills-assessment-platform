@@ -2,9 +2,8 @@ import React, { useState, useEffect } from 'react'
 import nurse2nursestaffingimage from './images/nurse2nurse.png'
 import data from './data/categories.json'
 import {Link} from 'react-router-dom'
-// import ReCAPTCHA from 'react-google-recaptcha'
 
-const HomePage = () => {
+const PickTest = () => {
   const [listen, setListen] = useState('Advanced Practice')
   const [showNext, setShowNext] = useState(false)
   const [secondListen, setSecondListen] = useState()
@@ -69,4 +68,4 @@ const HomePage = () => {
   )
 }
 
-export default HomePage
+export default PickTest
