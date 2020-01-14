@@ -1,9 +1,55 @@
 import React from 'react'
+import nurse2nursestaffingimage from './images/nurse2nurse.png'
 
 const HiddenTable = props => {
   return (
     <table id="table" style={{ display: 'none' }}>
       <tbody>
+        <>
+          <tr>
+            <td>Employee Name: {props.nurseName}</td>
+            <td>Test Name: {props.testName}</td>
+            <td>Date Completed: {props.dateCompleted}</td>
+          </tr>
+          <tr>
+            <td>Overall Competency Score: {props.overallCompetencyScore}</td>
+            <td>Overall Proficiency Score: {props.overallProficiencyScore}</td>
+            <td>Overall Frequency Score: {props.overallFrequencyScore}</td>
+          </tr>
+          <tr>
+            <td>Legend</td>
+          </tr>
+          <tr>
+            <td>Proficiency Rating Labels</td>
+          </tr>
+          <tr>
+            <td>1 = Inexperienced - no experience</td>
+          </tr>
+          <tr>
+            <td>2 = Novice - need assistance</td>
+          </tr>
+          <tr>
+            <td>3 = Proficient - perform independently</td>
+          </tr>
+          <tr>
+            <td>4 = Expert - serve as a resource</td>
+          </tr>
+          <tr>
+            <td>Frequency Rating Labels</td>
+          </tr>
+          <tr>
+            <td>1 = Never - observed only</td>
+          </tr>
+          <tr>
+            <td>2 = Sometimes - couple times a year</td>
+          </tr>
+          <tr>
+            <td>3 = Often - couple times a month</td>
+          </tr>
+          <tr>
+            <td>4 = Frequent - daily or weekly</td>
+          </tr>
+        </>
         {props.newTestData.map((header, sectionIndex) => {
           return (
             <>
@@ -12,14 +58,12 @@ const HiddenTable = props => {
                   {header.header}{' '}
                 </td>
                 <td>
-                  Proficiency:
-                  {props.profAverage.map(prof => {
-                    console.log(prof)
-                  })}
-                  Frequency:
-                  {props.freqAverage.map(freq => {
-                    return console.log(freq)
-                  })}
+                  Avg Proficiency:
+                  {props.proficiencyAverage[sectionIndex]}
+                </td>
+                <td>
+                  Avg Frequency:
+                  {props.frequencyAverage[sectionIndex]}
                 </td>
               </tr>
 
@@ -29,10 +73,8 @@ const HiddenTable = props => {
                     <>
                       <tr>
                         <td>{question}</td>
-                        {/* <td>
-                      {eventListener &&
-                        Object.values(pageData[header.header].freq)[index]}
-                    </td> */}
+                        <td>{props.profScores[index]}</td>
+                        <td>{props.freqScores[index]}</td>
                       </tr>
                     </>
                   )

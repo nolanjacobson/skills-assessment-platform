@@ -17,7 +17,6 @@ const TestPageData = props => {
   const newTestData = TestData.tests
     .filter(category => category.category === setCategory)
     .filter(test => test.testname === setTest)[0].sections
-  console.log(newTestData)
   const [checkBox, setCheckBox] = useState(false)
   const [contactInformation, setContactInformation] = useState({
     firstName: '',
@@ -60,27 +59,77 @@ const TestPageData = props => {
     })
   }
 
+  const generatePdf = () => {
+    var doc = new jsPDF()
+    doc.setFontSize(40)
+    doc.autoTable({
+      html: '#table',
+      includeHiddenHtml: true,
+      didParseCell: data => {
+        console.log(data.table.body)
+        for (let i = 0; i < data.table.body.length; i++) {
+          if (data.table.body[i].cells[1].text[0].includes('Proficiency:')) {
+            data.table.body[i].cells[0].styles.fillColor = '#4f63aa'
+            data.table.body[i].cells[0].styles.fontStyle = 'bold'
+            data.table.body[i].cells[0].styles.fontSize = 20
+            data.table.body[i].cells[1].styles.fillColor = '#4f63aa'
+            data.table.body[i].cells[2].styles.fillColor = '#4f63aa'
+            data.table.body[i].cells[0].styles.textColor = '#FFFFFF'
+            data.table.body[i].cells[1].styles.textColor = '#FFFFFF'
+            data.table.body[i].cells[2].styles.textColor = '#FFFFFF'
+          } else if (data.table.body[0]) {
+            data.table.body[0].cells[0].styles.fillColor = '#FFFFFF'
+            data.table.body[0].cells[1].styles.fillColor = '#FFFFFF'
+            data.table.body[0].cells[2].styles.fillColor = '#FFFFFF'
+            data.table.body[0].cells[0].styles.fontSize = 15
+            data.table.body[0].cells[1].styles.fontSize = 15
+            data.table.body[0].cells[2].styles.fontSize = 15
+            data.table.body[0].cells[0].styles.textColor = '#000000'
+            data.table.body[0].cells[1].styles.textColor = '#000000'
+            data.table.body[0].cells[2].styles.textColor = '#000000'
+          }
+        }
+
+        data.table.body[1].cells[0].styles.fillColor = '#FFFFFF'
+        data.table.body[1].cells[1].styles.fillColor = '#FFFFFF'
+        data.table.body[1].cells[2].styles.fillColor = '#FFFFFF'
+        data.table.body[1].cells[0].styles.fontSize = 15
+        data.table.body[1].cells[1].styles.fontSize = 15
+        data.table.body[1].cells[2].styles.fontSize = 15
+        data.table.body[1].cells[0].styles.textColor = '#000000'
+        data.table.body[1].cells[1].styles.textColor = '#000000'
+        data.table.body[1].cells[2].styles.textColor = '#000000'
+        data.table.body[3].cells[0].styles.fontStyle = 'bold'
+        data.table.body[3].cells[0].styles.fontSize = 12
+        data.table.body[3].cells[0].styles.textColor = '#000000'
+        data.table.body[8].cells[0].styles.fontStyle = 'bold'
+        data.table.body[8].cells[0].styles.fontSize = 12
+        data.table.body[8].cells[0].styles.textColor = '#000000'
+      },
+    })
+
+    var output = doc.output('datauristring')
+
+    doc.save('test')
+    contactInformation.testDataPdf = output
+  }
+
   const save = () => {
+    setEventListener(true)
     contactInformation.signatureCanvas = sigCanvas.current
       .getTrimmedCanvas()
       .toDataURL('image/png')
       .toString()
-    console.log(contactInformation.signatureCanvas)
     setImage(sigCanvas.current.getTrimmedCanvas().toDataURL('image/png'))
-
-    console.log(contactInformation.testDataPdf)
-    console.log('data:application/pdf;filename=generated.pdf;base64,'.length)
-    setEventListener(true)
   }
 
   const sendEmail = async e => {
     e.preventDefault()
-    console.log(contactInformation.signatureCanvas)
+    generatePdf()
     const response = await axios.post(
       'https://localhost:5001/api/NurseInformation',
       contactInformation
     )
-    setCheckBox(true)
   }
 
   useEffect(() => {
@@ -107,6 +156,20 @@ const TestPageData = props => {
         setLengths(previous => {
           return [...previous, Object.keys(pageData[header.header]).length]
         })
+        newTestData[sectionIndex].questions.map(rating => {
+          setFreqScores(previous => {
+            return [
+              ...previous,
+              Object.values(pageData[header.header][rating])[0],
+            ]
+          })
+          setProfScores(previous => {
+            return [
+              ...previous,
+              Object.values(pageData[header.header][rating])[1],
+            ]
+          })
+        })
         setCheckBox(true)
       })
     }
@@ -127,7 +190,6 @@ const TestPageData = props => {
       })
     }
     if (freqSum.length > 0) {
-      console.log(freqSum)
       const add = (a, b) => a + b
 
       const freqTotal = freqSum.reduce(add)
@@ -137,50 +199,27 @@ const TestPageData = props => {
       setOverallProfScore(profTotal / questionLength)
     }
 
-    setShowNow(true)
+    if (!showNow) {
+      setShowNow(true)
+    } else {
+      setShowNow(false)
+    }
   }, [checkBox])
 
-  useEffect(() => {
-    if (showNow) {
-      setAnotherShowNow(true)
-      var doc = new jsPDF()
-      doc.setFontSize(40)
-      doc.text('Hello World', 35, 25)
-      doc.autoTable({
-        html: '#table',
-        includeHiddenHtml: true,
-        didParseCell: data => {
-          for (let i = 0; i < data.table.body.length; i++) {
-            if (data.table.body[i].cells[1].text[0].includes('Proficiency:')) {
-              data.table.body[i].cells[0].styles.fillColor = '#4f63aa'
-              data.table.body[i].cells[0].styles.fontStyle = 'bold'
-              data.table.body[i].cells[0].styles.fontSize = 20
-              data.table.body[i].cells[1].styles.fillColor = '#4f63aa'
-              data.table.body[i].cells[0].styles.textColor = '#FFFFFF'
-              data.table.body[i].cells[1].styles.textColor = '#FFFFFF'
-            }
-          }
-        },
-      })
-      var output = doc.output('datauristring')
-      contactInformation.testDataPdf = output
-
-      doc.save('test')
-    }
-  }, [showNow])
-
-  const [anotherShowNow, setAnotherShowNow] = useState(false)
   const [showNow, setShowNow] = useState(false)
   const [lengths, setLengths] = useState([])
   const [profSum, setProfSum] = useState([])
   const [freqSum, setFreqSum] = useState([])
+  const [freqScores, setFreqScores] = useState([])
+  const [profScores, setProfScores] = useState([])
   const [profAverage, setProfAverage] = useState([])
   const [freqAverage, setFreqAverage] = useState([])
-  const [overallFreqScore, setOverallFreqScore] = useState()
-  const [overallProfScore, setOverallProfScore] = useState()
+  const [overallFreqScore, setOverallFreqScore] = useState(0)
+  const [overallProfScore, setOverallProfScore] = useState(0)
+  const [overallCompetencyScore, setOverallCompetencyScore] = useState(0)
   return (
     <>
-      {console.log(contactInformation.testDataPdf)}
+      {console.log(overallCompetencyScore, overallFreqScore, overallProfScore)}
       <section id="wrapEverything">
         <RenderHeader
           show={show}
@@ -210,15 +249,6 @@ const TestPageData = props => {
                     }
                   )}
                 </li>
-                {anotherShowNow && (
-                  <HiddenTable
-                    newTestData={newTestData}
-                    freqAverage={freqAverage}
-                    profAverage={profAverage}
-                  />
-                )}
-                {console.log(freqAverage)}
-                {console.log(freqAverage[sectionIndex])}
               </>
             )
           })}
@@ -230,6 +260,24 @@ const TestPageData = props => {
           sigCanvas={sigCanvas}
           handleChange={handleChange}
           contactInformation={contactInformation}
+        />
+        <HiddenTable
+          newTestData={newTestData}
+          frequencyAverage={freqAverage}
+          proficiencyAverage={profAverage}
+          overallCompetencyScore={(overallFreqScore + overallProfScore) / 2}
+          overallFrequencyScore={overallFreqScore}
+          overallProficiencyScore={overallProfScore}
+          freqScores={freqScores}
+          profScores={profScores}
+          testName={setTest}
+          nurseName={`${contactInformation.firstName} ${contactInformation.lastName}`}
+          dateCompleted={new Date()
+            .toLocaleString()
+            .replace(',', '')
+            .replace(/:.. /, ' ')}
+          pageData={pageData}
+          signature={contactInformation.signatureCanvas}
         />
       </section>
     </>
