@@ -1,5 +1,4 @@
 import React from 'react'
-import nurse2nursestaffingimage from './images/nurse2nurse.png'
 
 const HiddenTable = props => {
   return (

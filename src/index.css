@@ -247,6 +247,10 @@ input {
   background-color: white;
   color: black;
 }
+
+.success {
+  text-align: center;
+}
 @media (min-width: 768px) and (max-width: 1024px) {
   .testPageLogo {
     padding: 1rem;

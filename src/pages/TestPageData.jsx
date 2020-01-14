@@ -9,6 +9,7 @@ import CategoryHeader from '../components/CategoryHeader'
 import * as jsPDF from 'jspdf'
 import 'jspdf-autotable'
 import HiddenTable from './HiddenTable'
+import { Redirect } from 'react-router-dom'
 const TestPageData = props => {
   const [show, setShow] = useState(false)
   const [anotherValue, setAnotherValue] = useState(false)
@@ -130,7 +131,12 @@ const TestPageData = props => {
       'https://localhost:5001/api/NurseInformation',
       contactInformation
     )
+    if (response.status === 200) {
+      setSuccess(true)
+    }
   }
+
+  const [success, setSuccess] = useState(false)
 
   useEffect(() => {
     if (eventListener) {
@@ -219,6 +225,7 @@ const TestPageData = props => {
   const [overallCompetencyScore, setOverallCompetencyScore] = useState(0)
   return (
     <>
+      {success && <Redirect to="/success" />}
       {console.log(overallCompetencyScore, overallFreqScore, overallProfScore)}
       <section id="wrapEverything">
         <RenderHeader
