@@ -6,6 +6,9 @@ import FormSubmission from '../components/FormSubmission'
 import RenderHeader from '../components/RenderHeader'
 import axios from 'axios'
 import CategoryHeader from '../components/CategoryHeader'
+import * as jsPDF from 'jspdf'
+import 'jspdf-autotable'
+import HiddenTable from './HiddenTable'
 const TestPageData = props => {
   const [show, setShow] = useState(false)
   const [anotherValue, setAnotherValue] = useState(false)
@@ -23,7 +26,7 @@ const TestPageData = props => {
     phoneNumber: '',
     recruiterEmail: '',
     signatureCanvas: 'val',
-    pdfOutput: '',
+    testDataPdf: '',
   })
 
   const handleChange = e => {
@@ -57,8 +60,6 @@ const TestPageData = props => {
     })
   }
 
-  console.log(pageData)
-
   const save = () => {
     contactInformation.signatureCanvas = sigCanvas.current
       .getTrimmedCanvas()
@@ -66,6 +67,9 @@ const TestPageData = props => {
       .toString()
     console.log(contactInformation.signatureCanvas)
     setImage(sigCanvas.current.getTrimmedCanvas().toDataURL('image/png'))
+
+    console.log(contactInformation.testDataPdf)
+    console.log('data:application/pdf;filename=generated.pdf;base64,'.length)
     setEventListener(true)
   }
 
@@ -112,13 +116,13 @@ const TestPageData = props => {
     if (checkBox) {
       profSum.map((prof, index) => {
         setProfAverage(previous => {
-          return [Math.floor(prof / lengths[index])]
+          return [...previous, Math.floor(prof / lengths[index])]
         })
       })
 
       freqSum.map((freq, index) => {
         setFreqAverage(previous => {
-          return [Math.floor(freq / lengths[index])]
+          return [...previous, Math.floor(freq / lengths[index])]
         })
       })
     }
@@ -132,13 +136,40 @@ const TestPageData = props => {
       setOverallFreqScore(freqTotal / questionLength)
       setOverallProfScore(profTotal / questionLength)
     }
-    if (!showNow) {
-      setShowNow(true)
-    } else {
-      setShowNow(false)
-    }
+
+    setShowNow(true)
   }, [checkBox])
 
+  useEffect(() => {
+    if (showNow) {
+      setAnotherShowNow(true)
+      var doc = new jsPDF()
+      doc.setFontSize(40)
+      doc.text('Hello World', 35, 25)
+      doc.autoTable({
+        html: '#table',
+        includeHiddenHtml: true,
+        didParseCell: data => {
+          for (let i = 0; i < data.table.body.length; i++) {
+            if (data.table.body[i].cells[1].text[0].includes('Proficiency:')) {
+              data.table.body[i].cells[0].styles.fillColor = '#4f63aa'
+              data.table.body[i].cells[0].styles.fontStyle = 'bold'
+              data.table.body[i].cells[0].styles.fontSize = 20
+              data.table.body[i].cells[1].styles.fillColor = '#4f63aa'
+              data.table.body[i].cells[0].styles.textColor = '#FFFFFF'
+              data.table.body[i].cells[1].styles.textColor = '#FFFFFF'
+            }
+          }
+        },
+      })
+      var output = doc.output('datauristring')
+      contactInformation.testDataPdf = output
+
+      doc.save('test')
+    }
+  }, [showNow])
+
+  const [anotherShowNow, setAnotherShowNow] = useState(false)
   const [showNow, setShowNow] = useState(false)
   const [lengths, setLengths] = useState([])
   const [profSum, setProfSum] = useState([])
@@ -149,6 +180,7 @@ const TestPageData = props => {
   const [overallProfScore, setOverallProfScore] = useState()
   return (
     <>
+      {console.log(contactInformation.testDataPdf)}
       <section id="wrapEverything">
         <RenderHeader
           show={show}
@@ -178,6 +210,15 @@ const TestPageData = props => {
                     }
                   )}
                 </li>
+                {anotherShowNow && (
+                  <HiddenTable
+                    newTestData={newTestData}
+                    freqAverage={freqAverage}
+                    profAverage={profAverage}
+                  />
+                )}
+                {console.log(freqAverage)}
+                {console.log(freqAverage[sectionIndex])}
               </>
             )
           })}

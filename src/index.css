@@ -53,7 +53,7 @@ body {
 .testPageLogo {
   width: 75%;
   margin: 0 auto;
-  display:flex;
+  display: flex;
   justify-content: center;
 }
 .standardBox {
@@ -228,7 +228,7 @@ input {
 }
 
 .sigCanvas {
-  display:flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
 }
@@ -237,7 +237,6 @@ input {
   width: 245px;
   height: 200px;
   border: 1px solid black;
-
 }
 
 .flexButtons {
@@ -252,7 +251,6 @@ input {
   .testPageLogo {
     padding: 1rem;
     width: 30%;
-   
   }
 
   .standardBox {

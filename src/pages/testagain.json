@@ -1,0 +1,808 @@
+{
+  "Cardiovascular": {
+    "Assessment - Normal Heart Tones (i.e.:S1,S2)": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Assessment - Abnormal heart tones(i.e.: murmur, gallop, friction rub)": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Assessment - Identification of PMI (Point Maximal Intensity)": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Assessment - Blood Pressure (non-invasive)": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Assessment - Pulses/Circulation via palpation": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Assessment - Pulses/Circulation via doppler": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Assessment - Inspection insertion site invasive lines": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Assessment - 12-lead EKG interpretation": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Assessment - EKG Changes for MI": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Assessment - Rhythm interpretation": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Assessment - Incisional wound assessment": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Assessment - S/S DVT": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Fresh Post-op CABG": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Fresh Post-op MVR": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Fresh Post-op AVR": {
+      "freq": 1,
+      "prof": 1
+    },
+    "AAA Repair": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Heart Transplant": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Post cardiac surgery complications": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Fem-Pop Bypass": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Fem-Fem Bypass": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Myocardial contusion": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Pericardial Window": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Post AICD Insertion": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Carotid Endarterectomy": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Cardiac Arrest": {
+      "freq": 1,
+      "prof": 1
+    },
+    "MI": {
+      "freq": 1,
+      "prof": 1
+    },
+    "CHF": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Pericardial Effusion": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Cardiac Tamponade": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Pericarditis": {
+      "freq": 1,
+      "prof": 1
+    },
+    "LVAD(Left Ventricular Assist Device)": {
+      "freq": 1,
+      "prof": 1
+    },
+    "RVAD(Right Ventricular Assist Device)": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Obtain Cardiac Output": {
+      "freq": 1,
+      "prof": 1
+    },
+    "PCWP Measurement": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Obtain CVP Measurement": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Removal of radial arterial line": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Removal of femoral sheath": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Venipuncture": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Obtain lab specimens from A-line": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Obtain lab specimens from Central Line": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Perform 12-lead EKG": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Proper Cardiac Monitor lead placement": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Incisional Wound Care as applicable": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Management of: IV conscious sedation": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Management of: Blood and blood products": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Management of: Identify blood transfusion reactions": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Hemodynamic Monitoring: Management of Arterial Line": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Hemodynamic Monitoring: Management of PA/Swan-Ganz": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Hemodynamic Monitoring: Management of CVP Line": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Hemodynamic Monitoring: Management of multiple invasive lines": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Hemodynamic Monitoring: Zero and calibration of transducers": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Hemodynamic Monitoring: Assess adequate perfusion of affected extremity with invasive lines": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Management of IABP: Waveform interpretation": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Management of IABP: Determination of appropriate timing": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Management of IABP: Perfusion assessment of affected extremity": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Management of IABP: Recognize IABP complications": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Pacemaker: PPM": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Pacemaker: Transvenous": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Pacemaker: Transcutaneous": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Management of Temporary Pacemaker: Recognition of failure to sense, capture": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Management of Temporary Pacemaker: Manipulation of TPM settings": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Management of Temporary Pacemaker: Troubleshoot TPM settings": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Management of Temporary Pacemaker: Management of epicardial wires": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Identification and interpretation of: Arterial waveform": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Identification and interpretation of: PA/Swan-Ganz waveform": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Identification and interpretation of: PCWP waveform": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Identification and interpretation of: CVP waveform": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Identification and interpretation of: SVO2 Data": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Perform calculations for: PVR": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Perform calculations for: SVR": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Perform calculations for: MAP": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Assist with: Set-Up for Cardioversion": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Assist with: Cardioversion": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Assist with: Central Line insertion": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Assist with: CAVH-D": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Assist with: Emergency Open Chest": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Assist with: Arterial line insertion": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Assist with: PA/Swan-Ganz insertion": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Assist with: Chest Tube insertion": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Assist with: Chest Tube Removal": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Assist with: Emergency Tracheostomy": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Assist with: Pericardiocentesis": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Assist with: Transesophageal Echocardiogram": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Assist with: Thoracentesis": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Assist with: Emergency Intubation": {
+      "freq": 1,
+      "prof": 1
+    }
+  },
+  "Pulmonary": {
+    "Auscultation of breath sounds": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Identify adventitious lung sounds": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Auscultate for confirmation of ET Tube placement": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Implement Ventilator Acquired Pneumonia protocols": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Assess and confirm proper vent settings": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Manage patient on mechanical ventilation": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Assist with post-extubation care": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Application of BiPAP": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Application of CPAP": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Maintenance of pulmonary stability post-extubation": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Application of Pulse Oximetry": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Interpretation of Pulse Oximetry Values": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Perform ET Tube suctioning": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Perform NT(Nasotracheal) suctioning": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Perform suctioning of Tracheostomy": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Collection of Sputum via NT Suction": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Collection of Sputum Specimen via ET w/specimen trap": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Assist with extubation of patient": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Chest Tubes: Perform Chest Tube Set-up": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Chest Tubes: Monitor & record output": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Chest Tubes: Identify and troubleshoot clotted chest tube": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Chest Tubes: Identify and troubleshoot patient bleeding": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Chest Tubes: Identify presence of air leak": {
+      "freq": 1,
+      "prof": 1
+    }
+  },
+  "Gastroenterology": {
+    "Assessment: Bowel Sounds": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Assessment: Proper N/G tube placement": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Provision of care for GI Bleed": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Insertion of N/G Tube": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Removal of N/G Tube": {
+      "freq": 1,
+      "prof": 1
+    },
+    "LIS (low intermittent suction)": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Continuous Suction": {
+      "freq": 1,
+      "prof": 1
+    }
+  },
+  "Endocrine": {
+    "Diabetes mellitus": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Diabetic ketoacidosis": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Diabetes Insipidus": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Addison’s Disease": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Hyperthyroidism": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Hypothyroidism": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Insulin Shock": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Fingerstick blood glucose": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Implementation of Sliding Scale": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Blood glucose monitoring": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Use of Insulin Pen": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Use of Lancet": {
+      "freq": 1,
+      "prof": 1
+    }
+  },
+  "Neurology": {
+    "Assessment: Cranial Nerves": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Assessment: GCS": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Assessment: Pathologic Reflexes": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Assessment: Reflex/Motor Deficits": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Assessment: Visual/Communication Deficits": {
+      "freq": 1,
+      "prof": 1
+    },
+    "CVA": {
+      "freq": 1,
+      "prof": 1
+    },
+    "TIA": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Encephalopathy": {
+      "freq": 1,
+      "prof": 1
+    }
+  },
+  "Renal": {
+    "Assessment - Fluid status": {
+      "freq": 1,
+      "prof": 1
+    },
+    "CRRT": {
+      "freq": 1,
+      "prof": 1
+    },
+    "CAVH Dialysis": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Hemodialysis": {
+      "freq": 1,
+      "prof": 1
+    }
+  },
+  "Multisystem": {
+    "Assessment:Perform comprehensive multi-system assessment": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Hypovolemic Shock": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Cardiogenic Shock": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Septic Shock": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Disseminated intravascular coagulation (DIC)": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Organ/tissue donation": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Implementation of Core Measures": {
+      "freq": 1,
+      "prof": 1
+    }
+  },
+  "Labs": {
+    "Interpretation of: ABG's": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Interpretation of: BUN/Creatinine": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Interpretation of: Electrolytes": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Interpretation of: Coagulation Studies": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Interpretation of: Cardiac Enzymes": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Interpretation of: Blood glucose": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Interpretation of: Thyroid Panel": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Interpretation of: CBC": {
+      "freq": 1,
+      "prof": 1
+    }
+  },
+  "Patient Education": {
+    "Turn, cough, and deep breathing technique": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Splinting technique post cardiac surgery": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Use of incentive spirometer": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Importance of increasing mobility post-cardiac surgery when applicable": {
+      "freq": 1,
+      "prof": 1
+    }
+  },
+  "Cardiovascular Pharmacology": {
+    "Titrate vasopressors to effect/parameters": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Assess for therapeutic response": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Perform manage dosage drip calculations": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Alupent (Metaproterenol)": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Amicar": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Aminophylline (Theophylline)": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Amiodarone (Cordarone)": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Atropine": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Apresoline": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Bretylium (Bretylol)": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Corticosteroids": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Digoxin (Lanoxin)": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Diltiazem (Cardizem)": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Dobutamine (Dobutrex)": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Dopamine (Intropin)": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Epinephrine (Adrenalin)": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Esmolol (Brevibloc)": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Heparin Drip": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Inocor (Amrinone)": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Levophed": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Lidocaine": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Metoprolol (Lopressor)": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Neosynephrine": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Nipride (Nitroprusside)": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Nitroglycerin (Tridil)": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Procainamide (Pronestyl)": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Propofol (Diprivan)": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Sodium Bicarbonate": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Succinylcholine": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Vasopressin": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Verapamil (Calan, Isoptin, Verelan)": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Vecuronium": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Electrolyte Replacement Therapy": {
+      "freq": 1,
+      "prof": 1
+    }
+  },
+  "Patient Advocacy": {
+    "Provide care for end-of-life decisions that families face in ICU such as withdrawal of life support": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Adhere to legal procedures regarding notification of organ donation provider": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Demonstrate Spiritual and Cultural Considerations for the Critical Care patient": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Provide for the integration of comfort care and death with dignity": {
+      "freq": 1,
+      "prof": 1
+    },
+    "Demonstrate effective coping skills in caring for the critical care patient": {
+      "freq": 1,
+      "prof": 1
+    }
+  }
+}
