@@ -66,49 +66,45 @@ const TestPageData = props => {
     doc.autoTable({
       html: '#table',
       includeHiddenHtml: true,
-      // didParseCell: data => {
-      //   for (let i = 0; i < data.table.body.length; i++) {
-      //     if (data.table.body[i].cells[1].text[0].includes('Proficiency:')) {
-      //       data.table.body[i].cells[0].styles.fillColor = '#4f63aa'
-      //       data.table.body[i].cells[0].styles.fontStyle = 'bold'
-      //       data.table.body[i].cells[0].styles.fontSize = 20
-      //       data.table.body[i].cells[1].styles.fillColor = '#4f63aa'
-      //       data.table.body[i].cells[2].styles.fillColor = '#4f63aa'
-      //       data.table.body[i].cells[0].styles.textColor = '#FFFFFF'
-      //       data.table.body[i].cells[1].styles.textColor = '#FFFFFF'
-      //       data.table.body[i].cells[2].styles.textColor = '#FFFFFF'
-      //     } else if (data.table.body[0]) {
-      //       data.table.body[0].cells[0].styles.fillColor = '#FFFFFF'
-      //       data.table.body[0].cells[1].styles.fillColor = '#FFFFFF'
-      //       data.table.body[0].cells[2].styles.fillColor = '#FFFFFF'
-      //       data.table.body[0].cells[0].styles.fontSize = 15
-      //       data.table.body[0].cells[1].styles.fontSize = 15
-      //       data.table.body[0].cells[2].styles.fontSize = 15
-      //       data.table.body[0].cells[0].styles.textColor = '#000000'
-      //       data.table.body[0].cells[1].styles.textColor = '#000000'
-      //       data.table.body[0].cells[2].styles.textColor = '#000000'
-      //     }
-      //   }
+      didParseCell: data => {
+        for (let i = 0; i < data.table.body.length; i++) {
+          if (data.table.body[i].cells[1].text[0].includes('Proficiency:')) {
+            data.table.body[i].cells[0].styles.fillColor = '#4f63aa'
+            data.table.body[i].cells[0].styles.fontStyle = 'bold'
+            data.table.body[i].cells[0].styles.fontSize = 20
+            data.table.body[i].cells[1].styles.fillColor = '#4f63aa'
+            data.table.body[i].cells[2].styles.fillColor = '#4f63aa'
+            data.table.body[i].cells[0].styles.textColor = '#FFFFFF'
+            data.table.body[i].cells[1].styles.textColor = '#FFFFFF'
+            data.table.body[i].cells[2].styles.textColor = '#FFFFFF'
+          } else if (data.table.body[0]) {
+            data.table.body[0].cells[0].styles.fillColor = '#FFFFFF'
+            data.table.body[0].cells[1].styles.fillColor = '#FFFFFF'
+            data.table.body[0].cells[2].styles.fillColor = '#FFFFFF'
+            data.table.body[0].cells[0].styles.fontSize = 15
+            data.table.body[0].cells[1].styles.fontSize = 15
+            data.table.body[0].cells[2].styles.fontSize = 15
+            data.table.body[0].cells[0].styles.textColor = '#000000'
+            data.table.body[0].cells[1].styles.textColor = '#000000'
+            data.table.body[0].cells[2].styles.textColor = '#000000'
+          }
+        }
 
-      //   data.table.body[1].cells[0].styles.fillColor = '#FFFFFF'
-      //   data.table.body[1].cells[1].styles.fillColor = '#FFFFFF'
-      //   data.table.body[1].cells[2].styles.fillColor = '#FFFFFF'
-      //   data.table.body[1].cells[0].styles.fontSize = 15
-      //   data.table.body[1].cells[1].styles.fontSize = 15
-      //   data.table.body[1].cells[2].styles.fontSize = 15
-      //   data.table.body[1].cells[0].styles.textColor = '#000000'
-      //   data.table.body[1].cells[1].styles.textColor = '#000000'
-      //   data.table.body[1].cells[2].styles.textColor = '#000000'
-      //   data.table.body[3].cells[0].styles.fontStyle = 'bold'
-      //   data.table.body[3].cells[0].styles.fontSize = 12
-      //   data.table.body[3].cells[0].styles.textColor = '#000000'
-      //   data.table.body[8].cells[0].styles.fontStyle = 'bold'
-      //   data.table.body[8].cells[0].styles.fontSize = 12
-      //   data.table.body[8].cells[0].styles.textColor = '#000000'
-      // },
-      didDrawCell: data => {
-        console.log(data)
-        const img = nurse2nursestaffingimage.toDataURL()
+        data.table.body[1].cells[0].styles.fillColor = '#FFFFFF'
+        data.table.body[1].cells[1].styles.fillColor = '#FFFFFF'
+        data.table.body[1].cells[2].styles.fillColor = '#FFFFFF'
+        data.table.body[1].cells[0].styles.fontSize = 15
+        data.table.body[1].cells[1].styles.fontSize = 15
+        data.table.body[1].cells[2].styles.fontSize = 15
+        data.table.body[1].cells[0].styles.textColor = '#000000'
+        data.table.body[1].cells[1].styles.textColor = '#000000'
+        data.table.body[1].cells[2].styles.textColor = '#000000'
+        data.table.body[3].cells[0].styles.fontStyle = 'bold'
+        data.table.body[3].cells[0].styles.fontSize = 12
+        data.table.body[3].cells[0].styles.textColor = '#000000'
+        data.table.body[8].cells[0].styles.fontStyle = 'bold'
+        data.table.body[8].cells[0].styles.fontSize = 12
+        data.table.body[8].cells[0].styles.textColor = '#000000'
       },
     })
 
