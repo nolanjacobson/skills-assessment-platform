@@ -222,7 +222,8 @@ const TestPageData = props => {
   const [overallCompetencyScore, setOverallCompetencyScore] = useState(0)
   return (
     <>
-      {success && window.location.replace('http://stackoverflow.com')}
+      {success &&
+        window.location.replace('https://www.nurse2nursestaffing.com/')}
       <section id="wrapEverything">
         <RenderHeader
           show={show}

@@ -115,7 +115,6 @@ const FormSubmission = props => {
                 className="finish"
                 disabled={props.contactInformation.signatureCanvas === 'val'}
                 type="submit"
-                onClick={props.sendEmail}
               >
                 Finish
               </button>
