@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react'
 import SignatureCanvas from 'react-signature-canvas'
 import axios from 'axios'
 import { Redirect } from 'react-router-dom'
+import { Button } from 'react-bootstrap'
 
 const FormSubmission = props => {
   return (
@@ -86,7 +87,7 @@ const FormSubmission = props => {
               <SignatureCanvas
                 backgroundColor="white"
                 penColor="black"
-                canvasProps={{className:'siggCanvas'}}
+                canvasProps={{ className: 'siggCanvas' }}
                 ref={props.sigCanvas}
               />
               <section className="flexButtons">
