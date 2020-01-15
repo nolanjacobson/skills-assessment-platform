@@ -8,7 +8,8 @@
     "deploy": "echo 'To setup deployment run: yarn setup-deploy'",
     "setup-deploy": "app-app --deploy && yarn deploy",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "start-sw": "http-server ./build"
   },
   "browserslist": [
     ">0.2%",
@@ -24,6 +25,7 @@
     "useTabs": false
   },
   "devDependencies": {
+    "http-server": "^0.12.1",
     "prettier": "^1.19.1",
     "stylelint": "^12.0.0",
     "stylelint-config-standard": "^19.0.0"

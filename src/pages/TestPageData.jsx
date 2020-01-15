@@ -67,7 +67,6 @@ const TestPageData = props => {
       html: '#table',
       includeHiddenHtml: true,
       didParseCell: data => {
-        console.log(data.table.body)
         for (let i = 0; i < data.table.body.length; i++) {
           if (data.table.body[i].cells[1].text[0].includes('Proficiency:')) {
             data.table.body[i].cells[0].styles.fillColor = '#4f63aa'
@@ -110,8 +109,6 @@ const TestPageData = props => {
     })
 
     var output = doc.output('datauristring')
-
-    doc.save('test')
     contactInformation.testDataPdf = output
   }
 
@@ -225,8 +222,7 @@ const TestPageData = props => {
   const [overallCompetencyScore, setOverallCompetencyScore] = useState(0)
   return (
     <>
-      {success && <Redirect to="/success" />}
-      {console.log(overallCompetencyScore, overallFreqScore, overallProfScore)}
+      {success && window.location.replace('http://stackoverflow.com')}
       <section id="wrapEverything">
         <RenderHeader
           show={show}

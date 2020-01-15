@@ -95,9 +95,11 @@ body {
 }
 .newCategory {
   background-color: #4f63aa;
-  padding: 1.5rem;
+  padding: .5rem;
+  margin-top: 0;
   text-align: center;
   color: white;
+  border-radius: 5px;
 }
 .flexThem {
   display: flex;
@@ -347,7 +349,11 @@ input {
   }
 
   .newTestDataLi {
+    /* border: solid grey 1px;
+    border-radius: 2px; */
+    padding: 1rem;
     width: 75%;
+    margin-bottom: 1rem;
   }
 
   .fa-plus-square {
