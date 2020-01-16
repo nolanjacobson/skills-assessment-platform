@@ -10,6 +10,8 @@ import * as jsPDF from 'jspdf'
 import 'jspdf-autotable'
 import HiddenTable from './HiddenTable'
 import { Redirect } from 'react-router-dom'
+import base64_source from '../utils/image.constants'
+
 const TestPageData = props => {
   const [show, setShow] = useState(false)
   const [anotherValue, setAnotherValue] = useState(false)
@@ -25,9 +27,9 @@ const TestPageData = props => {
     nurseEmail: '',
     phoneNumber: '',
     recruiterEmail: '',
-    signatureCanvas: 'val',
     testDataPdf: '',
   })
+  const [signatureCanvas, setSignatureCanvas] = useState('val')
 
   const handleChange = e => {
     e.persist()
@@ -63,9 +65,27 @@ const TestPageData = props => {
   const generatePdf = () => {
     var doc = new jsPDF()
     doc.setFontSize(40)
+    var header = function(data) {
+      doc.setFontSize(10)
+      doc.setTextColor(40)
+      doc.setFontStyle('normal')
+      doc.addImage(
+        base64_source,
+        'JPEG',
+        data.settings.margin.left,
+        20,
+        100,
+        20
+      )
+      //doc.addImage(image base64_source, 'image format', logo_sizes.centered_x, _y, logo_sizes.w, logo_sizes.h);
+      //Image must be Base64 encoded
+    }
+
     doc.autoTable({
       html: '#table',
       includeHiddenHtml: true,
+      margin: { top: 60, bottom: 40 },
+      didDrawPage: header,
       didParseCell: data => {
         for (let i = 0; i < data.table.body.length; i++) {
           if (data.table.body[i].cells[1].text[0].includes('Proficiency:')) {
@@ -93,6 +113,35 @@ const TestPageData = props => {
         data.table.body[1].cells[0].styles.fillColor = '#FFFFFF'
         data.table.body[1].cells[1].styles.fillColor = '#FFFFFF'
         data.table.body[1].cells[2].styles.fillColor = '#FFFFFF'
+        data.table.body[data.table.body.length - 1].cells[0].styles.fillColor =
+          '#FFFFFF'
+        data.table.body[data.table.body.length - 1].cells[0].styles.fontStyle =
+          'bold'
+        data.table.body[
+          data.table.body.length - 1
+        ].cells[0].styles.fontSize = 20
+        data.table.body[
+          data.table.body.length - 2
+        ].cells[0].styles.fontSize = 20
+        data.table.body[data.table.body.length - 2].cells[0].styles.fontStyle =
+          'bold'
+        data.table.body[data.table.body.length - 1].cells[1].styles.fillColor =
+          '#FFFFFF'
+        data.table.body[data.table.body.length - 1].cells[2].styles.fillColor =
+          '#FFFFFF'
+        data.table.body[data.table.body.length - 2].cells[0].styles.fillColor =
+          '#FFFFFF'
+
+        data.table.body[data.table.body.length - 2].cells[1].styles.fillColor =
+          '#FFFFFF'
+        data.table.body[data.table.body.length - 2].cells[2].styles.fillColor =
+          '#FFFFFF'
+        data.table.body[data.table.body.length - 2].cells[0].styles.halign =
+          'center'
+        data.table.body[data.table.body.length - 1].cells[0].styles.halign =
+          'center'
+        // data.table.body[data.table.body.length - 2].cells[2].styles.halign =
+        //   'center'
         data.table.body[1].cells[0].styles.fontSize = 15
         data.table.body[1].cells[1].styles.fontSize = 15
         data.table.body[1].cells[2].styles.fontSize = 15
@@ -107,18 +156,24 @@ const TestPageData = props => {
         data.table.body[8].cells[0].styles.textColor = '#000000'
       },
     })
-
+    doc.addImage(
+      signatureCanvas,
+      'JPEG',
+      75,
+      doc.autoTable.previous.finalY,
+      60,
+      60
+    )
     var output = doc.output('datauristring')
     contactInformation.testDataPdf = output
   }
 
   const save = () => {
     setEventListener(true)
-    contactInformation.signatureCanvas = sigCanvas.current
-      .getTrimmedCanvas()
-      .toDataURL('image/png')
-      .toString()
-    setImage(sigCanvas.current.getTrimmedCanvas().toDataURL('image/png'))
+    setSignatureCanvas(
+      sigCanvas.current.getTrimmedCanvas().toDataURL('image/png')
+    )
+    console.log(signatureCanvas)
   }
 
   const sendEmail = async e => {
@@ -134,7 +189,19 @@ const TestPageData = props => {
   }
 
   const [success, setSuccess] = useState(false)
-
+  const [recruiters, setRecruiters] = useState([])
+  useEffect(() => {
+    const getRecruiters = async () => {
+      const response = await axios.get(
+        'https://nurse-2-nurse-api.herokuapp.com/api/NurseInformation/AllRecruiters'
+      )
+      if (response.status === 200) {
+        setRecruiters(response.data)
+        console.log(response.data)
+      }
+    }
+    getRecruiters()
+  }, [])
   useEffect(() => {
     if (eventListener) {
       newTestData.map((header, sectionIndex) => {
@@ -182,13 +249,19 @@ const TestPageData = props => {
     if (checkBox) {
       profSum.map((prof, index) => {
         setProfAverage(previous => {
-          return [...previous, Math.floor(prof / lengths[index])]
+          return [
+            ...previous,
+            Math.round(((prof / lengths[index]) * 4) / 4).toFixed(2),
+          ]
         })
       })
 
       freqSum.map((freq, index) => {
         setFreqAverage(previous => {
-          return [...previous, Math.floor(freq / lengths[index])]
+          return [
+            ...previous,
+            Math.round(((freq / lengths[index]) * 4) / 4).toFixed(2),
+          ]
         })
       })
     }
@@ -264,14 +337,24 @@ const TestPageData = props => {
           sigCanvas={sigCanvas}
           handleChange={handleChange}
           contactInformation={contactInformation}
+          signatureCanvas={signatureCanvas}
+          recruiters={recruiters}
         />
         <HiddenTable
           newTestData={newTestData}
           frequencyAverage={freqAverage}
           proficiencyAverage={profAverage}
-          overallCompetencyScore={(overallFreqScore + overallProfScore) / 2}
-          overallFrequencyScore={overallFreqScore}
-          overallProficiencyScore={overallProfScore}
+          overallCompetencyScore={(
+            (Math.round((overallProfScore * 4) / 4) +
+              Math.round((overallFreqScore * 4) / 4)) /
+            2
+          ).toFixed(2)}
+          overallFrequencyScore={Math.round((overallFreqScore * 4) / 4).toFixed(
+            2
+          )}
+          overallProficiencyScore={Math.round(
+            (overallProfScore * 4) / 4
+          ).toFixed(2)}
           freqScores={freqScores}
           profScores={profScores}
           testName={setTest}

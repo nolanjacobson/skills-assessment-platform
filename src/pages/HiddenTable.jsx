@@ -82,6 +82,12 @@ const HiddenTable = props => {
             </>
           )
         })}
+        <tr>
+          <td>Date Completed: {props.dateCompleted}</td>
+        </tr>
+        <tr>
+          <td>Employee Name: {props.nurseName}</td>
+        </tr>
       </tbody>
     </table>
   )

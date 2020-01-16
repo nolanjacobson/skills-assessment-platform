@@ -18,12 +18,13 @@ const FormSubmission = props => {
             className="recruiterAddress"
             required
           >
-            <option value={'jeremy@nurse2nursestaffing.com'}>Jeremy</option>
-            <option value={'mary@nurse2nursestaffing.com'}>Mary</option>
-            <option value={'mary@nurse2nursestaffing.com'}>Megan</option>
-            <option value={'nikaela@nurse2nursestaffing.com'}>Nikaela</option>
-            <option value={'tobin@nurse2nursestaffing.com'}>Tobin</option>
-            <option value={'nolanjacobson0@Gmail.com'}>Nolan</option>
+            {props.recruiters.map(recruiter => {
+              return (
+                <option value={recruiter.recruiterEmail}>
+                  {recruiter.recruiterName}
+                </option>
+              )
+            })}
           </select>
         </div>
       </section>
@@ -113,7 +114,7 @@ const FormSubmission = props => {
               </p>
               <button
                 className="finish"
-                disabled={props.contactInformation.signatureCanvas === 'val'}
+                disabled={props.signatureCanvas === 'val'}
                 type="submit"
               >
                 Finish
