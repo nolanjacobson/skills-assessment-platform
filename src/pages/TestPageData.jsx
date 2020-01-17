@@ -193,7 +193,7 @@ const TestPageData = props => {
   useEffect(() => {
     const getRecruiters = async () => {
       const response = await axios.get(
-        'https://nurse-2-nurse-api.herokuapp.com/api/NurseInformation/AllRecruiters'
+        'https://nurse-2-nurse-api.herokuapp.com/AllRecruiters'
       )
       if (response.status === 200) {
         setRecruiters(response.data)
