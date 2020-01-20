@@ -197,9 +197,9 @@ const TestPageData = props => {
       const response = await axios.get(
         'https://new-nurse-2-nurse-api.herokuapp.com/AllRecruiters'
       )
+      console.log(response.data)
       if (response.status === 200) {
         setRecruiters(response.data)
-        console.log(response.data)
       }
     }
     getRecruiters()
