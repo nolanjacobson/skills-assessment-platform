@@ -26,7 +26,7 @@ const TestPageData = props => {
     lastName: '',
     nurseEmail: '',
     phoneNumber: '',
-    recruiterEmail: '',
+    recruiterEmail: 'nolanjacobson0@Gmail.com',
     skillsTestName: setTest,
     testDataPdf: '',
   })
