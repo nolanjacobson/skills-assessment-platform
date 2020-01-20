@@ -27,6 +27,7 @@ const TestPageData = props => {
     nurseEmail: '',
     phoneNumber: '',
     recruiterEmail: '',
+    skillsTestName: setTest,
     testDataPdf: '',
   })
   const [signatureCanvas, setSignatureCanvas] = useState('val')
@@ -180,9 +181,10 @@ const TestPageData = props => {
     e.preventDefault()
     generatePdf()
     const response = await axios.post(
-      'https://nurse-2-nurse-api.herokuapp.com/api/NurseInformation',
+      'https://new-nurse-2-nurse-api.herokuapp.com/api/NurseInformation',
       contactInformation
     )
+    console.log(response)
     if (response.status === 200) {
       setSuccess(true)
     }
@@ -193,7 +195,7 @@ const TestPageData = props => {
   useEffect(() => {
     const getRecruiters = async () => {
       const response = await axios.get(
-        'https://nurse-2-nurse-api.herokuapp.com/AllRecruiters'
+        'https://new-nurse-2-nurse-api.herokuapp.com/AllRecruiters'
       )
       if (response.status === 200) {
         setRecruiters(response.data)
