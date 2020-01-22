@@ -26,31 +26,27 @@ const TestPageData = props => {
     lastName: '',
     nurseEmail: '',
     phoneNumber: '',
-    recruiterEmail: 'nolanjacobson0@gmail.com',
+    recruiterEmail: 'tobin@lrshealthcare.com',
     skillsTestName: setTest,
     testDataPdf: '',
   })
   const [signatureCanvas, setSignatureCanvas] = useState('val')
-
-  const handleChange = e => {
-    e.persist()
-    setContactInformation(prev => ({
-      ...prev,
-      [e.target.name]: e.target.value,
-    }))
-  }
+  const [showNow, setShowNow] = useState(false)
+  const [lengths, setLengths] = useState([])
+  const [profSum, setProfSum] = useState([])
+  const [freqSum, setFreqSum] = useState([])
+  const [freqScores, setFreqScores] = useState([])
+  const [profScores, setProfScores] = useState([])
+  const [profAverage, setProfAverage] = useState([])
+  const [freqAverage, setFreqAverage] = useState([])
+  const [overallFreqScore, setOverallFreqScore] = useState(0)
+  const [overallProfScore, setOverallProfScore] = useState(0)
+  const [eventListener, setEventListener] = useState(false)
+  const [pageData, setPageData] = useState({})
   const sigCanvas = useRef(null)
   const clear = () => {
     sigCanvas.current.clear()
   }
-  const [image, setImage] = useState('')
-  const [newImage, setNewImage] = useState('')
-  const [eventListener, setEventListener] = useState(false)
-  const [headers, setHeaders] = useState([])
-  const [pageData, setPageData] = useState({})
-
-  const [temp, setTemp] = useState('')
-
   const updatePageData = (section, question, freq, prof) => {
     setPageData(prev => {
       return {
@@ -61,6 +57,14 @@ const TestPageData = props => {
         },
       }
     })
+  }
+
+  const handleChange = e => {
+    e.persist()
+    setContactInformation(prev => ({
+      ...prev,
+      [e.target.name]: e.target.value,
+    }))
   }
 
   const generatePdf = () => {
@@ -78,8 +82,6 @@ const TestPageData = props => {
         100,
         20
       )
-      //doc.addImage(image base64_source, 'image format', logo_sizes.centered_x, _y, logo_sizes.w, logo_sizes.h);
-      //Image must be Base64 encoded
     }
 
     doc.autoTable({
@@ -141,8 +143,6 @@ const TestPageData = props => {
           'center'
         data.table.body[data.table.body.length - 1].cells[0].styles.halign =
           'center'
-        // data.table.body[data.table.body.length - 2].cells[2].styles.halign =
-        //   'center'
         data.table.body[1].cells[0].styles.fontSize = 15
         data.table.body[1].cells[1].styles.fontSize = 15
         data.table.body[1].cells[2].styles.fontSize = 15
@@ -159,7 +159,7 @@ const TestPageData = props => {
     })
     doc.addImage(
       signatureCanvas,
-      'PNG',
+      'JPEG',
       75,
       doc.autoTable.previous.finalY,
       60,
@@ -171,10 +171,8 @@ const TestPageData = props => {
 
   const save = () => {
     setEventListener(true)
-    setSignatureCanvas(
-      sigCanvas.current.getTrimmedCanvas().toDataURL('image/png')
-    )
-    console.log(signatureCanvas)
+    const sig = sigCanvas.current.getTrimmedCanvas().toDataURL('image/png')
+    setSignatureCanvas(sig)
   }
 
   const sendEmail = async e => {
@@ -197,7 +195,7 @@ const TestPageData = props => {
       const response = await axios.get(
         'https://new-nurse-2-nurse-api.herokuapp.com/AllRecruiters'
       )
-      console.log(response.data)
+
       if (response.status === 200) {
         setRecruiters(response.data)
       }
@@ -284,17 +282,6 @@ const TestPageData = props => {
     }
   }, [checkBox])
 
-  const [showNow, setShowNow] = useState(false)
-  const [lengths, setLengths] = useState([])
-  const [profSum, setProfSum] = useState([])
-  const [freqSum, setFreqSum] = useState([])
-  const [freqScores, setFreqScores] = useState([])
-  const [profScores, setProfScores] = useState([])
-  const [profAverage, setProfAverage] = useState([])
-  const [freqAverage, setFreqAverage] = useState([])
-  const [overallFreqScore, setOverallFreqScore] = useState(0)
-  const [overallProfScore, setOverallProfScore] = useState(0)
-  const [overallCompetencyScore, setOverallCompetencyScore] = useState(0)
   return (
     <>
       {success &&

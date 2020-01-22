@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import nurse2nursestaffingimage from './images/nurse2nurse.png'
 import data from './data/categories.json'
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 const PickTest = () => {
   const [listen, setListen] = useState('Advanced Practice')
@@ -11,25 +11,22 @@ const PickTest = () => {
   const [buttonDrop, setButtonDrop] = useState(false)
   const uri = encodeURIComponent(secondListen)
   useEffect(() => {
-    console.log({ listen })
     if (listen) {
       setShowNext(true)
       setTestDropDown(
         data.categories.filter(f => f.category === listen)[0].tests
         // filter returns an array and we want the first element inside it
-      )}
-    else if (!listen) {
+      )
+    } else if (!listen) {
       setShowNext(false)
       setButtonDrop(false)
     }
   }, [listen])
 
   useEffect(() => {
-    console.log({ secondListen })
     if (secondListen) {
       setButtonDrop(true)
-      }
-    else if (!secondListen || !listen) {
+    } else if (!secondListen || !listen) {
       setButtonDrop(false)
     }
   }, [secondListen])
@@ -40,7 +37,10 @@ const PickTest = () => {
         <img className="nurse2nurseHome" src={nurse2nursestaffingimage} />
         <p className="chooseTest">Please choose a Skills Assessment Test</p>
         <p className="homePagePTag">Category *</p>
-        <select className="categorySelect" onChange={e => setListen(e.target.value)}>
+        <select
+          className="categorySelect"
+          onChange={e => setListen(e.target.value)}
+        >
           {/* <option value={null}></option> */}
           {data.categories.map((categoryName, index) => {
             return (
@@ -50,19 +50,28 @@ const PickTest = () => {
             )
           })}
         </select>
-    
+
         {showNext && (
-            <>
+          <>
             <p className="homePagePTag">Test *</p>
-          <select className="testSelect" onChange={e => setSecondListen(e.target.value)}>
-             <option value={null}></option>
-            {testDropDown.map((category, index) => {
-              return <option key={index}>{category}</option>
-            })}
-          </select>
+            <select
+              className="testSelect"
+              onChange={e => setSecondListen(e.target.value)}
+            >
+              <option value={null}></option>
+              {testDropDown.map((category, index) => {
+                return <option key={index}>{category}</option>
+              })}
+            </select>
           </>
         )}
-        {buttonDrop ? <Link to={`/${listen}/${uri}`}><button className="submit">Start</button></Link> : (<></>)}
+        {buttonDrop ? (
+          <Link to={`/${listen}/${uri}`}>
+            <button className="submit">Start</button>
+          </Link>
+        ) : (
+          <></>
+        )}
       </section>
     </div>
   )
