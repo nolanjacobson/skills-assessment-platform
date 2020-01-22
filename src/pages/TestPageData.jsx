@@ -159,7 +159,7 @@ const TestPageData = props => {
     })
     doc.addImage(
       signatureCanvas,
-      'JPEG',
+      'PNG',
       75,
       doc.autoTable.previous.finalY,
       60,
