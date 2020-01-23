@@ -220,7 +220,6 @@ const TestPageData = props => {
       30
     )
     var output = doc.output('datauristring')
-    doc.save('test')
     contactInformation.testDataPdf = output
   }
 
