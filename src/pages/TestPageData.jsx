@@ -20,6 +20,7 @@ const TestPageData = props => {
   const newTestData = TestData.tests
     .filter(category => category.category === setCategory)
     .filter(test => test.testname === setTest)[0].sections
+  // console.log(newTestData.map(question => console.log(question)))
   const [checkBox, setCheckBox] = useState(false)
   const [contactInformation, setContactInformation] = useState({
     firstName: '',
@@ -39,9 +40,12 @@ const TestPageData = props => {
   const [profScores, setProfScores] = useState([])
   const [profAverage, setProfAverage] = useState([])
   const [freqAverage, setFreqAverage] = useState([])
+  const [recruiters, setRecruiters] = useState([])
   const [overallFreqScore, setOverallFreqScore] = useState(0)
   const [overallProfScore, setOverallProfScore] = useState(0)
   const [eventListener, setEventListener] = useState(false)
+
+  const [success, setSuccess] = useState(false)
   const [pageData, setPageData] = useState({})
   const sigCanvas = useRef(null)
   const clear = () => {
@@ -242,8 +246,6 @@ const TestPageData = props => {
     }
   }
 
-  const [success, setSuccess] = useState(false)
-  const [recruiters, setRecruiters] = useState([])
   useEffect(() => {
     const getRecruiters = async () => {
       const response = await axios.get(
@@ -335,6 +337,7 @@ const TestPageData = props => {
       setShowNow(false)
     }
   }, [checkBox])
+
 
   return (
     <>

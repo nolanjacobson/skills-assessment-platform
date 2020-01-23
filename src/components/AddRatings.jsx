@@ -16,7 +16,11 @@ const AddRatings = props => {
 
   return (
     <>
-      <span className="testDataText">{props.question}</span>{' '}
+      <span className="testDataText">
+        {props.question.charAt(0)
+          ? props.question.charAt(0).toUpperCase() + props.question.slice(1)
+          : props.question}
+      </span>{' '}
       <section className="frequencyProficiency">
         <Ratings
           start={0}
