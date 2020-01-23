@@ -113,7 +113,9 @@ const FormSubmission = props => {
                 I certify this test was filled out to the best of my knowledge.
               </p>
               {props.spinnerVal ? (
-                <Spinner animation="border" />
+                <Spinner variant="primary" animation="border" role="status">
+                  <span>Loading...</span>
+                </Spinner>
               ) : (
                 <button
                   className="finish"
