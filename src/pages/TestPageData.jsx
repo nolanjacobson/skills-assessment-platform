@@ -130,55 +130,45 @@ const TestPageData = props => {
         data.table.body[
           data.table.body.length - 2
         ].cells[0].styles.fontSize = 10
-        data.table.body[data.table.body.length - 4].cells[0].styles.fillColor =
+
+        data.table.body[data.table.body.length - 3].cells[0].styles.fillColor =
           '#FFFFFF'
-        data.table.body[data.table.body.length - 4].cells[1].styles.fillColor =
+        data.table.body[data.table.body.length - 3].cells[1].styles.fillColor =
           '#FFFFFF'
-        data.table.body[data.table.body.length - 4].cells[2].styles.fillColor =
+        data.table.body[data.table.body.length - 3].cells[2].styles.fillColor =
           '#FFFFFF'
-        data.table.body[data.table.body.length - 6].cells[0].styles.fillColor =
+        data.table.body[data.table.body.length - 5].cells[0].styles.fillColor =
           '#FFFFFF'
-        data.table.body[data.table.body.length - 6].cells[1].styles.fillColor =
+        data.table.body[data.table.body.length - 5].cells[1].styles.fillColor =
           '#FFFFFF'
-        data.table.body[data.table.body.length - 6].cells[2].styles.fillColor =
+        data.table.body[data.table.body.length - 5].cells[2].styles.fillColor =
           '#FFFFFF'
 
-          data.table.body[data.table.body.length - 8].cells[0].styles.fillColor =
+        data.table.body[data.table.body.length - 7].cells[0].styles.fillColor =
           '#FFFFFF'
-        data.table.body[data.table.body.length - 8].cells[1].styles.fillColor =
+        data.table.body[data.table.body.length - 7].cells[1].styles.fillColor =
           '#FFFFFF'
-        data.table.body[data.table.body.length - 8].cells[2].styles.fillColor =
+        data.table.body[data.table.body.length - 7].cells[2].styles.fillColor =
           '#FFFFFF'
-          data.table.body[data.table.body.length - 10].cells[0].styles.fillColor =
+        data.table.body[data.table.body.length - 9].cells[0].styles.fillColor =
           '#FFFFFF'
-        data.table.body[data.table.body.length - 10].cells[1].styles.fillColor =
+        data.table.body[data.table.body.length - 9].cells[1].styles.fillColor =
           '#FFFFFF'
-        data.table.body[data.table.body.length - 10].cells[2].styles.fillColor =
+        data.table.body[data.table.body.length - 9].cells[2].styles.fillColor =
           '#FFFFFF'
-          data.table.body[data.table.body.length - 12].cells[0].styles.fillColor =
+        data.table.body[data.table.body.length - 11].cells[0].styles.fillColor =
           '#FFFFFF'
-        data.table.body[data.table.body.length - 12].cells[1].styles.fillColor =
+        data.table.body[data.table.body.length - 11].cells[1].styles.fillColor =
           '#FFFFFF'
-        data.table.body[data.table.body.length - 12].cells[2].styles.fillColor =
+        data.table.body[data.table.body.length - 11].cells[2].styles.fillColor =
           '#FFFFFF'
-          data.table.body[data.table.body.length - 14].cells[0].styles.fillColor =
+        data.table.body[data.table.body.length - 13].cells[0].styles.fillColor =
           '#FFFFFF'
-        data.table.body[data.table.body.length - 14].cells[1].styles.fillColor =
+        data.table.body[data.table.body.length - 13].cells[1].styles.fillColor =
           '#FFFFFF'
-        data.table.body[data.table.body.length - 14].cells[2].styles.fillColor =
+        data.table.body[data.table.body.length - 13].cells[2].styles.fillColor =
           '#FFFFFF'
-          data.table.body[data.table.body.length - 16].cells[0].styles.fillColor =
-          '#FFFFFF'
-        data.table.body[data.table.body.length - 16].cells[1].styles.fillColor =
-          '#FFFFFF'
-        data.table.body[data.table.body.length - 16].cells[2].styles.fillColor =
-          '#FFFFFF'
-        // data.table.body[data.table.body.length - 7].cells[0].styles.fillColor =
-        //   '#FFFFFF'
-        // data.table.body[data.table.body.length - 7].cells[1].styles.fillColor =
-        //   '#FFFFFF'
-        // data.table.body[data.table.body.length - 7].cells[2].styles.fillColor =
-        //   '#FFFFFF'
+
         data.table.body[data.table.body.length - 2].cells[0].styles.fontStyle =
           'bold'
         data.table.body[data.table.body.length - 1].cells[1].styles.fillColor =
@@ -192,10 +182,7 @@ const TestPageData = props => {
           '#FFFFFF'
         data.table.body[data.table.body.length - 2].cells[2].styles.fillColor =
           '#FFFFFF'
-        // data.table.body[data.table.body.length - 2].cells[0].styles.halign =
-        //   'center'
-        // data.table.body[data.table.body.length - 1].cells[0].styles.halign =
-        //   'center'
+
         data.table.body[1].cells[0].styles.fontSize = 10
         data.table.body[1].cells[1].styles.fontSize = 10
         data.table.body[1].cells[2].styles.fontSize = 10
@@ -222,9 +209,6 @@ const TestPageData = props => {
         data.table.body[7].cells[0].styles.fillColor = '#F5F5F5'
         data.table.body[7].cells[1].styles.fillColor = '#F5F5F5'
         data.table.body[7].cells[2].styles.fillColor = '#F5F5F5'
-        // data.table.body[8].cells[0].styles.fontStyle = 'bold'
-        // data.table.body[8].cells[0].styles.fontSize = 12
-        // data.table.body[8].cells[0].styles.textColor = '#000000'
       },
     })
     doc.addImage(
