@@ -20,33 +20,29 @@ const HiddenTable = props => {
           </tr>
           <tr>
             <td>Proficiency Rating Labels</td>
-          </tr>
-          <tr>
-            <td>1 = Inexperienced - no experience</td>
-          </tr>
-          <tr>
-            <td>2 = Novice - need assistance</td>
-          </tr>
-          <tr>
-            <td>3 = Proficient - perform independently</td>
-          </tr>
-          <tr>
-            <td>4 = Expert - serve as a resource</td>
-          </tr>
-          <tr>
             <td>Frequency Rating Labels</td>
           </tr>
           <tr>
+            <td>1 = Inexperienced - no experience</td>
             <td>1 = Never - observed only</td>
           </tr>
           <tr>
+            <td>2 = Novice - need assistance</td>
             <td>2 = Sometimes - couple times a year</td>
           </tr>
           <tr>
+            <td>3 = Proficient - perform independently</td>
             <td>3 = Often - couple times a month</td>
           </tr>
           <tr>
+            <td>4 = Expert - serve as a resource</td>
             <td>4 = Frequent - daily or weekly</td>
+          </tr>
+          <tr>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
           </tr>
         </>
         {props.newTestData.map((header, sectionIndex) => {
@@ -83,10 +79,70 @@ const HiddenTable = props => {
           )
         })}
         <tr>
-          <td>Date Completed: {props.dateCompleted}</td>
+          <td></td><td></td><td></td>
         </tr>
         <tr>
-          <td>Employee Name: {props.nurseName}</td>
+          <td></td><td></td><td></td>
+        </tr>
+
+        <tr>
+          <td></td><td></td><td></td>
+        </tr>
+
+        <tr>
+          <td></td><td></td><td></td>
+        </tr>
+
+        <tr>
+          <td></td><td></td><td></td>
+        </tr>
+
+        <tr>
+          <td></td><td></td><td></td>
+        </tr>
+
+        <tr>
+          <td></td><td></td><td></td>
+        </tr>
+
+        <tr>
+          <td></td><td></td><td></td>
+        </tr>
+
+        <tr>
+          <td></td><td></td><td></td>
+        </tr>
+
+        <tr>
+          <td></td><td></td><td></td>
+        </tr>
+
+        <tr>
+          <td></td><td></td><td></td>
+        </tr>
+
+        <tr>
+          <td></td><td></td><td></td>
+        </tr>
+
+        <tr>
+          <td></td><td></td><td></td>
+        </tr>
+
+        <tr>
+          <td></td><td></td><td></td>
+        </tr>
+
+        <tr>
+          <td>
+            I certify this test was filled out to the best of my knowledge.
+          </td>
+        </tr>
+        <tr>
+          <td>Signed by: {props.nurseName}</td>
+        </tr>
+        <tr>
+          <td>{props.dateCompleted}</td>
         </tr>
       </tbody>
     </table>

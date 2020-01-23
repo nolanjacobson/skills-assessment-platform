@@ -71,7 +71,6 @@ const TestPageData = props => {
     var doc = new jsPDF()
     doc.setFontSize(40)
     var header = function(data) {
-      doc.setFontSize(10)
       doc.setTextColor(40)
       doc.setFontStyle('normal')
       doc.addImage(
@@ -87,7 +86,7 @@ const TestPageData = props => {
     doc.autoTable({
       html: '#table',
       includeHiddenHtml: true,
-      margin: { top: 60, bottom: 40 },
+      margin: { top: 50, bottom: 40 },
       didDrawPage: header,
       didParseCell: data => {
         for (let i = 0; i < data.table.body.length; i++) {
@@ -104,28 +103,82 @@ const TestPageData = props => {
             data.table.body[0].cells[0].styles.fillColor = '#FFFFFF'
             data.table.body[0].cells[1].styles.fillColor = '#FFFFFF'
             data.table.body[0].cells[2].styles.fillColor = '#FFFFFF'
-            data.table.body[0].cells[0].styles.fontSize = 15
-            data.table.body[0].cells[1].styles.fontSize = 15
-            data.table.body[0].cells[2].styles.fontSize = 15
+            data.table.body[0].cells[0].styles.fontSize = 10
+            data.table.body[0].cells[1].styles.fontSize = 10
+            data.table.body[0].cells[2].styles.fontSize = 10
             data.table.body[0].cells[0].styles.textColor = '#000000'
             data.table.body[0].cells[1].styles.textColor = '#000000'
             data.table.body[0].cells[2].styles.textColor = '#000000'
+            data.table.body[1].cells[1].styles.cellWidth = 'wrap'
+            data.table.body[1].cells[2].styles.cellWidth = 'wrap'
           }
         }
 
         data.table.body[1].cells[0].styles.fillColor = '#FFFFFF'
         data.table.body[1].cells[1].styles.fillColor = '#FFFFFF'
+        data.table.body[1].cells[1].styles.cellWidth = 'wrap'
+        data.table.body[1].cells[2].styles.cellWidth = 'wrap'
+
         data.table.body[1].cells[2].styles.fillColor = '#FFFFFF'
         data.table.body[data.table.body.length - 1].cells[0].styles.fillColor =
           '#FFFFFF'
-        data.table.body[data.table.body.length - 1].cells[0].styles.fontStyle =
-          'bold'
+        // data.table.body[data.table.body.length - 1].cells[0].styles.fontStyle =
+        //   'bold'
         data.table.body[
           data.table.body.length - 1
-        ].cells[0].styles.fontSize = 20
+        ].cells[0].styles.fontSize = 10
         data.table.body[
           data.table.body.length - 2
-        ].cells[0].styles.fontSize = 20
+        ].cells[0].styles.fontSize = 10
+        data.table.body[data.table.body.length - 4].cells[0].styles.fillColor =
+          '#FFFFFF'
+        data.table.body[data.table.body.length - 4].cells[1].styles.fillColor =
+          '#FFFFFF'
+        data.table.body[data.table.body.length - 4].cells[2].styles.fillColor =
+          '#FFFFFF'
+        data.table.body[data.table.body.length - 6].cells[0].styles.fillColor =
+          '#FFFFFF'
+        data.table.body[data.table.body.length - 6].cells[1].styles.fillColor =
+          '#FFFFFF'
+        data.table.body[data.table.body.length - 6].cells[2].styles.fillColor =
+          '#FFFFFF'
+
+          data.table.body[data.table.body.length - 8].cells[0].styles.fillColor =
+          '#FFFFFF'
+        data.table.body[data.table.body.length - 8].cells[1].styles.fillColor =
+          '#FFFFFF'
+        data.table.body[data.table.body.length - 8].cells[2].styles.fillColor =
+          '#FFFFFF'
+          data.table.body[data.table.body.length - 10].cells[0].styles.fillColor =
+          '#FFFFFF'
+        data.table.body[data.table.body.length - 10].cells[1].styles.fillColor =
+          '#FFFFFF'
+        data.table.body[data.table.body.length - 10].cells[2].styles.fillColor =
+          '#FFFFFF'
+          data.table.body[data.table.body.length - 12].cells[0].styles.fillColor =
+          '#FFFFFF'
+        data.table.body[data.table.body.length - 12].cells[1].styles.fillColor =
+          '#FFFFFF'
+        data.table.body[data.table.body.length - 12].cells[2].styles.fillColor =
+          '#FFFFFF'
+          data.table.body[data.table.body.length - 14].cells[0].styles.fillColor =
+          '#FFFFFF'
+        data.table.body[data.table.body.length - 14].cells[1].styles.fillColor =
+          '#FFFFFF'
+        data.table.body[data.table.body.length - 14].cells[2].styles.fillColor =
+          '#FFFFFF'
+          data.table.body[data.table.body.length - 16].cells[0].styles.fillColor =
+          '#FFFFFF'
+        data.table.body[data.table.body.length - 16].cells[1].styles.fillColor =
+          '#FFFFFF'
+        data.table.body[data.table.body.length - 16].cells[2].styles.fillColor =
+          '#FFFFFF'
+        // data.table.body[data.table.body.length - 7].cells[0].styles.fillColor =
+        //   '#FFFFFF'
+        // data.table.body[data.table.body.length - 7].cells[1].styles.fillColor =
+        //   '#FFFFFF'
+        // data.table.body[data.table.body.length - 7].cells[2].styles.fillColor =
+        //   '#FFFFFF'
         data.table.body[data.table.body.length - 2].cells[0].styles.fontStyle =
           'bold'
         data.table.body[data.table.body.length - 1].cells[1].styles.fillColor =
@@ -139,33 +192,51 @@ const TestPageData = props => {
           '#FFFFFF'
         data.table.body[data.table.body.length - 2].cells[2].styles.fillColor =
           '#FFFFFF'
-        data.table.body[data.table.body.length - 2].cells[0].styles.halign =
-          'center'
-        data.table.body[data.table.body.length - 1].cells[0].styles.halign =
-          'center'
-        data.table.body[1].cells[0].styles.fontSize = 15
-        data.table.body[1].cells[1].styles.fontSize = 15
-        data.table.body[1].cells[2].styles.fontSize = 15
+        // data.table.body[data.table.body.length - 2].cells[0].styles.halign =
+        //   'center'
+        // data.table.body[data.table.body.length - 1].cells[0].styles.halign =
+        //   'center'
+        data.table.body[1].cells[0].styles.fontSize = 10
+        data.table.body[1].cells[1].styles.fontSize = 10
+        data.table.body[1].cells[2].styles.fontSize = 10
         data.table.body[1].cells[0].styles.textColor = '#000000'
         data.table.body[1].cells[1].styles.textColor = '#000000'
         data.table.body[1].cells[2].styles.textColor = '#000000'
-        data.table.body[3].cells[0].styles.fontStyle = 'bold'
-        data.table.body[3].cells[0].styles.fontSize = 12
+        data.table.body[2].cells[0].styles.fontSize = 12
+        data.table.body[2].cells[0].styles.textColor = '#505050'
+        data.table.body[2].cells[0].styles.fontStyle = 'bold'
+
+        data.table.body[3].cells[0].styles.fillColor = '#F5F5F5'
+        data.table.body[3].cells[1].styles.fillColor = '#F5F5F5'
+        data.table.body[3].cells[2].styles.fillColor = '#F5F5F5'
         data.table.body[3].cells[0].styles.textColor = '#000000'
-        data.table.body[8].cells[0].styles.fontStyle = 'bold'
-        data.table.body[8].cells[0].styles.fontSize = 12
-        data.table.body[8].cells[0].styles.textColor = '#000000'
+        data.table.body[3].cells[1].styles.textColor = '#000000'
+
+        data.table.body[3].cells[0].styles.fontStyle = 'bold'
+        data.table.body[3].cells[1].styles.fontStyle = 'bold'
+        data.table.body[3].cells[0].styles.fontSize = 12
+        data.table.body[3].cells[1].styles.fontSize = 12
+        data.table.body[5].cells[0].styles.fillColor = '#F5F5F5'
+        data.table.body[5].cells[1].styles.fillColor = '#F5F5F5'
+        data.table.body[5].cells[2].styles.fillColor = '#F5F5F5'
+        data.table.body[7].cells[0].styles.fillColor = '#F5F5F5'
+        data.table.body[7].cells[1].styles.fillColor = '#F5F5F5'
+        data.table.body[7].cells[2].styles.fillColor = '#F5F5F5'
+        // data.table.body[8].cells[0].styles.fontStyle = 'bold'
+        // data.table.body[8].cells[0].styles.fontSize = 12
+        // data.table.body[8].cells[0].styles.textColor = '#000000'
       },
     })
     doc.addImage(
       signatureCanvas,
       'JPEG',
-      75,
+      30,
       doc.autoTable.previous.finalY,
-      60,
-      60
+      30,
+      30
     )
     var output = doc.output('datauristring')
+    doc.save('test')
     contactInformation.testDataPdf = output
   }
 
