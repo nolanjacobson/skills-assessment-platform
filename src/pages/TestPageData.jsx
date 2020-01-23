@@ -338,11 +338,10 @@ const TestPageData = props => {
     }
   }, [checkBox])
 
-
   return (
     <>
       {success &&
-        window.location.replace('https://www.nurse2nursestaffing.com/')}
+        window.parent.location.replace('https://www.nurse2nursestaffing.com/')}
       <section id="wrapEverything">
         <RenderHeader
           show={show}
