@@ -11,10 +11,10 @@ import 'jspdf-autotable'
 import HiddenTable from './HiddenTable'
 import { Redirect } from 'react-router-dom'
 import base64_source from '../utils/image.constants'
-
+import { Spinner } from 'react-bootstrap'
 const TestPageData = props => {
   const [show, setShow] = useState(false)
-  const [anotherValue, setAnotherValue] = useState(false)
+  const [spinnerVal, setSpinnerVal] = useState(false)
   const setCategory = props.match.params.category
   const setTest = decodeURIComponent(props.match.params.test)
   const newTestData = TestData.tests
@@ -233,9 +233,14 @@ const TestPageData = props => {
     setSignatureCanvas(sig)
   }
 
-  const sendEmail = async e => {
+  const setSpinner = e => {
     e.preventDefault()
+    setSpinnerVal(true)
+  }
+
+  const sendEmail = async () => {
     generatePdf()
+    console.log(spinnerVal)
     const response = await axios.post(
       'https://new-nurse-2-nurse-api.herokuapp.com/api/NurseInformation',
       contactInformation
@@ -245,6 +250,12 @@ const TestPageData = props => {
       setSuccess(true)
     }
   }
+
+  useEffect(() => {
+    if (spinnerVal) {
+      sendEmail()
+    }
+  })
 
   useEffect(() => {
     const getRecruiters = async () => {
@@ -366,6 +377,8 @@ const TestPageData = props => {
                           key={index}
                           pageData={pageData}
                           updatePageData={updatePageData}
+                          spinnerVal={spinnerVal}
+                          setSpinnerVal={setSpinnerVal}
                         />
                       )
                     }
@@ -376,7 +389,8 @@ const TestPageData = props => {
           })}
         </ul>
         <FormSubmission
-          sendEmail={sendEmail}
+          // sendEmail={sendEmail}
+          setSpinner = {setSpinner}
           clear={clear}
           save={save}
           sigCanvas={sigCanvas}

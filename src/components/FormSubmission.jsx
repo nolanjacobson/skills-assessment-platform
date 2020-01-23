@@ -3,7 +3,7 @@ import SignatureCanvas from 'react-signature-canvas'
 import axios from 'axios'
 import { Redirect } from 'react-router-dom'
 import { Button } from 'react-bootstrap'
-
+import { Spinner } from 'react-bootstrap'
 const FormSubmission = props => {
   return (
     <section className="wrapper">
@@ -30,7 +30,7 @@ const FormSubmission = props => {
       </section>
       <section className="apiCallBox">
         <p className="contactInformation">Contact Information *</p>
-        <form className="contactInformationForm" onSubmit={props.sendEmail}>
+        <form className="contactInformationForm" onSubmit={props.setSpinner}>
           <section className="shrinkThis">
             <section className="row1">
               <div>
@@ -112,13 +112,17 @@ const FormSubmission = props => {
               <p className="certification">
                 I certify this test was filled out to the best of my knowledge.
               </p>
-              <button
-                className="finish"
-                disabled={props.signatureCanvas === 'val'}
-                type="submit"
-              >
-                Finish
-              </button>
+              {props.spinnerVal ? (
+                <Spinner animation="border" />
+              ) : (
+                <button
+                  className="finish"
+                  disabled={props.signatureCanvas === 'val'}
+                  type="submit"
+                >
+                  Finish
+                </button>
+              )}
             </div>
           </section>
         </form>
