@@ -391,6 +391,7 @@ const TestPageData = props => {
         <FormSubmission
           // sendEmail={sendEmail}
           setSpinner = {setSpinner}
+          spinnerVal={spinnerVal}
           clear={clear}
           save={save}
           sigCanvas={sigCanvas}
