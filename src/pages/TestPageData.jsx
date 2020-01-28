@@ -22,7 +22,7 @@ const TestPageData = props => {
     .filter(category => category.category === setCategory)
     .filter(test => test.testname === setTest)[0].sections
   // console.log(newTestData.map(question => console.log(question)))
-  const [checkBox, setCheckBox] = useState(false)
+  const [checkBox, setCheckBox] = useState(0)
   const [contactInformation, setContactInformation] = useState({
     firstName: '',
     lastName: '',
@@ -44,8 +44,7 @@ const TestPageData = props => {
   const [recruiters, setRecruiters] = useState([])
   const [overallFreqScore, setOverallFreqScore] = useState(0)
   const [overallProfScore, setOverallProfScore] = useState(0)
-  const [eventListener, setEventListener] = useState(false)
-
+  const [eventListener, setEventListener] = useState(0)
   const [success, setSuccess] = useState(false)
   const [pageData, setPageData] = useState({})
   const sigCanvas = useRef(null)
@@ -228,7 +227,7 @@ const TestPageData = props => {
   }
 
   const save = () => {
-    setEventListener(true)
+    setEventListener(eventListener + 1)
     const sig = sigCanvas.current.getTrimmedCanvas().toDataURL('image/png')
     setSignatureCanvas(sig)
   }
@@ -240,12 +239,10 @@ const TestPageData = props => {
 
   const sendEmail = async () => {
     generatePdf()
-    console.log(spinnerVal)
     const response = await axios.post(
       'https://new-nurse-2-nurse-api.herokuapp.com/api/NurseInformation',
       contactInformation
     )
-    console.log(response)
     if (response.status === 200) {
       setSuccess(true)
     }
@@ -307,7 +304,7 @@ const TestPageData = props => {
             ]
           })
         })
-        setCheckBox(true)
+        setCheckBox(checkbox + 1)
       })
     }
   }, [eventListener])
@@ -390,7 +387,6 @@ const TestPageData = props => {
             })}
           </ul>
           <FormSubmission
-            // sendEmail={sendEmail}
             setSpinner={setSpinner}
             spinnerVal={spinnerVal}
             clear={clear}

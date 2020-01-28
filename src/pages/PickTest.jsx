@@ -35,7 +35,6 @@ const PickTest = () => {
   const googleIsAuthorized = () => {
     setButton(true)
     localStorage.setItem('isAuthorized', 'trueVal')
-    console.log(localStorage.getItem('isAuthorized'))
   }
   return (
     <div className="outerBox">
