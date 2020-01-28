@@ -315,20 +315,17 @@ const TestPageData = props => {
   useEffect(() => {
     if (checkBox) {
       profSum.map((prof, index) => {
+        let num = prof / lengths[index]
         setProfAverage(previous => {
-          return [
-            ...previous,
-            Math.round(((prof / lengths[index]) * 4) / 4).toFixed(2),
-          ]
+          return [...previous, Math.round((num * 4) / 4).toFixed(2)]
         })
       })
 
       freqSum.map((freq, index) => {
+        let num = freq / lengths[index]
+
         setFreqAverage(previous => {
-          return [
-            ...previous,
-            Math.round(((freq / lengths[index]) * 4) / 4).toFixed(2),
-          ]
+          return [...previous, Math.round((num * 4) / 4).toFixed(2)]
         })
       })
     }
@@ -406,14 +403,14 @@ const TestPageData = props => {
             frequencyAverage={freqAverage}
             proficiencyAverage={profAverage}
             overallCompetencyScore={(
-              (Math.ceil((overallProfScore * 4) / 4) +
-                Math.ceil((overallFreqScore * 4) / 4)) /
+              (Math.round((overallProfScore * 4) / 4) +
+                Math.round((overallFreqScore * 4) / 4)) /
               2
             ).toFixed(2)}
-            overallFrequencyScore={Math.ceil(
+            overallFrequencyScore={Math.round(
               (overallFreqScore * 4) / 4
             ).toFixed(2)}
-            overallProficiencyScore={Math.ceil(
+            overallProficiencyScore={Math.round(
               (overallProfScore * 4) / 4
             ).toFixed(2)}
             freqScores={freqScores}
