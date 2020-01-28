@@ -10,6 +10,7 @@ const PickTest = () => {
   const [secondListen, setSecondListen] = useState()
   const [testDropDown, setTestDropDown] = useState([])
   const [buttonDrop, setButtonDrop] = useState(false)
+  const key = process.env.SITEKEY
   const uri = encodeURIComponent(secondListen)
   useEffect(() => {
     if (listen) {
@@ -73,10 +74,7 @@ const PickTest = () => {
         )}
         {buttonDrop ? (
           <div className="recaptcha">
-            <ReCAPTCHA
-              sitekey="6LcokdMUAAAAAEwvq_XO8FnSmbJ9TARpFoHuyOBf"
-              onChange={googleIsAuthorized}
-            />
+            <ReCAPTCHA sitekey={key} onChange={googleIsAuthorized} />
           </div>
         ) : (
           <></>
