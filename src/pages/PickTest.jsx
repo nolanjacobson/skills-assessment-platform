@@ -12,6 +12,9 @@ const PickTest = () => {
   const [buttonDrop, setButtonDrop] = useState(false)
   const uri = encodeURIComponent(secondListen)
   useEffect(() => {
+    localStorage.setItem('isAuthorized', 'false')
+  }, [])
+  useEffect(() => {
     if (listen) {
       setShowNext(true)
       setTestDropDown(
@@ -34,7 +37,7 @@ const PickTest = () => {
   const [button, setButton] = useState(false)
   const googleIsAuthorized = () => {
     setButton(true)
-    localStorage.setItem('isAuthorized', true)
+    localStorage.setItem('isAuthorized', 'true')
   }
   return (
     <div className="outerBox">
