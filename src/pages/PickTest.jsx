@@ -74,7 +74,7 @@ const PickTest = () => {
           <div className="recaptcha">
             <ReCAPTCHA
               sitekey="6LcokdMUAAAAAEwvq_XO8FnSmbJ9TARpFoHuyOBf"
-              onChange={() => setButton(true)}
+              onChange={googleIsAuthorized}
             />
           </div>
         ) : (
