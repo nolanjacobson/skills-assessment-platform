@@ -323,7 +323,7 @@ const TestPageData = props => {
 
       freqSum.map((freq, index) => {
         let num = freq / lengths[index]
-        console.log(Math.round(num * 4) / 4).toFixed(2))
+        console.log(Math.round((num * 4) / 4).toFixed(2))
         setFreqAverage(previous => {
           return [...previous, Math.round((num * 4) / 4).toFixed(2)]
         })
