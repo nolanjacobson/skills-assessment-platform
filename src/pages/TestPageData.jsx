@@ -13,7 +13,7 @@ import { Redirect } from 'react-router-dom'
 import base64_source from '../utils/image.constants'
 import { Spinner } from 'react-bootstrap'
 const TestPageData = props => {
-  const [isAuthorized, setIsAuthorized] = useState(false)
+  const [isAuthorized, setIsAuthorized] = useState(true)
   const [show, setShow] = useState(false)
   const [spinnerVal, setSpinnerVal] = useState(false)
   const setCategory = props.match.params.category
@@ -54,8 +54,8 @@ const TestPageData = props => {
   }
 
   useEffect(() => {
-    if (localStorage.getItem(isAuthorized)) {
-      setIsAuthorized(true)
+    if (!localStorage.getItem(isAuthorized)) {
+      setIsAuthorized(false)
     }
   }, [])
   const updatePageData = (section, question, freq, prof) => {
