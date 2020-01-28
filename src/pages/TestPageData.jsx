@@ -54,7 +54,7 @@ const TestPageData = props => {
   }
 
   useEffect(() => {
-    if (!localStorage.getItem(isAuthorized)) {
+    if (!localStorage.getItem('isAuthorized')) {
       setIsAuthorized(false)
     }
   }, [])
