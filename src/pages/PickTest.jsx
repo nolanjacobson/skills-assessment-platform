@@ -34,7 +34,7 @@ const PickTest = () => {
   const [button, setButton] = useState(false)
   const googleIsAuthorized = () => {
     setButton(true)
-    localStorage.setItem('isAuthorized', 'true')
+    localStorage.setItem('isAuthorized', true)
     console.log(localStorage.getItem('isAuthorized'))
   }
   return (
