@@ -317,15 +317,16 @@ const TestPageData = props => {
       profSum.map((prof, index) => {
         let num = prof / lengths[index]
         setProfAverage(previous => {
-          return [...previous, Math.round((num * 4) / 4).toFixed(2)]
+          return [...previous, Math.round(((num * 4) / 4).toFixed(2))]
         })
       })
 
       freqSum.map((freq, index) => {
-        let num = freq / lengths[index]
-        console.log(Math.round((num * 4) / 4).toFixed(2))
         setFreqAverage(previous => {
-          return [...previous, Math.round((num * 4) / 4).toFixed(2)]
+          return [
+            ...previous,
+            Math.round((((freq / lengths[index]) * 4) / 4).toFixed(2)),
+          ]
         })
       })
     }
