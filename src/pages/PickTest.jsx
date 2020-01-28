@@ -12,9 +12,6 @@ const PickTest = () => {
   const [buttonDrop, setButtonDrop] = useState(false)
   const uri = encodeURIComponent(secondListen)
   useEffect(() => {
-    localStorage.setItem('isAuthorized', 'false')
-  }, [])
-  useEffect(() => {
     if (listen) {
       setShowNext(true)
       setTestDropDown(
