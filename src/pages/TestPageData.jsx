@@ -304,7 +304,7 @@ const TestPageData = props => {
             ]
           })
         })
-        setCheckBox(checkbox + 1)
+        setCheckBox(checkBox + 1)
       })
     }
   }, [eventListener])
