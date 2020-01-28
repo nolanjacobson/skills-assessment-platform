@@ -84,14 +84,7 @@ const TestPageData = props => {
     var header = function(data) {
       doc.setTextColor(40)
       doc.setFontStyle('normal')
-      doc.addImage(
-        base64_source,
-        'JPEG',
-        data.settings.margin.left,
-        20,
-        100,
-        20
-      )
+      doc.addImage(base64_source, 'JPEG', data.settings.margin.left, 20, 80, 20)
     }
 
     doc.autoTable({
@@ -413,14 +406,14 @@ const TestPageData = props => {
             frequencyAverage={freqAverage}
             proficiencyAverage={profAverage}
             overallCompetencyScore={(
-              (Math.round((overallProfScore * 4) / 4) +
-                Math.round((overallFreqScore * 4) / 4)) /
+              (Math.ceil((overallProfScore * 4) / 4) +
+                Math.ceil((overallFreqScore * 4) / 4)) /
               2
             ).toFixed(2)}
-            overallFrequencyScore={Math.round(
+            overallFrequencyScore={Math.ceil(
               (overallFreqScore * 4) / 4
             ).toFixed(2)}
-            overallProficiencyScore={Math.round(
+            overallProficiencyScore={Math.ceil(
               (overallProfScore * 4) / 4
             ).toFixed(2)}
             freqScores={freqScores}
