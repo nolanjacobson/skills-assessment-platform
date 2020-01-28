@@ -3,6 +3,7 @@ import nurse2nursestaffingimage from './images/nurse2nurse.png'
 import data from './data/categories.json'
 import { Link } from 'react-router-dom'
 import ReCAPTCHA from 'react-google-recaptcha'
+
 const PickTest = () => {
   const [listen, setListen] = useState('Advanced Practice')
   const [showNext, setShowNext] = useState(false)
@@ -15,7 +16,6 @@ const PickTest = () => {
       setShowNext(true)
       setTestDropDown(
         data.categories.filter(f => f.category === listen)[0].tests
-        // filter returns an array and we want the first element inside it
       )
     } else if (!listen) {
       setShowNext(false)
@@ -32,7 +32,10 @@ const PickTest = () => {
   }, [secondListen])
 
   const [button, setButton] = useState(false)
-
+  const googleIsAuthorized = () => {
+    setButton(true)
+    localStorage.setItem('isAuthorized', true)
+  }
   return (
     <div className="outerBox">
       <section className="box">

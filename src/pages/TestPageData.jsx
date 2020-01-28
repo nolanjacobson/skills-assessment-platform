@@ -13,6 +13,7 @@ import { Redirect } from 'react-router-dom'
 import base64_source from '../utils/image.constants'
 import { Spinner } from 'react-bootstrap'
 const TestPageData = props => {
+  const [isAuthorized, setIsAuthorized] = useState(false)
   const [show, setShow] = useState(false)
   const [spinnerVal, setSpinnerVal] = useState(false)
   const setCategory = props.match.params.category
@@ -51,6 +52,12 @@ const TestPageData = props => {
   const clear = () => {
     sigCanvas.current.clear()
   }
+
+  useEffect(() => {
+    if (localStorage.getItem(isAuthorized) === true) {
+      setIsAuthorized(true)
+    }
+  }, [])
   const updatePageData = (section, question, freq, prof) => {
     setPageData(prev => {
       return {
@@ -353,80 +360,84 @@ const TestPageData = props => {
     <>
       {success &&
         window.parent.location.replace('https://www.nurse2nursestaffing.com/')}
-      <section id="wrapEverything">
-        <RenderHeader
-          show={show}
-          setTest={setTest}
-          setShow={setShow}
-          nurse2nursestaffingimage={nurse2nursestaffingimage}
-        />
-        <ul id="newTestData" className="newTestData">
-          {newTestData.map((header, sectionIndex) => {
-            return (
-              <>
-                <li className="newTestDataLi">
-                  <CategoryHeader header={header.header} />
-                  {newTestData[sectionIndex].questions.map(
-                    (question, index) => {
-                      return (
-                        <AddRatings
-                          pageData={pageData}
-                          section={header.header}
-                          question={question}
-                          index={index}
-                          key={index}
-                          pageData={pageData}
-                          updatePageData={updatePageData}
-                          spinnerVal={spinnerVal}
-                          setSpinnerVal={setSpinnerVal}
-                        />
-                      )
-                    }
-                  )}
-                </li>
-              </>
-            )
-          })}
-        </ul>
-        <FormSubmission
-          // sendEmail={sendEmail}
-          setSpinner = {setSpinner}
-          spinnerVal={spinnerVal}
-          clear={clear}
-          save={save}
-          sigCanvas={sigCanvas}
-          handleChange={handleChange}
-          contactInformation={contactInformation}
-          signatureCanvas={signatureCanvas}
-          recruiters={recruiters}
-        />
-        <HiddenTable
-          newTestData={newTestData}
-          frequencyAverage={freqAverage}
-          proficiencyAverage={profAverage}
-          overallCompetencyScore={(
-            (Math.round((overallProfScore * 4) / 4) +
-              Math.round((overallFreqScore * 4) / 4)) /
-            2
-          ).toFixed(2)}
-          overallFrequencyScore={Math.round((overallFreqScore * 4) / 4).toFixed(
-            2
-          )}
-          overallProficiencyScore={Math.round(
-            (overallProfScore * 4) / 4
-          ).toFixed(2)}
-          freqScores={freqScores}
-          profScores={profScores}
-          testName={setTest}
-          nurseName={`${contactInformation.firstName} ${contactInformation.lastName}`}
-          dateCompleted={new Date()
-            .toLocaleString()
-            .replace(',', '')
-            .replace(/:.. /, ' ')}
-          pageData={pageData}
-          signature={contactInformation.signatureCanvas}
-        />
-      </section>
+      {isAuthorized ? (
+        <section id="wrapEverything">
+          <RenderHeader
+            show={show}
+            setTest={setTest}
+            setShow={setShow}
+            nurse2nursestaffingimage={nurse2nursestaffingimage}
+          />
+          <ul id="newTestData" className="newTestData">
+            {newTestData.map((header, sectionIndex) => {
+              return (
+                <>
+                  <li className="newTestDataLi">
+                    <CategoryHeader header={header.header} />
+                    {newTestData[sectionIndex].questions.map(
+                      (question, index) => {
+                        return (
+                          <AddRatings
+                            pageData={pageData}
+                            section={header.header}
+                            question={question}
+                            index={index}
+                            key={index}
+                            pageData={pageData}
+                            updatePageData={updatePageData}
+                            spinnerVal={spinnerVal}
+                            setSpinnerVal={setSpinnerVal}
+                          />
+                        )
+                      }
+                    )}
+                  </li>
+                </>
+              )
+            })}
+          </ul>
+          <FormSubmission
+            // sendEmail={sendEmail}
+            setSpinner={setSpinner}
+            spinnerVal={spinnerVal}
+            clear={clear}
+            save={save}
+            sigCanvas={sigCanvas}
+            handleChange={handleChange}
+            contactInformation={contactInformation}
+            signatureCanvas={signatureCanvas}
+            recruiters={recruiters}
+          />
+          <HiddenTable
+            newTestData={newTestData}
+            frequencyAverage={freqAverage}
+            proficiencyAverage={profAverage}
+            overallCompetencyScore={(
+              (Math.round((overallProfScore * 4) / 4) +
+                Math.round((overallFreqScore * 4) / 4)) /
+              2
+            ).toFixed(2)}
+            overallFrequencyScore={Math.round(
+              (overallFreqScore * 4) / 4
+            ).toFixed(2)}
+            overallProficiencyScore={Math.round(
+              (overallProfScore * 4) / 4
+            ).toFixed(2)}
+            freqScores={freqScores}
+            profScores={profScores}
+            testName={setTest}
+            nurseName={`${contactInformation.firstName} ${contactInformation.lastName}`}
+            dateCompleted={new Date()
+              .toLocaleString()
+              .replace(',', '')
+              .replace(/:.. /, ' ')}
+            pageData={pageData}
+            signature={contactInformation.signatureCanvas}
+          />
+        </section>
+      ) : (
+        <Redirect to="/" />
+      )}
     </>
   )
 }
