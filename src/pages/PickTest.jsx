@@ -74,7 +74,7 @@ const PickTest = () => {
         {buttonDrop ? (
           <div className="recaptcha">
             <ReCAPTCHA
-              sitekey={'6LcokdMUAAAAAEwvq_XO8FnSmbJ9TARpFoHuyOBf'}
+              sitekey="6LcokdMUAAAAAEwvq_XO8FnSmbJ9TARpFoHuyOBf"
               onChange={googleIsAuthorized}
             />
           </div>
