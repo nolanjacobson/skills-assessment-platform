@@ -316,7 +316,7 @@ const TestPageData = props => {
     if (checkBox) {
       profSum.map((prof, index) => {
         setProfAverage(previous => {
-          return [...previous, Math.ceil((prof/ lengths[index] / 0.25) * 0.25).toFixed(2))]
+          return [...previous, Math.ceil((prof/ lengths[index] / 0.25) * 0.25).toFixed(2)]
         })
       })
 
