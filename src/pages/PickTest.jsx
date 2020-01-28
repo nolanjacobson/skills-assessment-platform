@@ -46,7 +46,6 @@ const PickTest = () => {
           className="categorySelect"
           onChange={e => setListen(e.target.value)}
         >
-          {/* <option value={null}></option> */}
           {data.categories.map((categoryName, index) => {
             return (
               <option key={index} value={categoryName.category}>

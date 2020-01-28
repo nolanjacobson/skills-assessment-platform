@@ -21,7 +21,6 @@ const TestPageData = props => {
   const newTestData = TestData.tests
     .filter(category => category.category === setCategory)
     .filter(test => test.testname === setTest)[0].sections
-  // console.log(newTestData.map(question => console.log(question)))
   const [checkBox, setCheckBox] = useState(0)
   const [contactInformation, setContactInformation] = useState({
     firstName: '',
@@ -83,7 +82,7 @@ const TestPageData = props => {
     var header = function(data) {
       doc.setTextColor(40)
       doc.setFontStyle('normal')
-      doc.addImage(base64_source, 'JPEG', data.settings.margin.left, 20, 60, 20)
+      doc.addImage(base64_source, 'JPEG', data.settings.margin.left, 20, 80, 20)
     }
 
     doc.autoTable({

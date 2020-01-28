@@ -7,7 +7,6 @@ import { Spinner } from 'react-bootstrap'
 const FormSubmission = props => {
   return (
     <section className="wrapper">
-      {props.checkBox && <Redirect to="/" />}
       <section className="recruiterInformation">
         <p className="recruiterEmail">Recruiter Name *</p>
         <div className="recruiterEmailContainer">
