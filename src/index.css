@@ -237,6 +237,11 @@ input {
   transition-duration: 0.4s; */
 }
 
+.finish:disabled {
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
+}
 .sigCanvas {
   display: flex;
   flex-direction: column;
