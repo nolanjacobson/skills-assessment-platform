@@ -254,7 +254,9 @@ input {
   margin: 0.5rem;
 }
 
-
+.recaptcha {
+  margin-top: 2rem;
+}
 .success {
   text-align: center;
 }

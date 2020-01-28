@@ -32,6 +32,7 @@ const PickTest = () => {
   }, [secondListen])
 
   const [button, setButton] = useState(false)
+
   return (
     <div className="outerBox">
       <section className="box">
@@ -67,10 +68,12 @@ const PickTest = () => {
           </>
         )}
         {buttonDrop ? (
-          <ReCAPTCHA
-            sitekey="6LcokdMUAAAAAEwvq_XO8FnSmbJ9TARpFoHuyOBf"
-            onChange={() => setButton(true)}
-          />
+          <div className="recaptcha">
+            <ReCAPTCHA
+              sitekey="6LcokdMUAAAAAEwvq_XO8FnSmbJ9TARpFoHuyOBf"
+              onChange={() => setButton(true)}
+            />
+          </div>
         ) : (
           <></>
         )}
