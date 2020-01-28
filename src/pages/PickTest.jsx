@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import nurse2nursestaffingimage from './images/nurse2nurse.png'
 import data from './data/categories.json'
 import { Link } from 'react-router-dom'
-
+import ReCAPTCHA from 'react-google-recaptcha'
 const PickTest = () => {
   const [listen, setListen] = useState('Advanced Practice')
   const [showNext, setShowNext] = useState(false)
@@ -31,6 +31,7 @@ const PickTest = () => {
     }
   }, [secondListen])
 
+  const [button, setButton] = useState(false)
   return (
     <div className="outerBox">
       <section className="box">
@@ -66,11 +67,17 @@ const PickTest = () => {
           </>
         )}
         {buttonDrop ? (
+          <ReCAPTCHA
+            sitekey="6LcokdMUAAAAAEwvq_XO8FnSmbJ9TARpFoHuyOBf"
+            onChange={() => setButton(true)}
+          />
+        ) : (
+          <></>
+        )}
+        {button && (
           <Link to={`/${listen}/${uri}`}>
             <button className="submit">Start</button>
           </Link>
-        ) : (
-          <></>
         )}
       </section>
     </div>
