@@ -124,8 +124,7 @@ const TestPageData = props => {
         data.table.body[1].cells[2].styles.fillColor = '#FFFFFF'
         data.table.body[data.table.body.length - 1].cells[0].styles.fillColor =
           '#FFFFFF'
-        // data.table.body[data.table.body.length - 1].cells[0].styles.fontStyle =
-        //   'bold'
+        
         data.table.body[
           data.table.body.length - 1
         ].cells[0].styles.fontSize = 10
