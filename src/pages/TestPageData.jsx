@@ -88,7 +88,7 @@ const TestPageData = props => {
     doc.autoTable({
       html: '#table',
       includeHiddenHtml: true,
-      margin: { top: 50, bottom: 40 },
+      margin: { top: 40, bottom: 40 },
       didDrawPage: header,
       didParseCell: data => {
         for (let i = 0; i < data.table.body.length; i++) {
