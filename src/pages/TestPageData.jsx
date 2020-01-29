@@ -241,9 +241,9 @@ const TestPageData = props => {
       'https://new-nurse-2-nurse-api.herokuapp.com/api/NurseInformation',
       contactInformation
     )
-    if (response.status === 200) {
-      setSuccess(true)
-    }
+    // if (response.status === 200) {
+    //   setSuccess(true)
+    // }
   }
 
   useEffect(() => {
