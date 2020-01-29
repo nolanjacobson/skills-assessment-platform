@@ -82,13 +82,13 @@ const TestPageData = props => {
     var header = function(data) {
       doc.setTextColor(40)
       doc.setFontStyle('normal')
-      doc.addImage(base64_source, 'JPEG', data.settings.margin.left, 20, 80, 20)
+      doc.addImage(base64_source, 'JPEG', data.settings.margin.left, 20, 60, 20)
     }
 
     doc.autoTable({
       html: '#table',
       includeHiddenHtml: true,
-      margin: { top: 40, bottom: 40 },
+      margin: { top: 35, bottom: 40 },
       didDrawPage: header,
       didParseCell: data => {
         for (let i = 0; i < data.table.body.length; i++) {
