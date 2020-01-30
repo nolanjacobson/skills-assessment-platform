@@ -21,7 +21,7 @@ const TestPageData = props => {
   const newTestData = TestData.tests
     .filter(category => category.category === setCategory)
     .filter(test => test.testname === setTest)[0].sections
-  const [checkBox, setCheckBox] = useState(0)
+  const [checkBox, setCheckBox] = useState(false)
   const [contactInformation, setContactInformation] = useState({
     firstName: '',
     lastName: '',
@@ -43,7 +43,7 @@ const TestPageData = props => {
   const [recruiters, setRecruiters] = useState([])
   const [overallFreqScore, setOverallFreqScore] = useState(0)
   const [overallProfScore, setOverallProfScore] = useState(0)
-  const [eventListener, setEventListener] = useState(0)
+  const [eventListener, setEventListener] = useState(false)
   const [success, setSuccess] = useState(false)
   const [pageData, setPageData] = useState({})
   const sigCanvas = useRef(null)
@@ -238,7 +238,7 @@ const TestPageData = props => {
   }
 
   const save = () => {
-    setEventListener(eventListener + 1)
+    setEventListener(true)
     const sig = sigCanvas.current.getTrimmedCanvas().toDataURL('image/png')
     setSignatureCanvas(sig)
   }
@@ -315,7 +315,7 @@ const TestPageData = props => {
             ]
           })
         })
-        setCheckBox(checkBox + 1)
+        setCheckBox(true)
       })
     }
   }, [eventListener])
