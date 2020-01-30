@@ -88,7 +88,7 @@ const TestPageData = props => {
     doc.autoTable({
       html: '#table',
       includeHiddenHtml: true,
-      margin: { top: 35, bottom: 40 },
+      margin: { top: 45, bottom: 40 },
       didDrawPage: header,
       didParseCell: data => {
         for (let i = 0; i < data.table.body.length; i++) {
@@ -124,7 +124,7 @@ const TestPageData = props => {
         data.table.body[1].cells[2].styles.fillColor = '#FFFFFF'
         data.table.body[data.table.body.length - 1].cells[0].styles.fillColor =
           '#FFFFFF'
-        
+
         data.table.body[
           data.table.body.length - 1
         ].cells[0].styles.fontSize = 10
@@ -241,16 +241,16 @@ const TestPageData = props => {
       'https://new-nurse-2-nurse-api.herokuapp.com/api/NurseInformation',
       contactInformation
     )
-    // if (response.status === 200) {
-    //   setSuccess(true)
-    // }
+    if (response.status === 200) {
+      setSuccess(true)
+    }
   }
 
   useEffect(() => {
     if (spinnerVal) {
       sendEmail()
     }
-  })
+  }, [spinnerVal])
 
   useEffect(() => {
     const getRecruiters = async () => {
@@ -346,8 +346,6 @@ const TestPageData = props => {
 
   return (
     <>
-      {success &&
-        window.parent.location.replace('https://www.nurse2nursestaffing.com/')}
       {isAuthorized ? (
         <section id="wrapEverything">
           <RenderHeader
@@ -385,6 +383,7 @@ const TestPageData = props => {
             })}
           </ul>
           <FormSubmission
+            success={success}
             setSpinner={setSpinner}
             spinnerVal={spinnerVal}
             clear={clear}
@@ -400,9 +399,9 @@ const TestPageData = props => {
             frequencyAverage={freqAverage}
             proficiencyAverage={profAverage}
             overallCompetencyScore={(
-              (Math.round((overallProfScore * 4) / 4) +
-                Math.round((overallFreqScore * 4) / 4)) /
-              2
+              Math.round(
+                (overallProfScore * 4) / 4 + (overallFreqScore * 4) / 4
+              ) / 2
             ).toFixed(2)}
             overallFrequencyScore={(
               Math.round(overallFreqScore * 4) / 4
