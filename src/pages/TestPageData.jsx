@@ -47,12 +47,12 @@ const TestPageData = props => {
   const [success, setSuccess] = useState(false)
   const [pageData, setPageData] = useState({})
   const sigCanvas = useRef(null)
-  const profScoreQuarter = (overallProfScore * 4) / 4
-  const freqScoreQuarter = (overallFreqScore * 4) / 4
+  const profScoreQuarter = Math.round((overallProfScore * 4) / 4).toFixed(2)
+  const freqScoreQuarter = Math.round((overallFreqScore * 4) / 4).toFixed(2)
   const overallCompetencyScore = Math.round(
     (profScoreQuarter + freqScoreQuarter) / 2
   ).toFixed(2)
-  
+
   const clear = () => {
     sigCanvas.current.clear()
   }
