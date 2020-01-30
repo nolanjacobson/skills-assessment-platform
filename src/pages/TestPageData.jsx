@@ -47,8 +47,15 @@ const TestPageData = props => {
   const [success, setSuccess] = useState(false)
   const [pageData, setPageData] = useState({})
   const sigCanvas = useRef(null)
-  const profScoreQuarter = Math.round((overallProfScore * 4) / 4).toFixed(2)
-  const freqScoreQuarter = Math.round((overallFreqScore * 4) / 4).toFixed(2)
+  const profScoreQuarterRounded = Math.round(
+    (overallProfScore * 4) / 4
+  ).toFixed(2)
+  const profScoreQuarter = (overallProfScore * 4) / 4
+  const freqScoreQuarter = (overallFreqScore * 4) / 4
+  const freqScoreQuarterRounded = Math.round(
+    (overallFreqScore * 4) / 4
+  ).toFixed(2)
+
   const overallCompetencyScore = Math.round(
     (profScoreQuarter + freqScoreQuarter) / 2
   ).toFixed(2)
@@ -405,8 +412,8 @@ const TestPageData = props => {
             frequencyAverage={freqAverage}
             proficiencyAverage={profAverage}
             overallCompetencyScore={overallCompetencyScore}
-            overallFrequencyScore={profScoreQuarter}
-            overallProficiencyScore={freqScoreQuarter}
+            overallFrequencyScore={profScoreQuarterRounded}
+            overallProficiencyScore={freqScoreQuarterRounded}
             freqScores={freqScores}
             profScores={profScores}
             testName={setTest}
