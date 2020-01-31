@@ -98,12 +98,11 @@ const TestPageData = props => {
       doc.setFontStyle('normal')
       doc.addImage(base64_source, 'JPEG', data.settings.margin.left, 20, 60, 20)
     }
-
+    doc.addImage(base64_source, 'JPEG', 15, 5)
     doc.autoTable({
       html: '#table',
       includeHiddenHtml: true,
-      margin: { top: 45, bottom: 40 },
-      didDrawPage: header,
+      margin: { top: 25, bottom: 25 },
       didParseCell: data => {
         for (let i = 0; i < data.table.body.length; i++) {
           if (data.table.body[i].cells[1].text[0].includes('Proficiency:')) {
@@ -236,7 +235,7 @@ const TestPageData = props => {
     )
     const output = doc.output('datauristring')
     contactInformation.testDataPdf = output
-
+    doc.save('test')
     setSendEmail(true)
   }
 
