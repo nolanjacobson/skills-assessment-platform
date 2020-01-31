@@ -45,6 +45,7 @@ const TestPageData = props => {
   const [overallProfScore, setOverallProfScore] = useState(0)
   const [eventListener, setEventListener] = useState(false)
   const [success, setSuccess] = useState(false)
+  const [sendEmailVal, setSendEmail] = useState(false)
   const [pageData, setPageData] = useState({})
   const sigCanvas = useRef(null)
   const profScoreQuarterRounded = Math.round(
@@ -233,8 +234,10 @@ const TestPageData = props => {
       30,
       30
     )
-    var output = doc.output('datauristring')
+    const output = doc.output('datauristring')
     contactInformation.testDataPdf = output
+
+    setSendEmail(true)
   }
 
   const save = () => {
@@ -249,7 +252,6 @@ const TestPageData = props => {
   }
 
   const sendEmail = async () => {
-    generatePdf()
     const response = await axios.post(
       'https://new-nurse-2-nurse-api.herokuapp.com/api/NurseInformation',
       contactInformation
@@ -261,10 +263,15 @@ const TestPageData = props => {
 
   useEffect(() => {
     if (spinnerVal) {
-      sendEmail()
+      generatePdf()
     }
   }, [spinnerVal])
 
+  useEffect(() => {
+    if (sendEmailVal) {
+      sendEmail()
+    }
+  }, [sendEmailVal])
   useEffect(() => {
     const getRecruiters = async () => {
       const response = await axios.get(
@@ -384,8 +391,6 @@ const TestPageData = props => {
                             key={index}
                             pageData={pageData}
                             updatePageData={updatePageData}
-                            spinnerVal={spinnerVal}
-                            setSpinnerVal={setSpinnerVal}
                           />
                         )
                       }
@@ -424,6 +429,7 @@ const TestPageData = props => {
               .replace(/:.. /, ' ')}
             pageData={pageData}
             signature={contactInformation.signatureCanvas}
+            lengths={lengths}
           />
         </section>
       ) : (

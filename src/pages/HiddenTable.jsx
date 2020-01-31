@@ -1,8 +1,20 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 
 const HiddenTable = props => {
+  const freqScores = props.freqScores
+  const profScores = props.profScores
+  const pageData = props.pageData
+  const [newArray, setNewArray] = useState([])
+
+  useEffect(() => {
+    setNewArray(
+      props.newTestData
+        .map(item => item.questions)
+        .reduce((a, b) => a.concat(b), [])
+    )
+  }, [])
   return (
-    <table id="table" style={{ display: 'none' }}>
+    <table id="table">
       <tbody>
         <>
           <tr>
@@ -61,46 +73,26 @@ const HiddenTable = props => {
                   {props.frequencyAverage[sectionIndex]}
                 </td>
               </tr>
-
-              {props.newTestData[sectionIndex].questions.map(
-                (question, index) => {
-                  return (
-                    <>
-                      <tr>
-                        <td>{question}</td>
-                        <td>{props.profScores[index]}</td>
-                        <td>{props.freqScores[index]}</td>
-                      </tr>
-                    </>
-                  )
-                }
-              )}
             </>
           )
         })}
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
+        {newArray.map((question, index) => {
+          return (
+            <>
+              <tr>
+                <td>{question}</td>
+                <td>{profScores[index]}</td>
+                <td>{freqScores[index]}</td>
+              </tr>
+            </>
+          )
+        })}
 
         <tr>
           <td></td>
           <td></td>
           <td></td>
         </tr>
-
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-
         <tr>
           <td></td>
           <td></td>
@@ -143,20 +135,23 @@ const HiddenTable = props => {
           <td></td>
         </tr>
 
-        {/* <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr> */}
-        {/* 
         <tr>
-          <td></td><td></td><td></td>
+          <td></td>
+          <td></td>
+          <td></td>
         </tr>
 
         <tr>
-          <td></td><td></td><td></td>
-        </tr> */}
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
 
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
         <tr>
           <td>
             I certify this test was filled out to the best of my knowledge.
