@@ -14,7 +14,7 @@ const HiddenTable = props => {
     )
   }, [])
   return (
-    <table id="table">
+    <table id="table" style={{ display: 'none' }}>
       <tbody>
         <>
           <tr>
