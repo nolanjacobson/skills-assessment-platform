@@ -73,21 +73,21 @@ const HiddenTable = props => {
                   {props.frequencyAverage[sectionIndex]}
                 </td>
               </tr>
-            </>
-          )
-        })}
-        {newArray.map((question, index) => {
-          return (
-            <>
-              <tr>
-                <td>{question}</td>
-                <td>{profScores[index]}</td>
-                <td>{freqScores[index]}</td>
-              </tr>
-            </>
-          )
-        })}
 
+              {newArray.map((question, index) => {
+                return (
+                  <>
+                    <tr>
+                      <td>{question}</td>
+                      <td>{profScores[index]}</td>
+                      <td>{freqScores[index]}</td>
+                    </tr>
+                  </>
+                )
+              })}
+            </>
+          )
+        })}
         <tr>
           <td></td>
           <td></td>

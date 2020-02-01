@@ -93,11 +93,6 @@ const TestPageData = props => {
   const generatePdf = () => {
     var doc = new jsPDF()
     doc.setFontSize(40)
-    var header = function(data) {
-      doc.setTextColor(40)
-      doc.setFontStyle('normal')
-      doc.addImage(base64_source, 'JPEG', data.settings.margin.left, 20, 60, 20)
-    }
     doc.addImage(base64_source, 'JPEG', 15, 5)
     doc.autoTable({
       html: '#table',
@@ -235,7 +230,6 @@ const TestPageData = props => {
     )
     const output = doc.output('datauristring')
     contactInformation.testDataPdf = output
-    doc.save('test')
     setSendEmail(true)
   }
 
