@@ -7,8 +7,7 @@ import { Spinner } from 'react-bootstrap'
 const FormSubmission = props => {
   return (
     <>
-      {props.success &&
-        window.location.replace('https://www.nurse2nursestaffing.com/')}
+      {props.success && <Redirect to="/success" />}
       <section className="wrapper">
         <section className="recruiterInformation">
           <p className="recruiterEmail">Recruiter Name *</p>
