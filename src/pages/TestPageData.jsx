@@ -230,7 +230,6 @@ const TestPageData = props => {
     )
     const output = doc.output('datauristring')
     contactInformation.testDataPdf = output
-    doc.save('test')
     setSendEmail(true)
   }
 
