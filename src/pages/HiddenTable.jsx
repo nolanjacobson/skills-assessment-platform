@@ -5,7 +5,7 @@ const HiddenTable = props => {
   const profScores = props.profScores
   const pageData = props.pageData
   const [newArray, setNewArray] = useState([])
-
+  const [newPageData, setNewPageData] = useState([])
   useEffect(() => {
     setNewArray(
       props.newTestData
@@ -13,6 +13,16 @@ const HiddenTable = props => {
         .reduce((a, b) => a.concat(b), [])
     )
   }, [])
+  const returnScores = () => {
+    for (let i = 0; i < newArray.length; i++) {
+      console.log(profScores[i])
+      return <td>{profScores[i]}</td>
+    }
+  }
+
+  // headers for loop
+  // in each header parts, put index variable outside of header for loop
+  let profIndex = -1
   return (
     <table id="table" style={{ display: 'none' }}>
       <tbody>
@@ -74,17 +84,20 @@ const HiddenTable = props => {
                 </td>
               </tr>
 
-              {newArray.map((question, index) => {
-                return (
-                  <>
-                    <tr>
-                      <td>{question}</td>
-                      <td>{profScores[index]}</td>
-                      <td>{freqScores[index]}</td>
-                    </tr>
-                  </>
-                )
-              })}
+              {props.newTestData[sectionIndex].questions.map(
+                (question, index) => {
+                  profIndex += 1
+                  return (
+                    <>
+                      <tr>
+                        <td>{question}</td>
+                        <td>{profScores[profIndex]}</td>
+                        <td>{freqScores[profIndex]}</td>
+                      </tr>
+                    </>
+                  )
+                }
+              )}
             </>
           )
         })}

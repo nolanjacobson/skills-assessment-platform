@@ -2,7 +2,7 @@
   "private": true,
   "name": "skills-assessment",
   "scripts": {
-    "start": "react-scripts start",
+    "start": "set PORT=3000 && react-scripts start",
     "build": "react-scripts build",
     "predeploy": "react-scripts build",
     "deploy": " netlify deploy --dir=build --prod",
