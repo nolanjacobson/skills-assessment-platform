@@ -80,6 +80,20 @@
             "Intercostal Block",
             "Transtracheal Block"
           ]
+        },
+        {
+          "header": "Age Specific Criteria",
+          "questions": [
+            "Newborn/Neonatal (up to 30 days)",
+            "Infant (30 days to 1 year)",
+            "Toddler (1 to 3 years)",
+            "Pre-school (3 to 5 years)",
+            "School Age (5 to 12 years)",
+            "Adolescent (12 to 18 years)",
+            "Young Adult (18 to 30 years)",
+            "Mature Adult (30 to 60 years)",
+            "Elderly (60 & up)"
+          ]
         }
       ]
     },
@@ -245,6 +259,20 @@
             "DNV- Accreditation",
             "OSHA (Occupational, Safety and Health Administration)"
           ]
+        },
+        {
+          "header": "Age Specific Criteria",
+          "questions": [
+            "Newborn/Neonatal (up to 30 days)",
+            "Infant (30 days to 1 year)",
+            "Toddler (1 to 3 years)",
+            "Pre-school (3 to 5 years)",
+            "School Age (5 to 12 years)",
+            "Adolescent (12 to 18 years)",
+            "Young Adult (18 to 30 years)",
+            "Mature Adult (30 to 60 years)",
+            "Elderly (60 & up)"
+          ]
         }
       ]
     },
@@ -384,6 +412,20 @@
             "McKesson",
             "MEDITECH"
           ]
+        },
+        {
+          "header": "Age Specific Criteria",
+          "questions": [
+            "Newborn/Neonatal (up to 30 days)",
+            "Infant (30 days to 1 year)",
+            "Toddler (1 to 3 years)",
+            "Pre-school (3 to 5 years)",
+            "School Age (5 to 12 years)",
+            "Adolescent (12 to 18 years)",
+            "Young Adult (18 to 30 years)",
+            "Mature Adult (30 to 60 years)",
+            "Elderly (60 & up)"
+          ]
         }
       ]
     },
@@ -430,6 +472,20 @@
           "header": "Other Skills",
           "questions": [
             "Billing processes/CPT coding"
+          ]
+        },
+        {
+          "header": "Age Specific Criteria",
+          "questions": [
+            "Newborn/Neonatal (up to 30 days)",
+            "Infant (30 days to 1 year)",
+            "Toddler (1 to 3 years)",
+            "Pre-school (3 to 5 years)",
+            "School Age (5 to 12 years)",
+            "Adolescent (12 to 18 years)",
+            "Young Adult (18 to 30 years)",
+            "Mature Adult (30 to 60 years)",
+            "Elderly (60 & up)"
           ]
         }
       ]
@@ -536,6 +592,20 @@
             "Patient positioning",
             "Body positioning",
             "Anatomic landmarks"
+          ]
+        },
+        {
+          "header": "Age Specific Criteria",
+          "questions": [
+            "Newborn/Neonatal (up to 30 days)",
+            "Infant (30 days to 1 year)",
+            "Toddler (1 to 3 years)",
+            "Pre-school (3 to 5 years)",
+            "School Age (5 to 12 years)",
+            "Adolescent (12 to 18 years)",
+            "Young Adult (18 to 30 years)",
+            "Mature Adult (30 to 60 years)",
+            "Elderly (60 & up)"
           ]
         }
       ]
@@ -675,6 +745,20 @@
             "ER/ICU",
             "Trauma Level I",
             "Trauma Level II"
+          ]
+        },
+        {
+          "header": "Age Specific Criteria",
+          "questions": [
+            "Newborn/Neonatal (up to 30 days)",
+            "Infant (30 days to 1 year)",
+            "Toddler (1 to 3 years)",
+            "Pre-school (3 to 5 years)",
+            "School Age (5 to 12 years)",
+            "Adolescent (12 to 18 years)",
+            "Young Adult (18 to 30 years)",
+            "Mature Adult (30 to 60 years)",
+            "Elderly (60 & up)"
           ]
         }
       ]
@@ -845,6 +929,20 @@
             "Automatic",
             "Manual"
           ]
+        },
+        {
+          "header": "Age Specific Criteria",
+          "questions": [
+            "Newborn/Neonatal (up to 30 days)",
+            "Infant (30 days to 1 year)",
+            "Toddler (1 to 3 years)",
+            "Pre-school (3 to 5 years)",
+            "School Age (5 to 12 years)",
+            "Adolescent (12 to 18 years)",
+            "Young Adult (18 to 30 years)",
+            "Mature Adult (30 to 60 years)",
+            "Elderly (60 & up)"
+          ]
         }
       ]
     },
@@ -898,6 +996,20 @@
             "Effective Communication",
             "Interpretation & Communication of Lab Values",
             "Labeling"
+          ]
+        },
+        {
+          "header": "Age Specific Criteria",
+          "questions": [
+            "Newborn/Neonatal (up to 30 days)",
+            "Infant (30 days to 1 year)",
+            "Toddler (1 to 3 years)",
+            "Pre-school (3 to 5 years)",
+            "School Age (5 to 12 years)",
+            "Adolescent (12 to 18 years)",
+            "Young Adult (18 to 30 years)",
+            "Mature Adult (30 to 60 years)",
+            "Elderly (60 & up)"
           ]
         }
       ]
@@ -1001,6 +1113,20 @@
             "Trauma Level I",
             "Trauma Level II"
           ]
+        },
+        {
+          "header": "Age Specific Criteria",
+          "questions": [
+            "Newborn/Neonatal (up to 30 days)",
+            "Infant (30 days to 1 year)",
+            "Toddler (1 to 3 years)",
+            "Pre-school (3 to 5 years)",
+            "School Age (5 to 12 years)",
+            "Adolescent (12 to 18 years)",
+            "Young Adult (18 to 30 years)",
+            "Mature Adult (30 to 60 years)",
+            "Elderly (60 & up)"
+          ]
         }
       ]
     },
@@ -1089,6 +1215,20 @@
             "McKesson",
             "Centricity"
           ]
+        },
+        {
+          "header": "Age Specific Criteria",
+          "questions": [
+            "Newborn/Neonatal (up to 30 days)",
+            "Infant (30 days to 1 year)",
+            "Toddler (1 to 3 years)",
+            "Pre-school (3 to 5 years)",
+            "School Age (5 to 12 years)",
+            "Adolescent (12 to 18 years)",
+            "Young Adult (18 to 30 years)",
+            "Mature Adult (30 to 60 years)",
+            "Elderly (60 & up)"
+          ]
         }
       ]
     },
@@ -1147,6 +1287,20 @@
             "Pacs",
             "McKesson",
             "Centricity"
+          ]
+        },
+        {
+          "header": "Age Specific Criteria",
+          "questions": [
+            "Newborn/Neonatal (up to 30 days)",
+            "Infant (30 days to 1 year)",
+            "Toddler (1 to 3 years)",
+            "Pre-school (3 to 5 years)",
+            "School Age (5 to 12 years)",
+            "Adolescent (12 to 18 years)",
+            "Young Adult (18 to 30 years)",
+            "Mature Adult (30 to 60 years)",
+            "Elderly (60 & up)"
           ]
         }
       ]
@@ -1317,20 +1471,6 @@
           ]
         },
         {
-          "header": "Age Specific Criteria",
-          "questions": [
-            "Newborn/Neonatal (up to 30 days)",
-            "Infant (30 days to 1 year)",
-            "Toddler (1 to 3 years)",
-            "Pre-school (3 to 5 years)",
-            "School Age (5 to 12 years)",
-            "Adolescent (12 to 18 years)",
-            "Young Adult (18 to 30 years)",
-            "Mature Adult (30 to 60 years)",
-            "Elderly (60 & up)"
-          ]
-        },
-        {
           "header": "Equipment",
           "questions": [
             "Abbot",
@@ -1360,6 +1500,20 @@
             "Sysmex",
             "Vista",
             "Vitro"
+          ]
+        },
+        {
+          "header": "Age Specific Criteria",
+          "questions": [
+            "Newborn/Neonatal (up to 30 days)",
+            "Infant (30 days to 1 year)",
+            "Toddler (1 to 3 years)",
+            "Pre-school (3 to 5 years)",
+            "School Age (5 to 12 years)",
+            "Adolescent (12 to 18 years)",
+            "Young Adult (18 to 30 years)",
+            "Mature Adult (30 to 60 years)",
+            "Elderly (60 & up)"
           ]
         }
       ]
@@ -1530,20 +1684,6 @@
           ]
         },
         {
-          "header": "Age Specific Criteria",
-          "questions": [
-            "Newborn/Neonatal (up to 30 days)",
-            "Infant (30 days to 1 year)",
-            "Toddler (1 to 3 years)",
-            "Pre-school (3 to 5 years)",
-            "School Age (5 to 12 years)",
-            "Adolescent (12 to 18 years)",
-            "Young Adult (18 to 30 years)",
-            "Mature Adult (30 to 60 years)",
-            "Elderly (60 & up)"
-          ]
-        },
-        {
           "header": "Equipment",
           "questions": [
             "Abbott",
@@ -1573,6 +1713,20 @@
             "Sysmex",
             "Vitro",
             "Vista"
+          ]
+        },
+        {
+          "header": "Age Specific Criteria",
+          "questions": [
+            "Newborn/Neonatal (up to 30 days)",
+            "Infant (30 days to 1 year)",
+            "Toddler (1 to 3 years)",
+            "Pre-school (3 to 5 years)",
+            "School Age (5 to 12 years)",
+            "Adolescent (12 to 18 years)",
+            "Young Adult (18 to 30 years)",
+            "Mature Adult (30 to 60 years)",
+            "Elderly (60 & up)"
           ]
         }
       ]
@@ -1764,6 +1918,20 @@
             "McKesson",
             "Centricity"
           ]
+        },
+        {
+          "header": "Age Specific Criteria",
+          "questions": [
+            "Newborn/Neonatal (up to 30 days)",
+            "Infant (30 days to 1 year)",
+            "Toddler (1 to 3 years)",
+            "Pre-school (3 to 5 years)",
+            "School Age (5 to 12 years)",
+            "Adolescent (12 to 18 years)",
+            "Young Adult (18 to 30 years)",
+            "Mature Adult (30 to 60 years)",
+            "Elderly (60 & up)"
+          ]
         }
       ]
     },
@@ -1946,6 +2114,20 @@
             "Patients in Isolation",
             "Minimize Risk for Fall"
           ]
+        },
+        {
+          "header": "Age Specific Criteria",
+          "questions": [
+            "Newborn/Neonatal (up to 30 days)",
+            "Infant (30 days to 1 year)",
+            "Toddler (1 to 3 years)",
+            "Pre-school (3 to 5 years)",
+            "School Age (5 to 12 years)",
+            "Adolescent (12 to 18 years)",
+            "Young Adult (18 to 30 years)",
+            "Mature Adult (30 to 60 years)",
+            "Elderly (60 & up)"
+          ]
         }
       ]
     },
@@ -2013,6 +2195,20 @@
             "Billing Processes/CPT Coding",
             "Requisition Review",
             "Voice Recognition Software"
+          ]
+        },
+        {
+          "header": "Age Specific Criteria",
+          "questions": [
+            "Newborn/Neonatal (up to 30 days)",
+            "Infant (30 days to 1 year)",
+            "Toddler (1 to 3 years)",
+            "Pre-school (3 to 5 years)",
+            "School Age (5 to 12 years)",
+            "Adolescent (12 to 18 years)",
+            "Young Adult (18 to 30 years)",
+            "Mature Adult (30 to 60 years)",
+            "Elderly (60 & up)"
           ]
         }
       ]
@@ -2134,6 +2330,20 @@
             "Creatinine Clearance Rate",
             "Adjusting Creatinine Clearance Rate"
           ]
+        },
+        {
+          "header": "Age Specific Criteria",
+          "questions": [
+            "Newborn/Neonatal (up to 30 days)",
+            "Infant (30 days to 1 year)",
+            "Toddler (1 to 3 years)",
+            "Pre-school (3 to 5 years)",
+            "School Age (5 to 12 years)",
+            "Adolescent (12 to 18 years)",
+            "Young Adult (18 to 30 years)",
+            "Mature Adult (30 to 60 years)",
+            "Elderly (60 & up)"
+          ]
         }
       ]
     },
@@ -2194,6 +2404,20 @@
             "Oral Tablets and Capsules",
             "Insulin Injections",
             "Subcutaneous Injections"
+          ]
+        },
+        {
+          "header": "Age Specific Criteria",
+          "questions": [
+            "Newborn/Neonatal (up to 30 days)",
+            "Infant (30 days to 1 year)",
+            "Toddler (1 to 3 years)",
+            "Pre-school (3 to 5 years)",
+            "School Age (5 to 12 years)",
+            "Adolescent (12 to 18 years)",
+            "Young Adult (18 to 30 years)",
+            "Mature Adult (30 to 60 years)",
+            "Elderly (60 & up)"
           ]
         }
       ]
@@ -2346,6 +2570,20 @@
             "Trilogy",
             "Electa",
             "Eclipse"
+          ]
+        },
+        {
+          "header": "Age Specific Criteria",
+          "questions": [
+            "Newborn/Neonatal (up to 30 days)",
+            "Infant (30 days to 1 year)",
+            "Toddler (1 to 3 years)",
+            "Pre-school (3 to 5 years)",
+            "School Age (5 to 12 years)",
+            "Adolescent (12 to 18 years)",
+            "Young Adult (18 to 30 years)",
+            "Mature Adult (30 to 60 years)",
+            "Elderly (60 & up)"
           ]
         }
       ]
@@ -2557,6 +2795,20 @@
             "Embryonic and fetal risks",
             "Genetic impact"
           ]
+        },
+        {
+          "header": "Age Specific Criteria",
+          "questions": [
+            "Newborn/Neonatal (up to 30 days)",
+            "Infant (30 days to 1 year)",
+            "Toddler (1 to 3 years)",
+            "Pre-school (3 to 5 years)",
+            "School Age (5 to 12 years)",
+            "Adolescent (12 to 18 years)",
+            "Young Adult (18 to 30 years)",
+            "Mature Adult (30 to 60 years)",
+            "Elderly (60 & up)"
+          ]
         }
       ]
     },
@@ -2707,6 +2959,20 @@
             "Cerner",
             "Epic"
           ]
+        },
+        {
+          "header": "Age Specific Criteria",
+          "questions": [
+            "Newborn/Neonatal (up to 30 days)",
+            "Infant (30 days to 1 year)",
+            "Toddler (1 to 3 years)",
+            "Pre-school (3 to 5 years)",
+            "School Age (5 to 12 years)",
+            "Adolescent (12 to 18 years)",
+            "Young Adult (18 to 30 years)",
+            "Mature Adult (30 to 60 years)",
+            "Elderly (60 & up)"
+          ]
         }
       ]
     },
@@ -2767,6 +3033,20 @@
             "Heat Sealing",
             "Instrument Count Sheets",
             "Placing Instruments on Trays"
+          ]
+        },
+        {
+          "header": "Age Specific Criteria",
+          "questions": [
+            "Newborn/Neonatal (up to 30 days)",
+            "Infant (30 days to 1 year)",
+            "Toddler (1 to 3 years)",
+            "Pre-school (3 to 5 years)",
+            "School Age (5 to 12 years)",
+            "Adolescent (12 to 18 years)",
+            "Young Adult (18 to 30 years)",
+            "Mature Adult (30 to 60 years)",
+            "Elderly (60 & up)"
           ]
         }
       ]
@@ -3024,6 +3304,20 @@
             "Patients in Isolation",
             "Minimize Risk for Fall"
           ]
+        },
+        {
+          "header": "Age Specific Criteria",
+          "questions": [
+            "Newborn/Neonatal (up to 30 days)",
+            "Infant (30 days to 1 year)",
+            "Toddler (1 to 3 years)",
+            "Pre-school (3 to 5 years)",
+            "School Age (5 to 12 years)",
+            "Adolescent (12 to 18 years)",
+            "Young Adult (18 to 30 years)",
+            "Mature Adult (30 to 60 years)",
+            "Elderly (60 & up)"
+          ]
         }
       ]
     },
@@ -3141,6 +3435,20 @@
             "Patients in Isolation",
             "Minimize Risk for Fall"
           ]
+        },
+        {
+          "header": "Age Specific Criteria",
+          "questions": [
+            "Newborn/Neonatal (up to 30 days)",
+            "Infant (30 days to 1 year)",
+            "Toddler (1 to 3 years)",
+            "Pre-school (3 to 5 years)",
+            "School Age (5 to 12 years)",
+            "Adolescent (12 to 18 years)",
+            "Young Adult (18 to 30 years)",
+            "Mature Adult (30 to 60 years)",
+            "Elderly (60 & up)"
+          ]
         }
       ]
     },
@@ -3208,6 +3516,20 @@
             "Pacs",
             "McKesson",
             "Centricity"
+          ]
+        },
+        {
+          "header": "Age Specific Criteria",
+          "questions": [
+            "Newborn/Neonatal (up to 30 days)",
+            "Infant (30 days to 1 year)",
+            "Toddler (1 to 3 years)",
+            "Pre-school (3 to 5 years)",
+            "School Age (5 to 12 years)",
+            "Adolescent (12 to 18 years)",
+            "Young Adult (18 to 30 years)",
+            "Mature Adult (30 to 60 years)",
+            "Elderly (60 & up)"
           ]
         }
       ]
@@ -3408,6 +3730,20 @@
             "Pneumonectomy/Lobectomy",
             "Sternal Splitting",
             "Thoracotomy"
+          ]
+        },
+        {
+          "header": "Age Specific Criteria",
+          "questions": [
+            "Newborn/Neonatal (up to 30 days)",
+            "Infant (30 days to 1 year)",
+            "Toddler (1 to 3 years)",
+            "Pre-school (3 to 5 years)",
+            "School Age (5 to 12 years)",
+            "Adolescent (12 to 18 years)",
+            "Young Adult (18 to 30 years)",
+            "Mature Adult (30 to 60 years)",
+            "Elderly (60 & up)"
           ]
         }
       ]
@@ -3633,6 +3969,20 @@
             "Dental suites",
             "Ambulatory surgery suites"
           ]
+        },
+        {
+          "header": "Age Specific Criteria",
+          "questions": [
+            "Newborn/Neonatal (up to 30 days)",
+            "Infant (30 days to 1 year)",
+            "Toddler (1 to 3 years)",
+            "Pre-school (3 to 5 years)",
+            "School Age (5 to 12 years)",
+            "Adolescent (12 to 18 years)",
+            "Young Adult (18 to 30 years)",
+            "Mature Adult (30 to 60 years)",
+            "Elderly (60 & up)"
+          ]
         }
       ]
     },
@@ -3693,6 +4043,20 @@
             "Universal Precautions",
             "Patients in Isolation",
             "Minimize Risk for Fall"
+          ]
+        },
+        {
+          "header": "Age Specific Criteria",
+          "questions": [
+            "Newborn/Neonatal (up to 30 days)",
+            "Infant (30 days to 1 year)",
+            "Toddler (1 to 3 years)",
+            "Pre-school (3 to 5 years)",
+            "School Age (5 to 12 years)",
+            "Adolescent (12 to 18 years)",
+            "Young Adult (18 to 30 years)",
+            "Mature Adult (30 to 60 years)",
+            "Elderly (60 & up)"
           ]
         }
       ]
@@ -3769,6 +4133,20 @@
             "Full Head Hook-Up",
             "Patient Pre-Study Calibration"
           ]
+        },
+        {
+          "header": "Age Specific Criteria",
+          "questions": [
+            "Newborn/Neonatal (up to 30 days)",
+            "Infant (30 days to 1 year)",
+            "Toddler (1 to 3 years)",
+            "Pre-school (3 to 5 years)",
+            "School Age (5 to 12 years)",
+            "Adolescent (12 to 18 years)",
+            "Young Adult (18 to 30 years)",
+            "Mature Adult (30 to 60 years)",
+            "Elderly (60 & up)"
+          ]
         }
       ]
     },
@@ -3837,6 +4215,20 @@
             "Food chemistry",
             "Labeling regulations",
             "Nutritional issues"
+          ]
+        },
+        {
+          "header": "Age Specific Criteria",
+          "questions": [
+            "Newborn/Neonatal (up to 30 days)",
+            "Infant (30 days to 1 year)",
+            "Toddler (1 to 3 years)",
+            "Pre-school (3 to 5 years)",
+            "School Age (5 to 12 years)",
+            "Adolescent (12 to 18 years)",
+            "Young Adult (18 to 30 years)",
+            "Mature Adult (30 to 60 years)",
+            "Elderly (60 & up)"
           ]
         }
       ]
@@ -4064,6 +4456,20 @@
             "Terbutaline sulfate",
             "Xopenex"
           ]
+        },
+        {
+          "header": "Age Specific Criteria",
+          "questions": [
+            "Newborn/Neonatal (up to 30 days)",
+            "Infant (30 days to 1 year)",
+            "Toddler (1 to 3 years)",
+            "Pre-school (3 to 5 years)",
+            "School Age (5 to 12 years)",
+            "Adolescent (12 to 18 years)",
+            "Young Adult (18 to 30 years)",
+            "Mature Adult (30 to 60 years)",
+            "Elderly (60 & up)"
+          ]
         }
       ]
     },
@@ -4171,6 +4577,20 @@
             "Ankle",
             "Pelvic Strap"
           ]
+        },
+        {
+          "header": "Age Specific Criteria",
+          "questions": [
+            "Newborn/Neonatal (up to 30 days)",
+            "Infant (30 days to 1 year)",
+            "Toddler (1 to 3 years)",
+            "Pre-school (3 to 5 years)",
+            "School Age (5 to 12 years)",
+            "Adolescent (12 to 18 years)",
+            "Young Adult (18 to 30 years)",
+            "Mature Adult (30 to 60 years)",
+            "Elderly (60 & up)"
+          ]
         }
       ]
     },
@@ -4258,6 +4678,20 @@
             "PVR",
             "SVR"
           ]
+        },
+        {
+          "header": "Age Specific Criteria",
+          "questions": [
+            "Newborn/Neonatal (up to 30 days)",
+            "Infant (30 days to 1 year)",
+            "Toddler (1 to 3 years)",
+            "Pre-school (3 to 5 years)",
+            "School Age (5 to 12 years)",
+            "Adolescent (12 to 18 years)",
+            "Young Adult (18 to 30 years)",
+            "Mature Adult (30 to 60 years)",
+            "Elderly (60 & up)"
+          ]
         }
       ]
     },
@@ -4310,6 +4744,20 @@
             "SIMS Interqual - Criteria for SSO Waiver",
             "Miliman and Robertson Criteria",
             "Physician Advisor"
+          ]
+        },
+        {
+          "header": "Age Specific Criteria",
+          "questions": [
+            "Newborn/Neonatal (up to 30 days)",
+            "Infant (30 days to 1 year)",
+            "Toddler (1 to 3 years)",
+            "Pre-school (3 to 5 years)",
+            "School Age (5 to 12 years)",
+            "Adolescent (12 to 18 years)",
+            "Young Adult (18 to 30 years)",
+            "Mature Adult (30 to 60 years)",
+            "Elderly (60 & up)"
           ]
         }
       ]
@@ -4397,6 +4845,20 @@
             "Verapamil (Calan, Isoptin, Verelan)",
             "Kayexelate",
             "Lasix (Furosemide)"
+          ]
+        },
+        {
+          "header": "Age Specific Criteria",
+          "questions": [
+            "Newborn/Neonatal (up to 30 days)",
+            "Infant (30 days to 1 year)",
+            "Toddler (1 to 3 years)",
+            "Pre-school (3 to 5 years)",
+            "School Age (5 to 12 years)",
+            "Adolescent (12 to 18 years)",
+            "Young Adult (18 to 30 years)",
+            "Mature Adult (30 to 60 years)",
+            "Elderly (60 & up)"
           ]
         }
       ]
@@ -4622,13 +5084,22 @@
             "Document using Narrative format",
             "Utilize Computerized documentation"
           ]
+        },
+        {
+          "header": "Age Specific Criteria",
+          "questions": [
+            "Newborn/Neonatal (up to 30 days)",
+            "Infant (30 days to 1 year)",
+            "Toddler (1 to 3 years)",
+            "Pre-school (3 to 5 years)",
+            "School Age (5 to 12 years)",
+            "Adolescent (12 to 18 years)",
+            "Young Adult (18 to 30 years)",
+            "Mature Adult (30 to 60 years)",
+            "Elderly (60 & up)"
+          ]
         }
       ]
-    },
-    {
-      "category": "Nursing",
-      "testname": "Case Manager",
-      "sections": []
     },
     {
       "category": "Nursing",
@@ -4884,6 +5355,20 @@
             "Provide for the integration of comfort care and death with dignity",
             "Demonstrate effective coping skills in caring for the critical care patient"
           ]
+        },
+        {
+          "header": "Age Specific Criteria",
+          "questions": [
+            "Newborn/Neonatal (up to 30 days)",
+            "Infant (30 days to 1 year)",
+            "Toddler (1 to 3 years)",
+            "Pre-school (3 to 5 years)",
+            "School Age (5 to 12 years)",
+            "Adolescent (12 to 18 years)",
+            "Young Adult (18 to 30 years)",
+            "Mature Adult (30 to 60 years)",
+            "Elderly (60 & up)"
+          ]
         }
       ]
     },
@@ -5080,6 +5565,20 @@
             "Ventricular Aneurysm Repair",
             "Vein Harvesting"
           ]
+        },
+        {
+          "header": "Age Specific Criteria",
+          "questions": [
+            "Newborn/Neonatal (up to 30 days)",
+            "Infant (30 days to 1 year)",
+            "Toddler (1 to 3 years)",
+            "Pre-school (3 to 5 years)",
+            "School Age (5 to 12 years)",
+            "Adolescent (12 to 18 years)",
+            "Young Adult (18 to 30 years)",
+            "Mature Adult (30 to 60 years)",
+            "Elderly (60 & up)"
+          ]
         }
       ]
     },
@@ -5199,6 +5698,20 @@
             "Post Treatment Access Care",
             "Equipment Clean Up",
             "Sterilization Procedures"
+          ]
+        },
+        {
+          "header": "Age Specific Criteria",
+          "questions": [
+            "Newborn/Neonatal (up to 30 days)",
+            "Infant (30 days to 1 year)",
+            "Toddler (1 to 3 years)",
+            "Pre-school (3 to 5 years)",
+            "School Age (5 to 12 years)",
+            "Adolescent (12 to 18 years)",
+            "Young Adult (18 to 30 years)",
+            "Mature Adult (30 to 60 years)",
+            "Elderly (60 & up)"
           ]
         }
       ]
@@ -5406,6 +5919,20 @@
             "Laryngoscope",
             "Cuffed Endotracheal Tube"
           ]
+        },
+        {
+          "header": "Age Specific Criteria",
+          "questions": [
+            "Newborn/Neonatal (up to 30 days)",
+            "Infant (30 days to 1 year)",
+            "Toddler (1 to 3 years)",
+            "Pre-school (3 to 5 years)",
+            "School Age (5 to 12 years)",
+            "Adolescent (12 to 18 years)",
+            "Young Adult (18 to 30 years)",
+            "Mature Adult (30 to 60 years)",
+            "Elderly (60 & up)"
+          ]
         }
       ]
     },
@@ -5443,6 +5970,20 @@
             "Salpingo-Oophorectomy",
             "Tubal Ligation",
             "Vaginal Hysterectomy"
+          ]
+        },
+        {
+          "header": "Age Specific Criteria",
+          "questions": [
+            "Newborn/Neonatal (up to 30 days)",
+            "Infant (30 days to 1 year)",
+            "Toddler (1 to 3 years)",
+            "Pre-school (3 to 5 years)",
+            "School Age (5 to 12 years)",
+            "Adolescent (12 to 18 years)",
+            "Young Adult (18 to 30 years)",
+            "Mature Adult (30 to 60 years)",
+            "Elderly (60 & up)"
           ]
         }
       ]
@@ -5539,6 +6080,20 @@
             "Enteric Precautions",
             "Respiratory Precautions",
             "Genitourinary Precautions"
+          ]
+        },
+        {
+          "header": "Age Specific Criteria",
+          "questions": [
+            "Newborn/Neonatal (up to 30 days)",
+            "Infant (30 days to 1 year)",
+            "Toddler (1 to 3 years)",
+            "Pre-school (3 to 5 years)",
+            "School Age (5 to 12 years)",
+            "Adolescent (12 to 18 years)",
+            "Young Adult (18 to 30 years)",
+            "Mature Adult (30 to 60 years)",
+            "Elderly (60 & up)"
           ]
         }
       ]
@@ -5648,6 +6203,20 @@
             "Start & Maintain Peripheral IV",
             "Collect Specimens",
             "Administering All Types of Medication"
+          ]
+        },
+        {
+          "header": "Age Specific Criteria",
+          "questions": [
+            "Newborn/Neonatal (up to 30 days)",
+            "Infant (30 days to 1 year)",
+            "Toddler (1 to 3 years)",
+            "Pre-school (3 to 5 years)",
+            "School Age (5 to 12 years)",
+            "Adolescent (12 to 18 years)",
+            "Young Adult (18 to 30 years)",
+            "Mature Adult (30 to 60 years)",
+            "Elderly (60 & up)"
           ]
         }
       ]
@@ -5927,6 +6496,20 @@
             "Participates in Self-Care Activities, i.e. Stress Management, Peer Support Groups",
             "Serve in a Mentor/Preceptor Role"
           ]
+        },
+        {
+          "header": "Age Specific Criteria",
+          "questions": [
+            "Newborn/Neonatal (up to 30 days)",
+            "Infant (30 days to 1 year)",
+            "Toddler (1 to 3 years)",
+            "Pre-school (3 to 5 years)",
+            "School Age (5 to 12 years)",
+            "Adolescent (12 to 18 years)",
+            "Young Adult (18 to 30 years)",
+            "Mature Adult (30 to 60 years)",
+            "Elderly (60 & up)"
+          ]
         }
       ]
     },
@@ -6099,6 +6682,20 @@
             "Isolation Techniques",
             "Oncology"
           ]
+        },
+        {
+          "header": "Age Specific Criteria",
+          "questions": [
+            "Newborn/Neonatal (up to 30 days)",
+            "Infant (30 days to 1 year)",
+            "Toddler (1 to 3 years)",
+            "Pre-school (3 to 5 years)",
+            "School Age (5 to 12 years)",
+            "Adolescent (12 to 18 years)",
+            "Young Adult (18 to 30 years)",
+            "Mature Adult (30 to 60 years)",
+            "Elderly (60 & up)"
+          ]
         }
       ]
     },
@@ -6173,6 +6770,20 @@
             "In-services of all and current employees  on Infection Control",
             "Orientation programs of new employees on Infection Control",
             "Infection Control techniques and Policies and Procedures"
+          ]
+        },
+        {
+          "header": "Age Specific Criteria",
+          "questions": [
+            "Newborn/Neonatal (up to 30 days)",
+            "Infant (30 days to 1 year)",
+            "Toddler (1 to 3 years)",
+            "Pre-school (3 to 5 years)",
+            "School Age (5 to 12 years)",
+            "Adolescent (12 to 18 years)",
+            "Young Adult (18 to 30 years)",
+            "Mature Adult (30 to 60 years)",
+            "Elderly (60 & up)"
           ]
         }
       ]
@@ -6251,6 +6862,20 @@
             "Meditech",
             "Pyxis",
             "Other"
+          ]
+        },
+        {
+          "header": "Age Specific Criteria",
+          "questions": [
+            "Newborn/Neonatal (up to 30 days)",
+            "Infant (30 days to 1 year)",
+            "Toddler (1 to 3 years)",
+            "Pre-school (3 to 5 years)",
+            "School Age (5 to 12 years)",
+            "Adolescent (12 to 18 years)",
+            "Young Adult (18 to 30 years)",
+            "Mature Adult (30 to 60 years)",
+            "Elderly (60 & up)"
           ]
         }
       ]
@@ -6399,6 +7024,20 @@
             "Pulmonary Edema",
             "RDS",
             "Seizure Activity"
+          ]
+        },
+        {
+          "header": "Age Specific Criteria",
+          "questions": [
+            "Newborn/Neonatal (up to 30 days)",
+            "Infant (30 days to 1 year)",
+            "Toddler (1 to 3 years)",
+            "Pre-school (3 to 5 years)",
+            "School Age (5 to 12 years)",
+            "Adolescent (12 to 18 years)",
+            "Young Adult (18 to 30 years)",
+            "Mature Adult (30 to 60 years)",
+            "Elderly (60 & up)"
           ]
         }
       ]
@@ -6572,6 +7211,20 @@
             "Giving Tape Report",
             "Making Assignments",
             "Making Rounds"
+          ]
+        },
+        {
+          "header": "Age Specific Criteria",
+          "questions": [
+            "Newborn/Neonatal (up to 30 days)",
+            "Infant (30 days to 1 year)",
+            "Toddler (1 to 3 years)",
+            "Pre-school (3 to 5 years)",
+            "School Age (5 to 12 years)",
+            "Adolescent (12 to 18 years)",
+            "Young Adult (18 to 30 years)",
+            "Mature Adult (30 to 60 years)",
+            "Elderly (60 & up)"
           ]
         }
       ]
@@ -6817,6 +7470,20 @@
             "Care of Pediatric Patient",
             "Care of Psychiatric Patient",
             "Knowledge of Normal Serum Lab Values"
+          ]
+        },
+        {
+          "header": "Age Specific Criteria",
+          "questions": [
+            "Newborn/Neonatal (up to 30 days)",
+            "Infant (30 days to 1 year)",
+            "Toddler (1 to 3 years)",
+            "Pre-school (3 to 5 years)",
+            "School Age (5 to 12 years)",
+            "Adolescent (12 to 18 years)",
+            "Young Adult (18 to 30 years)",
+            "Mature Adult (30 to 60 years)",
+            "Elderly (60 & up)"
           ]
         }
       ]
@@ -7260,6 +7927,20 @@
             "Assess skills and abilities of person chosen for delegation",
             "Supervise care provided by others (patient care technicians, other assistive personnel)"
           ]
+        },
+        {
+          "header": "Age Specific Criteria",
+          "questions": [
+            "Newborn/Neonatal (up to 30 days)",
+            "Infant (30 days to 1 year)",
+            "Toddler (1 to 3 years)",
+            "Pre-school (3 to 5 years)",
+            "School Age (5 to 12 years)",
+            "Adolescent (12 to 18 years)",
+            "Young Adult (18 to 30 years)",
+            "Mature Adult (30 to 60 years)",
+            "Elderly (60 & up)"
+          ]
         }
       ]
     },
@@ -7422,6 +8103,20 @@
           "questions": [
             "Fistula",
             "Hematoma"
+          ]
+        },
+        {
+          "header": "Age Specific Criteria",
+          "questions": [
+            "Newborn/Neonatal (up to 30 days)",
+            "Infant (30 days to 1 year)",
+            "Toddler (1 to 3 years)",
+            "Pre-school (3 to 5 years)",
+            "School Age (5 to 12 years)",
+            "Adolescent (12 to 18 years)",
+            "Young Adult (18 to 30 years)",
+            "Mature Adult (30 to 60 years)",
+            "Elderly (60 & up)"
           ]
         }
       ]
@@ -7687,6 +8382,20 @@
             "National Patient Safey Goals",
             "DO NOT USE Abbreviations"
           ]
+        },
+        {
+          "header": "Age Specific Criteria",
+          "questions": [
+            "Newborn/Neonatal (up to 30 days)",
+            "Infant (30 days to 1 year)",
+            "Toddler (1 to 3 years)",
+            "Pre-school (3 to 5 years)",
+            "School Age (5 to 12 years)",
+            "Adolescent (12 to 18 years)",
+            "Young Adult (18 to 30 years)",
+            "Mature Adult (30 to 60 years)",
+            "Elderly (60 & up)"
+          ]
         }
       ]
     },
@@ -7847,6 +8556,20 @@
             "Ability to use information technology to affect patient care and to reduce workload:patient electronic medical records",
             "Ability to use information technology to affect patient care and to reduce workload:Supply/medication management systems",
             "Ability to use information technology to affect patient care and to reduce workload: CPOE's"
+          ]
+        },
+        {
+          "header": "Age Specific Criteria",
+          "questions": [
+            "Newborn/Neonatal (up to 30 days)",
+            "Infant (30 days to 1 year)",
+            "Toddler (1 to 3 years)",
+            "Pre-school (3 to 5 years)",
+            "School Age (5 to 12 years)",
+            "Adolescent (12 to 18 years)",
+            "Young Adult (18 to 30 years)",
+            "Mature Adult (30 to 60 years)",
+            "Elderly (60 & up)"
           ]
         }
       ]
@@ -8064,6 +8787,20 @@
             "Vinblastine (Velban)",
             "Vincristine (Oncovin)"
           ]
+        },
+        {
+          "header": "Age Specific Criteria",
+          "questions": [
+            "Newborn/Neonatal (up to 30 days)",
+            "Infant (30 days to 1 year)",
+            "Toddler (1 to 3 years)",
+            "Pre-school (3 to 5 years)",
+            "School Age (5 to 12 years)",
+            "Adolescent (12 to 18 years)",
+            "Young Adult (18 to 30 years)",
+            "Mature Adult (30 to 60 years)",
+            "Elderly (60 & up)"
+          ]
         }
       ]
     },
@@ -8257,6 +8994,20 @@
             "Pneumonectomy/Lobectomy",
             "Sternal Splitting",
             "Thoracotomy"
+          ]
+        },
+        {
+          "header": "Age Specific Criteria",
+          "questions": [
+            "Newborn/Neonatal (up to 30 days)",
+            "Infant (30 days to 1 year)",
+            "Toddler (1 to 3 years)",
+            "Pre-school (3 to 5 years)",
+            "School Age (5 to 12 years)",
+            "Adolescent (12 to 18 years)",
+            "Young Adult (18 to 30 years)",
+            "Mature Adult (30 to 60 years)",
+            "Elderly (60 & up)"
           ]
         }
       ]
@@ -8514,6 +9265,20 @@
             "Pleuravac Disposable Drainage",
             "Vacuum Curettage",
             "Robotics"
+          ]
+        },
+        {
+          "header": "Age Specific Criteria",
+          "questions": [
+            "Newborn/Neonatal (up to 30 days)",
+            "Infant (30 days to 1 year)",
+            "Toddler (1 to 3 years)",
+            "Pre-school (3 to 5 years)",
+            "School Age (5 to 12 years)",
+            "Adolescent (12 to 18 years)",
+            "Young Adult (18 to 30 years)",
+            "Mature Adult (30 to 60 years)",
+            "Elderly (60 & up)"
           ]
         }
       ]
@@ -8797,6 +9562,20 @@
             "Vacuum Curettage",
             "Robotics"
           ]
+        },
+        {
+          "header": "Age Specific Criteria",
+          "questions": [
+            "Newborn/Neonatal (up to 30 days)",
+            "Infant (30 days to 1 year)",
+            "Toddler (1 to 3 years)",
+            "Pre-school (3 to 5 years)",
+            "School Age (5 to 12 years)",
+            "Adolescent (12 to 18 years)",
+            "Young Adult (18 to 30 years)",
+            "Mature Adult (30 to 60 years)",
+            "Elderly (60 & up)"
+          ]
         }
       ]
     },
@@ -8988,6 +9767,20 @@
             "Thoracotomy",
             "Recovery Room/PACU"
           ]
+        },
+        {
+          "header": "Age Specific Criteria",
+          "questions": [
+            "Newborn/Neonatal (up to 30 days)",
+            "Infant (30 days to 1 year)",
+            "Toddler (1 to 3 years)",
+            "Pre-school (3 to 5 years)",
+            "School Age (5 to 12 years)",
+            "Adolescent (12 to 18 years)",
+            "Young Adult (18 to 30 years)",
+            "Mature Adult (30 to 60 years)",
+            "Elderly (60 & up)"
+          ]
         }
       ]
     },
@@ -9163,6 +9956,20 @@
             "Fire Extinguisher",
             "Vice Pliers",
             "Trauma Shears"
+          ]
+        },
+        {
+          "header": "Age Specific Criteria",
+          "questions": [
+            "Newborn/Neonatal (up to 30 days)",
+            "Infant (30 days to 1 year)",
+            "Toddler (1 to 3 years)",
+            "Pre-school (3 to 5 years)",
+            "School Age (5 to 12 years)",
+            "Adolescent (12 to 18 years)",
+            "Young Adult (18 to 30 years)",
+            "Mature Adult (30 to 60 years)",
+            "Elderly (60 & up)"
           ]
         }
       ]
@@ -9441,6 +10248,20 @@
             "Knowledge of Routine Pediatric Drugs",
             "Metered Dose Inhaler"
           ]
+        },
+        {
+          "header": "Age Specific Criteria",
+          "questions": [
+            "Newborn/Neonatal (up to 30 days)",
+            "Infant (30 days to 1 year)",
+            "Toddler (1 to 3 years)",
+            "Pre-school (3 to 5 years)",
+            "School Age (5 to 12 years)",
+            "Adolescent (12 to 18 years)",
+            "Young Adult (18 to 30 years)",
+            "Mature Adult (30 to 60 years)",
+            "Elderly (60 & up)"
+          ]
         }
       ]
     },
@@ -9515,6 +10336,20 @@
             "Removal Process: Gloves/Utilize universal precautions",
             "Removal Process: Assess patient and site",
             "Removal process: Confirm catheter measurement"
+          ]
+        },
+        {
+          "header": "Age Specific Criteria",
+          "questions": [
+            "Newborn/Neonatal (up to 30 days)",
+            "Infant (30 days to 1 year)",
+            "Toddler (1 to 3 years)",
+            "Pre-school (3 to 5 years)",
+            "School Age (5 to 12 years)",
+            "Adolescent (12 to 18 years)",
+            "Young Adult (18 to 30 years)",
+            "Mature Adult (30 to 60 years)",
+            "Elderly (60 & up)"
           ]
         }
       ]
@@ -9719,6 +10554,20 @@
             "Tonsillectomy",
             "Cleft Lip / Palate"
           ]
+        },
+        {
+          "header": "Age Specific Criteria",
+          "questions": [
+            "Newborn/Neonatal (up to 30 days)",
+            "Infant (30 days to 1 year)",
+            "Toddler (1 to 3 years)",
+            "Pre-school (3 to 5 years)",
+            "School Age (5 to 12 years)",
+            "Adolescent (12 to 18 years)",
+            "Young Adult (18 to 30 years)",
+            "Mature Adult (30 to 60 years)",
+            "Elderly (60 & up)"
+          ]
         }
       ]
     },
@@ -9921,6 +10770,20 @@
             "Normal Serum Lab values",
             "Click to edit"
           ]
+        },
+        {
+          "header": "Age Specific Criteria",
+          "questions": [
+            "Newborn/Neonatal (up to 30 days)",
+            "Infant (30 days to 1 year)",
+            "Toddler (1 to 3 years)",
+            "Pre-school (3 to 5 years)",
+            "School Age (5 to 12 years)",
+            "Adolescent (12 to 18 years)",
+            "Young Adult (18 to 30 years)",
+            "Mature Adult (30 to 60 years)",
+            "Elderly (60 & up)"
+          ]
         }
       ]
     },
@@ -9960,6 +10823,20 @@
             "Crisis Intervention",
             "Eating Disorders",
             "Restraints"
+          ]
+        },
+        {
+          "header": "Age Specific Criteria",
+          "questions": [
+            "Newborn/Neonatal (up to 30 days)",
+            "Infant (30 days to 1 year)",
+            "Toddler (1 to 3 years)",
+            "Pre-school (3 to 5 years)",
+            "School Age (5 to 12 years)",
+            "Adolescent (12 to 18 years)",
+            "Young Adult (18 to 30 years)",
+            "Mature Adult (30 to 60 years)",
+            "Elderly (60 & up)"
           ]
         }
       ]
@@ -10020,6 +10897,20 @@
             "O2 Masks/Cannulas",
             "Suctioning Oral-Nasal-Pharynx",
             "Tracheostomy Care"
+          ]
+        },
+        {
+          "header": "Age Specific Criteria",
+          "questions": [
+            "Newborn/Neonatal (up to 30 days)",
+            "Infant (30 days to 1 year)",
+            "Toddler (1 to 3 years)",
+            "Pre-school (3 to 5 years)",
+            "School Age (5 to 12 years)",
+            "Adolescent (12 to 18 years)",
+            "Young Adult (18 to 30 years)",
+            "Mature Adult (30 to 60 years)",
+            "Elderly (60 & up)"
           ]
         }
       ]
@@ -10180,6 +11071,20 @@
             "Pain Management Response Assessment with Intervention",
             "Experience: Charge Duty",
             "Experience: Preceptor"
+          ]
+        },
+        {
+          "header": "Age Specific Criteria",
+          "questions": [
+            "Newborn/Neonatal (up to 30 days)",
+            "Infant (30 days to 1 year)",
+            "Toddler (1 to 3 years)",
+            "Pre-school (3 to 5 years)",
+            "School Age (5 to 12 years)",
+            "Adolescent (12 to 18 years)",
+            "Young Adult (18 to 30 years)",
+            "Mature Adult (30 to 60 years)",
+            "Elderly (60 & up)"
           ]
         }
       ]
@@ -10367,6 +11272,20 @@
           "questions": [
             "Supervise assistants, paraprofessionals, students, and volunteers in accordance with professional guidelines"
           ]
+        },
+        {
+          "header": "Age Specific Criteria",
+          "questions": [
+            "Newborn/Neonatal (up to 30 days)",
+            "Infant (30 days to 1 year)",
+            "Toddler (1 to 3 years)",
+            "Pre-school (3 to 5 years)",
+            "School Age (5 to 12 years)",
+            "Adolescent (12 to 18 years)",
+            "Young Adult (18 to 30 years)",
+            "Mature Adult (30 to 60 years)",
+            "Elderly (60 & up)"
+          ]
         }
       ]
     },
@@ -10483,6 +11402,20 @@
             "Work Capacity Evaluation",
             "Work Hardening (BTB)",
             "Work Hardening (Valpar)"
+          ]
+        },
+        {
+          "header": "Age Specific Criteria",
+          "questions": [
+            "Newborn/Neonatal (up to 30 days)",
+            "Infant (30 days to 1 year)",
+            "Toddler (1 to 3 years)",
+            "Pre-school (3 to 5 years)",
+            "School Age (5 to 12 years)",
+            "Adolescent (12 to 18 years)",
+            "Young Adult (18 to 30 years)",
+            "Mature Adult (30 to 60 years)",
+            "Elderly (60 & up)"
           ]
         }
       ]
@@ -10710,6 +11643,20 @@
             "Terbutaline sulfate",
             "Xopenex"
           ]
+        },
+        {
+          "header": "Age Specific Criteria",
+          "questions": [
+            "Newborn/Neonatal (up to 30 days)",
+            "Infant (30 days to 1 year)",
+            "Toddler (1 to 3 years)",
+            "Pre-school (3 to 5 years)",
+            "School Age (5 to 12 years)",
+            "Adolescent (12 to 18 years)",
+            "Young Adult (18 to 30 years)",
+            "Mature Adult (30 to 60 years)",
+            "Elderly (60 & up)"
+          ]
         }
       ]
     },
@@ -10790,6 +11737,20 @@
             "TENS Training",
             "Family Education",
             "Patient Education"
+          ]
+        },
+        {
+          "header": "Age Specific Criteria",
+          "questions": [
+            "Newborn/Neonatal (up to 30 days)",
+            "Infant (30 days to 1 year)",
+            "Toddler (1 to 3 years)",
+            "Pre-school (3 to 5 years)",
+            "School Age (5 to 12 years)",
+            "Adolescent (12 to 18 years)",
+            "Young Adult (18 to 30 years)",
+            "Mature Adult (30 to 60 years)",
+            "Elderly (60 & up)"
           ]
         }
       ]
@@ -10910,6 +11871,20 @@
             "Access resources for individuals with cognitive-communication disorders, speech/language disorders and/or swallowing/feeding disorders",
             "Incorporate ethical and quality of life issues into decisions concerning swallowing and/or feeding management",
             "Incorporate ASHA’s Code of Ethics and Scope of Practice for the Profession of Speech-Language Pathology"
+          ]
+        },
+        {
+          "header": "Age Specific Criteria",
+          "questions": [
+            "Newborn/Neonatal (up to 30 days)",
+            "Infant (30 days to 1 year)",
+            "Toddler (1 to 3 years)",
+            "Pre-school (3 to 5 years)",
+            "School Age (5 to 12 years)",
+            "Adolescent (12 to 18 years)",
+            "Young Adult (18 to 30 years)",
+            "Mature Adult (30 to 60 years)",
+            "Elderly (60 & up)"
           ]
         }
       ]
